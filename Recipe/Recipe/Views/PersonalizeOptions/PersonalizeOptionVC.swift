@@ -7,36 +7,30 @@
 
 import UIKit
 
-class DummyRecipes {
-    let icon: UIImage
-    let title: String
-    
-    init(icon: UIImage, title: String) {
-        self.icon = icon
-        self.title = title
-    }
-    
-    static func dummy() -> [DummyRecipes] {
-        return [
-            .init(icon: .icVegetable, title: "Normal"),
-            .init(icon: .icVegan, title: "Vegan"),
-            .init(icon: .icVegetarian, title: "Vegetarian"),
-            .init(icon: .icMeat, title: "Pescatarian"),
-            .init(icon: .icPaleo, title: "Paleo"),
-            .init(icon: .icLowcrab, title: "Low-Carb"),
-            .init(icon: .icKeto, title: "Keto")
-        ]
-    }
-}
-
 class PersonalizeOptionVC: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dietTitleLabel: UILabel!
-    @IBOutlet weak var btnSkip: UIButton!
+    @IBOutlet weak var ingredientTitleLabel: UILabel!
+   
+    @IBOutlet weak var flexibleGridView: UIFlexibleGridView!
+    @IBOutlet weak var flexibleGridViewHeight: NSLayoutConstraint!
     @IBOutlet weak var recipesCollectionView: UICollectionView!
     
+    @IBOutlet weak var btnContinue: UIButton!
+    @IBOutlet weak var btnSkip: UIButton!
+    
     let dummyRecipes = DummyRecipes.dummy()
+    let dummyIngredients = [
+        "Gluten",
+        "Dairy",
+        "Egg",
+        "Soy",
+        "Peanut",
+        "Tree Nut",
+        "Fish",
+        "Shellfish"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,9 +41,13 @@ class PersonalizeOptionVC: UIViewController {
     private func setupUI() {
         titleLabel.font = .popSemiB24
         dietTitleLabel.font = .popR14
+        ingredientTitleLabel.font = .popR14
         btnSkip.setButtonTitleStyle(.popM12, .primary)
         btnSkip.setTitleUnderLine(title: "SKIP")
+        btnContinue.backgroundColor = .activeOrange
+        btnContinue.setButtonTitleStyle(.popSemiB14, .pureWhite)
         setupCollectionView()
+        setupFlexibleGridView()
     }
 
     private func setupCollectionView() {
@@ -58,7 +56,19 @@ class PersonalizeOptionVC: UIViewController {
         recipesCollectionView.register(cell: PersonalizeRecipesCell.self)
         recipesCollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
     }
-
+    
+    private func setupFlexibleGridView() {
+        flexibleGridView.dataSource = self
+        flexibleGridView.delegate = self
+        flexibleGridView.itemHeight = 40
+        flexibleGridView.itemSpacing = 16
+        flexibleGridView.lineSpacing = 12
+        flexibleGridView.selectionStyle = .single
+        flexibleGridView.contentInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        flexibleGridView.register(with: UIFlexibleGridViewItem.self, identifier: "flexible-item")
+        flexibleGridView.reloadData()
+    }
+    
 }
 
 extension PersonalizeOptionVC: UICollectionViewDelegateFlowLayout {
@@ -67,7 +77,7 @@ extension PersonalizeOptionVC: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        return .init(width: collectionView.frame.width/4 + 8, height: 116)
+        return .init(width: collectionView.frame.width/4 - 8, height: 116)
     }
     
     func collectionView(
@@ -88,7 +98,12 @@ extension PersonalizeOptionVC: UICollectionViewDelegateFlowLayout {
 }
 
 extension PersonalizeOptionVC: UICollectionViewDelegate {
-    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        print(dummyRecipes[indexPath.row])
+    }
 }
 
 extension PersonalizeOptionVC: UICollectionViewDataSource {
@@ -109,6 +124,45 @@ extension PersonalizeOptionVC: UICollectionViewDataSource {
         )
         cell.bind(data: dummyRecipes[indexPath.row])
         return cell
+    }
+
+}
+
+extension PersonalizeOptionVC: UIFlexibleGridViewDataSource, UIFlexibleGridViewDelegate {
+    
+    func layoutForGridView(
+        _ flexibleGridView: UIFlexibleGridView
+    ) -> UIGridLayout {
+        return .auto
+    }
+    
+    func numberOfItemsInGridView(
+        _ flexibleGridView: UIFlexibleGridView
+    ) -> Int {
+        return dummyIngredients.count
+    }
+    
+    func flexibleGridView(
+        _ flexibleGridView: UIFlexibleGridView,
+        itemForIndexAt index: Int
+    ) -> UIFlexibleGridViewItem {
+        let item = flexibleGridView.dequeItem(withIdentifier: "flexible-item", for: index)
+        item.setChipStyle(with: dummyIngredients[index])
+        return item
+    }
+    
+    func flexibleGridView(
+        _ flexibleGridView: UIFlexibleGridView,
+        didSelectItemAt index: Int
+    ) {
+        print(index)
+    }
+    
+    func flexibleGridView(
+        _ flexibleGridView: UIFlexibleGridView,
+        contentHeight height: CGFloat
+    ) {
+        flexibleGridViewHeight.constant = height
     }
 
 }

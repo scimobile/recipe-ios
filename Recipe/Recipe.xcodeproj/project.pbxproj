@@ -14,6 +14,10 @@
 		786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C32C637DBB0038B60C /* UICollectionView.swift */; };
 		786896C62C637DF20038B60C /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C52C637DF20038B60C /* NSObject.swift */; };
 		786896C82C63803A0038B60C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C72C63803A0038B60C /* UIView.swift */; };
+		786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C92C63CD130038B60C /* UIFlexibleGridView.swift */; };
+		786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */; };
+		786896CE2C63CEE20038B60C /* FlexibleGridViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */; };
+		786896D12C63D8E60038B60C /* DummyRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896D02C63D8E60038B60C /* DummyRecipes.swift */; };
 		7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082A2C627E6400AA1EEA /* Fonts.swift */; };
 		7880082D2C627EF500AA1EEA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082C2C627EF500AA1EEA /* Colors.swift */; };
 		7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082E2C627F2F00AA1EEA /* UIColor.swift */; };
@@ -40,6 +44,10 @@
 		786896C32C637DBB0038B60C /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		786896C52C637DF20038B60C /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		786896C72C63803A0038B60C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		786896C92C63CD130038B60C /* UIFlexibleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlexibleGridView.swift; sourceTree = "<group>"; };
+		786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlexibleGridViewItem.swift; sourceTree = "<group>"; };
+		786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleGridViewComponents.swift; sourceTree = "<group>"; };
+		786896D02C63D8E60038B60C /* DummyRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRecipes.swift; sourceTree = "<group>"; };
 		7880082A2C627E6400AA1EEA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7880082C2C627EF500AA1EEA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7880082E2C627F2F00AA1EEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -97,6 +105,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		786896CF2C63D8DB0038B60C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				786896D02C63D8E60038B60C /* DummyRecipes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		788008292C627E0500AA1EEA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				788008342C62900500AA1EEA /* DynamicHeightCV.swift */,
+				786896C92C63CD130038B60C /* UIFlexibleGridView.swift */,
+				786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */,
+				786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -146,6 +165,7 @@
 		FE2636BA2C5FF32E00B907CC /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				786896CF2C63D8DB0038B60C /* Model */,
 				788008322C628FE600AA1EEA /* CommonUI */,
 				788008292C627E0500AA1EEA /* Extensions */,
 				FE2636D02C5FF34800B907CC /* Views */,
@@ -288,14 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */,
 				786896C82C63803A0038B60C /* UIView.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
+				786896D12C63D8E60038B60C /* DummyRecipes.swift in Sources */,
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
+				786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */,
 				788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */,
 				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
 				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
 				786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */,
+				786896CE2C63CEE20038B60C /* FlexibleGridViewComponents.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
 				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
 				786896C62C637DF20038B60C /* NSObject.swift in Sources */,
