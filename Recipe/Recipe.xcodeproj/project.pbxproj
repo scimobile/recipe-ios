@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */; };
 		78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */; };
+		786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */; };
+		786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */; };
+		786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C32C637DBB0038B60C /* UICollectionView.swift */; };
+		786896C62C637DF20038B60C /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C52C637DF20038B60C /* NSObject.swift */; };
+		786896C82C63803A0038B60C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C72C63803A0038B60C /* UIView.swift */; };
 		7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082A2C627E6400AA1EEA /* Fonts.swift */; };
 		7880082D2C627EF500AA1EEA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082C2C627EF500AA1EEA /* Colors.swift */; };
 		7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082E2C627F2F00AA1EEA /* UIColor.swift */; };
 		788008312C62867F00AA1EEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788008302C62867F00AA1EEA /* UIButton.swift */; };
+		788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788008342C62900500AA1EEA /* DynamicHeightCV.swift */; };
 		FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */; };
 		FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */; };
 		FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BF2C5FF32E00B907CC /* ViewController.swift */; };
@@ -29,10 +35,16 @@
 /* Begin PBXFileReference section */
 		78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeOptionVC.swift; sourceTree = "<group>"; };
 		78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeOptionVC.xib; sourceTree = "<group>"; };
+		786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeRecipesCell.swift; sourceTree = "<group>"; };
+		786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeRecipesCell.xib; sourceTree = "<group>"; };
+		786896C32C637DBB0038B60C /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		786896C52C637DF20038B60C /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		786896C72C63803A0038B60C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		7880082A2C627E6400AA1EEA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7880082C2C627EF500AA1EEA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7880082E2C627F2F00AA1EEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		788008302C62867F00AA1EEA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		788008342C62900500AA1EEA /* DynamicHeightCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCV.swift; sourceTree = "<group>"; };
 		FE2636B82C5FF32E00B907CC /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +80,23 @@
 			path = PersonalizeOptions;
 			sourceTree = "<group>";
 		};
+		786896BD2C637D2E0038B60C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				786896BE2C637D340038B60C /* Cell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		786896BE2C637D340038B60C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */,
+				786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		788008292C627E0500AA1EEA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +104,27 @@
 				7880082C2C627EF500AA1EEA /* Colors.swift */,
 				7880082E2C627F2F00AA1EEA /* UIColor.swift */,
 				788008302C62867F00AA1EEA /* UIButton.swift */,
+				786896C32C637DBB0038B60C /* UICollectionView.swift */,
+				786896C52C637DF20038B60C /* NSObject.swift */,
+				786896C72C63803A0038B60C /* UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		788008322C628FE600AA1EEA /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				788008332C628FED00AA1EEA /* CustomViews */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		788008332C628FED00AA1EEA /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				788008342C62900500AA1EEA /* DynamicHeightCV.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		FE2636AF2C5FF32D00B907CC = {
@@ -98,6 +146,7 @@
 		FE2636BA2C5FF32E00B907CC /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				788008322C628FE600AA1EEA /* CommonUI */,
 				788008292C627E0500AA1EEA /* Extensions */,
 				FE2636D02C5FF34800B907CC /* Views */,
 				FE2636D12C5FF36300B907CC /* Storyboards */,
@@ -120,6 +169,7 @@
 		FE2636D02C5FF34800B907CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				786896BD2C637D2E0038B60C /* CollectionView */,
 				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
 			);
@@ -221,6 +271,7 @@
 			files = (
 				FE2636C52C5FF32F00B907CC /* Assets.xcassets in Resources */,
 				FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */,
+				786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */,
 				FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
@@ -237,13 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786896C82C63803A0038B60C /* UIView.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
+				788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */,
 				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
 				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
+				786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
 				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
+				786896C62C637DF20038B60C /* NSObject.swift in Sources */,
+				786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

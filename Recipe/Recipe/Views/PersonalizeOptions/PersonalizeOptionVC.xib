@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalizeOptionVC" customModule="Recipe" customModuleProvider="target">
             <connections>
                 <outlet property="btnSkip" destination="8x2-sw-AFJ" id="Nhf-kL-n6C"/>
+                <outlet property="dietTitleLabel" destination="WrA-93-qP3" id="T6W-R5-SN8"/>
+                <outlet property="recipesCollectionView" destination="x0c-KL-0qb" id="Jsv-5H-ht8"/>
                 <outlet property="titleLabel" destination="LIG-aW-oFF" id="FXJ-f6-Rm3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,7 +26,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m3r-O7-YIN">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="130.33333333333334"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="406.33333333333331"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWz-9y-bUu" userLabel="headerProgressView">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="130.33333333333334"/>
@@ -60,6 +62,37 @@
                                         <constraint firstItem="8x2-sw-AFJ" firstAttribute="bottom" secondItem="tOU-ud-aIs" secondAttribute="bottom" id="zbn-e7-NJT"/>
                                     </constraints>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-7l-Ocb" userLabel="recipesForDietView">
+                                    <rect key="frame" x="0.0" y="130.33333333333337" width="393" height="276"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ll only show you recipes for your diet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrA-93-qP3">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="20.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="189" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="x0c-KL-0qb" customClass="DynamicHeightCV" customModule="Recipe" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="40.3333333333333" width="393" height="215.66666666666663"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pgO-NH-R8l">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="x0c-KL-0qb" firstAttribute="leading" secondItem="f8x-7l-Ocb" secondAttribute="leading" id="3No-Gl-MT0"/>
+                                        <constraint firstAttribute="trailing" secondItem="WrA-93-qP3" secondAttribute="trailing" constant="20" id="FoU-Sl-qAx"/>
+                                        <constraint firstItem="x0c-KL-0qb" firstAttribute="top" secondItem="WrA-93-qP3" secondAttribute="bottom" constant="20" id="JkZ-Ek-bbo"/>
+                                        <constraint firstAttribute="bottom" secondItem="x0c-KL-0qb" secondAttribute="bottom" constant="20" id="K8S-qX-32s"/>
+                                        <constraint firstItem="WrA-93-qP3" firstAttribute="leading" secondItem="f8x-7l-Ocb" secondAttribute="leading" constant="20" id="Lgx-CB-MNg"/>
+                                        <constraint firstAttribute="trailing" secondItem="x0c-KL-0qb" secondAttribute="trailing" id="f9y-8k-1LK"/>
+                                        <constraint firstItem="WrA-93-qP3" firstAttribute="top" secondItem="f8x-7l-Ocb" secondAttribute="top" id="xFL-qI-Rc5"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -82,7 +115,7 @@
                 <constraint firstItem="LoL-Kj-Dhu" firstAttribute="trailing" secondItem="N2o-Cp-wO2" secondAttribute="trailing" id="O56-m9-A75"/>
                 <constraint firstAttribute="bottom" secondItem="LoL-Kj-Dhu" secondAttribute="bottom" id="pwj-g6-vgG"/>
             </constraints>
-            <point key="canvasLocation" x="-50" y="-10"/>
+            <point key="canvasLocation" x="-567" y="-9"/>
         </view>
     </objects>
     <resources>
