@@ -5,9 +5,9 @@
 //  Created by kukuzan on 07/08/2024.
 //
 
-import Foundation
+import UIKit
 
-class DummyRecipes {
+class DummyData {
     let icon: UIImage
     let title: String
     
@@ -16,7 +16,7 @@ class DummyRecipes {
         self.title = title
     }
     
-    static func dummy() -> [DummyRecipes] {
+    static func dummyRecipes() -> [DummyData] {
         return [
             .init(icon: .icVegetable, title: "Normal"),
             .init(icon: .icVegan, title: "Vegan"),
@@ -25,6 +25,16 @@ class DummyRecipes {
             .init(icon: .icPaleo, title: "Paleo"),
             .init(icon: .icLowcrab, title: "Low-Carb"),
             .init(icon: .icKeto, title: "Keto")
+        ]
+    }
+    
+    static func dummyGoals() -> [DummyData] {
+        return [
+            .init(icon: .icHealth, title: "Eat Healthy"),
+            .init(icon: .icBudget, title: "Budget-Friendly"),
+            .init(icon: .icPlan, title: "Plan Better"),
+            .init(icon: .icLearn, title: "Quick & Easy"),
+            .init(icon: .icQuick, title: "Quick & Easy")
         ]
     }
 }

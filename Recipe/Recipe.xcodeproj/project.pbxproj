@@ -17,7 +17,11 @@
 		786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C92C63CD130038B60C /* UIFlexibleGridView.swift */; };
 		786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */; };
 		786896CE2C63CEE20038B60C /* FlexibleGridViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */; };
-		786896D12C63D8E60038B60C /* DummyRecipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896D02C63D8E60038B60C /* DummyRecipes.swift */; };
+		786896D12C63D8E60038B60C /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896D02C63D8E60038B60C /* DummyData.swift */; };
+		786896D72C63DA870038B60C /* PersonalizeGoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896D52C63DA870038B60C /* PersonalizeGoalsVC.swift */; };
+		786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896D62C63DA870038B60C /* PersonalizeGoalsVC.xib */; };
+		786896DD2C63DD3F0038B60C /* PersonalizeGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896DB2C63DD3F0038B60C /* PersonalizeGoalsCell.swift */; };
+		786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896DC2C63DD3F0038B60C /* PersonalizeGoalsCell.xib */; };
 		7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082A2C627E6400AA1EEA /* Fonts.swift */; };
 		7880082D2C627EF500AA1EEA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082C2C627EF500AA1EEA /* Colors.swift */; };
 		7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082E2C627F2F00AA1EEA /* UIColor.swift */; };
@@ -47,7 +51,11 @@
 		786896C92C63CD130038B60C /* UIFlexibleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlexibleGridView.swift; sourceTree = "<group>"; };
 		786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlexibleGridViewItem.swift; sourceTree = "<group>"; };
 		786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleGridViewComponents.swift; sourceTree = "<group>"; };
-		786896D02C63D8E60038B60C /* DummyRecipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyRecipes.swift; sourceTree = "<group>"; };
+		786896D02C63D8E60038B60C /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		786896D52C63DA870038B60C /* PersonalizeGoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeGoalsVC.swift; sourceTree = "<group>"; };
+		786896D62C63DA870038B60C /* PersonalizeGoalsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeGoalsVC.xib; sourceTree = "<group>"; };
+		786896DB2C63DD3F0038B60C /* PersonalizeGoalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeGoalsCell.swift; sourceTree = "<group>"; };
+		786896DC2C63DD3F0038B60C /* PersonalizeGoalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeGoalsCell.xib; sourceTree = "<group>"; };
 		7880082A2C627E6400AA1EEA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		7880082C2C627EF500AA1EEA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7880082E2C627F2F00AA1EEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -99,8 +107,8 @@
 		786896BE2C637D340038B60C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */,
-				786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */,
+				786896DA2C63DD1D0038B60C /* PersonalizeGoalsCell */,
+				786896D92C63DD100038B60C /* PersonalizeRecipesCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -108,9 +116,36 @@
 		786896CF2C63D8DB0038B60C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				786896D02C63D8E60038B60C /* DummyRecipes.swift */,
+				786896D02C63D8E60038B60C /* DummyData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		786896D42C63DA6B0038B60C /* PersonalizeGoals */ = {
+			isa = PBXGroup;
+			children = (
+				786896D52C63DA870038B60C /* PersonalizeGoalsVC.swift */,
+				786896D62C63DA870038B60C /* PersonalizeGoalsVC.xib */,
+			);
+			path = PersonalizeGoals;
+			sourceTree = "<group>";
+		};
+		786896D92C63DD100038B60C /* PersonalizeRecipesCell */ = {
+			isa = PBXGroup;
+			children = (
+				786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */,
+				786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */,
+			);
+			path = PersonalizeRecipesCell;
+			sourceTree = "<group>";
+		};
+		786896DA2C63DD1D0038B60C /* PersonalizeGoalsCell */ = {
+			isa = PBXGroup;
+			children = (
+				786896DB2C63DD3F0038B60C /* PersonalizeGoalsCell.swift */,
+				786896DC2C63DD3F0038B60C /* PersonalizeGoalsCell.xib */,
+			);
+			path = PersonalizeGoalsCell;
 			sourceTree = "<group>";
 		};
 		788008292C627E0500AA1EEA /* Extensions */ = {
@@ -190,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				786896BD2C637D2E0038B60C /* CollectionView */,
+				786896D42C63DA6B0038B60C /* PersonalizeGoals */,
 				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
 			);
@@ -293,11 +329,13 @@
 				FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */,
 				786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */,
 				FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */,
+				786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
 				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
+				786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +349,13 @@
 				786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */,
 				786896C82C63803A0038B60C /* UIView.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
-				786896D12C63D8E60038B60C /* DummyRecipes.swift in Sources */,
+				786896DD2C63DD3F0038B60C /* PersonalizeGoalsCell.swift in Sources */,
+				786896D12C63D8E60038B60C /* DummyData.swift in Sources */,
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
 				786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */,
 				788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */,
 				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
+				786896D72C63DA870038B60C /* PersonalizeGoalsVC.swift in Sources */,
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
 				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
 				786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */,

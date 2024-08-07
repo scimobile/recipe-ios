@@ -9,6 +9,7 @@ import UIKit
 
 class PersonalizeOptionVC: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dietTitleLabel: UILabel!
     @IBOutlet weak var ingredientTitleLabel: UILabel!
@@ -20,7 +21,9 @@ class PersonalizeOptionVC: UIViewController {
     @IBOutlet weak var btnContinue: UIButton!
     @IBOutlet weak var btnSkip: UIButton!
     
-    let dummyRecipes = DummyRecipes.dummy()
+    // MARK: - Properties
+    /// initialize
+    let dummyRecipes = DummyData.dummyRecipes()
     let dummyIngredients = [
         "Gluten",
         "Dairy",
@@ -32,13 +35,16 @@ class PersonalizeOptionVC: UIViewController {
         "Shellfish"
     ]
     
+    // MARK: - View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
     }
     
+    // MARK: - UI setup & Helper Functions
     private func setupUI() {
+        navigationController?.isNavigationBarHidden = true
         titleLabel.font = .popSemiB24
         dietTitleLabel.font = .popR14
         ingredientTitleLabel.font = .popR14
@@ -69,8 +75,20 @@ class PersonalizeOptionVC: UIViewController {
         flexibleGridView.reloadData()
     }
     
+    // MARK: - IBActions
+    @IBAction
+    private func didTapContinue(_ sender: UIButton) {
+        let personalizeGoalsVC = PersonalizeGoalsVC()
+        navigationController?.pushViewController(personalizeGoalsVC, animated: true)
+    }
+    
+    @IBAction
+    private func didTapSkip(_ sender: UIButton) {
+        
+    }
+    
 }
-
+// MARK: - UICollectionViewDelegateFlowLayout
 extension PersonalizeOptionVC: UICollectionViewDelegateFlowLayout {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -96,7 +114,7 @@ extension PersonalizeOptionVC: UICollectionViewDelegateFlowLayout {
         0
     }
 }
-
+// MARK: - UICollectionViewDelegate
 extension PersonalizeOptionVC: UICollectionViewDelegate {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -105,7 +123,7 @@ extension PersonalizeOptionVC: UICollectionViewDelegate {
         print(dummyRecipes[indexPath.row])
     }
 }
-
+// MARK: - UICollectionViewDataSource
 extension PersonalizeOptionVC: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
@@ -127,7 +145,7 @@ extension PersonalizeOptionVC: UICollectionViewDataSource {
     }
 
 }
-
+// MARK: - UIFlexibleGridViewDataSource, UIFlexibleGridViewDelegate
 extension PersonalizeOptionVC: UIFlexibleGridViewDataSource, UIFlexibleGridViewDelegate {
     
     func layoutForGridView(

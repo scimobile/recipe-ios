@@ -35,7 +35,7 @@ class PersonalizeRecipesCell: UICollectionViewCell {
         titleLabel.font = .popM11
     }
 
-    func bind(data: DummyRecipes) {
+    func bind(data: DummyData) {
         iconImage.image = data.icon
         titleLabel.text = data.title
     }
