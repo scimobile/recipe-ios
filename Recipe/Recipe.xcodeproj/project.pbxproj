@@ -13,6 +13,8 @@
 		7880082D2C627EF500AA1EEA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082C2C627EF500AA1EEA /* Colors.swift */; };
 		7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082E2C627F2F00AA1EEA /* UIColor.swift */; };
 		788008312C62867F00AA1EEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788008302C62867F00AA1EEA /* UIButton.swift */; };
+		CE0C22672C649C8700BC3383 /* LoginOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C22652C649C8700BC3383 /* LoginOptionsVC.swift */; };
+		CE5D61D52C64D414006AFD65 /* LoginOptionsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5D61D42C64D414006AFD65 /* LoginOptionsVC.storyboard */; };
 		FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */; };
 		FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */; };
 		FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BF2C5FF32E00B907CC /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		7880082C2C627EF500AA1EEA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		7880082E2C627F2F00AA1EEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		788008302C62867F00AA1EEA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		CE0C22652C649C8700BC3383 /* LoginOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsVC.swift; sourceTree = "<group>"; };
+		CE5D61D42C64D414006AFD65 /* LoginOptionsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginOptionsVC.storyboard; sourceTree = "<group>"; };
 		FE2636B82C5FF32E00B907CC /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CE1FF70E2C64C073006C8054 /* LoginOptions */ = {
+			isa = PBXGroup;
+			children = (
+				CE0C22652C649C8700BC3383 /* LoginOptionsVC.swift */,
+				CE5D61D42C64D414006AFD65 /* LoginOptionsVC.storyboard */,
+			);
+			path = LoginOptions;
+			sourceTree = "<group>";
+		};
 		FE2636AF2C5FF32D00B907CC = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 			children = (
 				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
+				CE1FF70E2C64C073006C8054 /* LoginOptions */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 				FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */,
 				FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
+				CE5D61D52C64D414006AFD65 /* LoginOptionsVC.storyboard in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
 				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
@@ -243,6 +258,7 @@
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
 				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
+				CE0C22672C649C8700BC3383 /* LoginOptionsVC.swift in Sources */,
 				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
 			);
@@ -322,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -379,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -404,7 +420,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -434,7 +450,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
