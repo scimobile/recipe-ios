@@ -21,6 +21,8 @@
 			</array>
 		</dict>
 	</dict>
+    <key>BASE_URL</key>
+    <string>http://54.179.102.152/api</string>
     <key>UIAppFonts</key>
     <array>
         <string>Poppins-Bold.ttf</string>
