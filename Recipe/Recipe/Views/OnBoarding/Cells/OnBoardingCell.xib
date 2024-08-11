@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OnBoardingCell" customModule="Recipe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="594"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="594"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvI-Cv-kra">
+                        <rect key="frame" x="0.0" y="0.0" width="386" height="594"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="2RI-QM-L4x">
+                                <rect key="frame" x="0.0" y="0.0" width="386" height="450"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tell us your food preferences and we’ll only serve you delicious recipes ideas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mel-IN-oeP">
+                                <rect key="frame" x="16" y="529.33333333333348" width="354" height="40.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="colorTextPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dR-JY-oD9">
+                                <rect key="frame" x="24" y="464.66666666666663" width="338" height="40.666666666666686"/>
+                                <string key="text">Personalized Recipe 
+Discovery</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" name="colorTextPrimary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="colorBgPrimary"/>
+                        <constraints>
+                            <constraint firstItem="7dR-JY-oD9" firstAttribute="leading" secondItem="kvI-Cv-kra" secondAttribute="leading" constant="24" id="0KD-xv-Kt5"/>
+                            <constraint firstAttribute="bottom" secondItem="mel-IN-oeP" secondAttribute="bottom" constant="24" id="4vj-5c-x7T"/>
+                            <constraint firstItem="mel-IN-oeP" firstAttribute="centerX" secondItem="kvI-Cv-kra" secondAttribute="centerX" id="DI0-gP-Df3"/>
+                            <constraint firstItem="mel-IN-oeP" firstAttribute="leading" secondItem="kvI-Cv-kra" secondAttribute="leading" constant="16" id="LYN-aI-DcS"/>
+                            <constraint firstAttribute="trailing" secondItem="2RI-QM-L4x" secondAttribute="trailing" id="Nb6-Ug-fsm"/>
+                            <constraint firstItem="mel-IN-oeP" firstAttribute="top" secondItem="7dR-JY-oD9" secondAttribute="bottom" constant="24" id="RSb-af-RMs"/>
+                            <constraint firstItem="7dR-JY-oD9" firstAttribute="centerX" secondItem="kvI-Cv-kra" secondAttribute="centerX" id="Rha-h5-m8N"/>
+                            <constraint firstItem="7dR-JY-oD9" firstAttribute="top" secondItem="2RI-QM-L4x" secondAttribute="bottom" constant="24" id="cHN-Cg-6lt"/>
+                            <constraint firstItem="2RI-QM-L4x" firstAttribute="leading" secondItem="kvI-Cv-kra" secondAttribute="leading" id="dhR-Bz-sgV"/>
+                            <constraint firstAttribute="trailing" secondItem="7dR-JY-oD9" secondAttribute="trailing" constant="24" id="fHw-IS-YuT"/>
+                            <constraint firstItem="2RI-QM-L4x" firstAttribute="top" secondItem="kvI-Cv-kra" secondAttribute="top" id="fws-B2-mcr"/>
+                            <constraint firstAttribute="trailing" secondItem="mel-IN-oeP" secondAttribute="trailing" constant="16" id="vkU-Ml-qyp"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kvI-Cv-kra" secondAttribute="trailing" id="B3v-oJ-qVm"/>
+                <constraint firstItem="kvI-Cv-kra" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bDY-4Y-Q8f"/>
+                <constraint firstAttribute="bottom" secondItem="kvI-Cv-kra" secondAttribute="bottom" id="noc-Vm-Y7C"/>
+                <constraint firstItem="kvI-Cv-kra" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vkI-Bj-jpH"/>
+            </constraints>
+            <size key="customSize" width="386" height="594"/>
+            <connections>
+                <outlet property="imgOnBoard" destination="2RI-QM-L4x" id="nUx-Ct-e0A"/>
+                <outlet property="lblContent" destination="mel-IN-oeP" id="WQA-Dv-Khv"/>
+                <outlet property="lblTitle" destination="7dR-JY-oD9" id="CM7-4e-umU"/>
+            </connections>
+            <point key="canvasLocation" x="-124" y="22"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="onboard1" width="350" height="450"/>
+        <namedColor name="colorBgPrimary">
+            <color red="0.99215686274509807" green="0.96470588235294119" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="colorTextPrimary">
+            <color red="0.11764705882352941" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

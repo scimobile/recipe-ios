@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */; };
+		78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */; };
+		7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082A2C627E6400AA1EEA /* Fonts.swift */; };
+		7880082D2C627EF500AA1EEA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082C2C627EF500AA1EEA /* Colors.swift */; };
+		7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082E2C627F2F00AA1EEA /* UIColor.swift */; };
+		788008312C62867F00AA1EEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788008302C62867F00AA1EEA /* UIButton.swift */; };
+		B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */; };
+		B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */; };
+		B94BAE992C634EB200B043B7 /* OnBoardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */; };
+		B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */; };
+		B94BAE9F2C63DD8500B043B7 /* OnBoardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */; };
+		B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEA02C63ECBE00B043B7 /* color.xcassets */; };
+		B94BAEA82C63FDEF00B043B7 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */; };
+		B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */; };
+		B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B94BAEAB2C64001F00B043B7 /* Lottie */; };
+		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
 		FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */; };
 		FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */; };
 		FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BF2C5FF32E00B907CC /* ViewController.swift */; };
@@ -21,6 +37,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeOptionVC.swift; sourceTree = "<group>"; };
+		78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeOptionVC.xib; sourceTree = "<group>"; };
+		7880082A2C627E6400AA1EEA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		7880082C2C627EF500AA1EEA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7880082E2C627F2F00AA1EEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		788008302C62867F00AA1EEA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
+		B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCell.xib; sourceTree = "<group>"; };
+		B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingEntity.swift; sourceTree = "<group>"; };
+		B94BAEA02C63ECBE00B043B7 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
+		B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		B94BAEAD2C64015300B043B7 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 		FE2636B82C5FF32E00B907CC /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +72,84 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2636DA2C5FF58C00B907CC /* IQKeyboardManagerSwift in Frameworks */,
+				B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78607D142C6124AA008AA26B /* PersonalizeOptions */ = {
+			isa = PBXGroup;
+			children = (
+				78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */,
+				78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */,
+			);
+			path = PersonalizeOptions;
+			sourceTree = "<group>";
+		};
+		788008292C627E0500AA1EEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7880082A2C627E6400AA1EEA /* Fonts.swift */,
+				7880082C2C627EF500AA1EEA /* Colors.swift */,
+				7880082E2C627F2F00AA1EEA /* UIColor.swift */,
+				788008302C62867F00AA1EEA /* UIButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B94BAE8D2C63316A00B043B7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE942C634DB500B043B7 /* Cells */,
+				B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */,
+				B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		B94BAE942C634DB500B043B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */,
+				B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B94BAE9B2C63DD5C00B043B7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B94BAE9C2C63DD6500B043B7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE9D2C63DD6E00B043B7 /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B94BAE9D2C63DD6E00B043B7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B94BAEA52C63FDE000B043B7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */,
+				B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		FE2636AF2C5FF32D00B907CC = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +169,9 @@
 		FE2636BA2C5FF32E00B907CC /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				B94BAE9C2C63DD6500B043B7 /* Data */,
+				B94BAE9B2C63DD5C00B043B7 /* Domain */,
+				788008292C627E0500AA1EEA /* Extensions */,
 				FE2636D02C5FF34800B907CC /* Views */,
 				FE2636D12C5FF36300B907CC /* Storyboards */,
 				FE2636CF2C5FF33900B907CC /* Application */,
@@ -87,6 +193,9 @@
 		FE2636D02C5FF34800B907CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B94BAEA52C63FDE000B043B7 /* Splash */,
+				B94BAE8D2C63316A00B043B7 /* OnBoarding */,
+				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
 			);
 			path = Views;
@@ -104,8 +213,10 @@
 		FE2636D42C5FF38C00B907CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B94BAEAD2C64015300B043B7 /* splashAnimation.json */,
 				FE2636DB2C5FF75400B907CC /* Fonts */,
 				FE2636C42C5FF32F00B907CC /* Assets.xcassets */,
+				B94BAEA02C63ECBE00B043B7 /* color.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -139,6 +250,7 @@
 			name = Recipe;
 			packageProductDependencies = (
 				FE2636D92C5FF58C00B907CC /* IQKeyboardManagerSwift */,
+				B94BAEAB2C64001F00B043B7 /* Lottie */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -170,6 +282,7 @@
 			mainGroup = FE2636AF2C5FF32D00B907CC;
 			packageReferences = (
 				FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -185,12 +298,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94BAE992C634EB200B043B7 /* OnBoardingCell.xib in Resources */,
 				FE2636C52C5FF32F00B907CC /* Assets.xcassets in Resources */,
 				FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */,
 				FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
+				B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
+				B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */,
+				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
+				B94BAEA82C63FDEF00B043B7 /* SplashVC.xib in Resources */,
+				B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,9 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
+				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
+				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
+				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
+				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
+				B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */,
+				B94BAE9F2C63DD8500B043B7 /* OnBoardingEntity.swift in Sources */,
+				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
+				B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +561,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -444,6 +580,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B94BAEAB2C64001F00B043B7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		FE2636D92C5FF58C00B907CC /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
