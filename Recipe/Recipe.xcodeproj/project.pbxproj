@@ -66,10 +66,6 @@
 		FE2636BA2C5FF32E00B907CC /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				FE2636E42C5FF98E00B907CC /* Constants */,
-				FE2636D72C5FF50F00B907CC /* Extensions */,
-				FE2636D22C5FF37900B907CC /* Utils */,
-				FE2636D32C5FF38100B907CC /* Data */,
 				FE2636D02C5FF34800B907CC /* Views */,
 				FE2636D12C5FF36300B907CC /* Storyboards */,
 				FE2636CF2C5FF33900B907CC /* Application */,
@@ -105,22 +101,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FE2636D22C5FF37900B907CC /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		FE2636D32C5FF38100B907CC /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				FE2636D62C5FF4FA00B907CC /* Models */,
-				FE2636D52C5FF4F400B907CC /* Network */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		FE2636D42C5FF38C00B907CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,27 +108,6 @@
 				FE2636C42C5FF32F00B907CC /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FE2636D52C5FF4F400B907CC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		FE2636D62C5FF4FA00B907CC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FE2636D72C5FF50F00B907CC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FE2636DB2C5FF75400B907CC /* Fonts */ = {
@@ -160,13 +119,6 @@
 				FE2636DC2C5FF76800B907CC /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		FE2636E42C5FF98E00B907CC /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
