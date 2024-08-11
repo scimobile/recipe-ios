@@ -21,6 +21,31 @@
 			</array>
 		</dict>
 	</dict>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.451862807740-imjgdqvcs8qef0kdteur00befhbpccgh</string>
+                <string>fb1164410451492898</string>
+            </array>
+        </dict>
+    </array>
+    <key>GIDClientID</key>
+    <string>451862807740-imjgdqvcs8qef0kdteur00befhbpccgh.apps.googleusercontent.com</string>
+    <key>GIDServerClientID</key>
+    <string>451862807740-gpjt43g8pkvbo9rua9oq9oltr4bhmgfj.apps.googleusercontent.com</string>
+    <key>FacebookAppID</key>
+    <string>1164410451492898</string>
+    <key>FacebookClientToken</key>
+    <string>8aea5f0080abc21022e51bb721f6b1f9</string>
+    <key>FacebookDisplayName</key>
+    <string>TryLoginIOS</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+    </array>
     <key>UIAppFonts</key>
     <array>
         <string>Poppins-Bold.ttf</string>
