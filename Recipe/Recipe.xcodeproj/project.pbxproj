@@ -207,6 +207,37 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		E17576DB2C691C1C00C52515 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E17576E12C69258E00C52515 /* repository */,
+				E17576DE2C69254600C52515 /* Models */,
+				E17576DF2C69255500C52515 /* datasource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E17576DE2C69254600C52515 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E17576DF2C69255500C52515 /* datasource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = datasource;
+			sourceTree = "<group>";
+		};
+		E17576E12C69258E00C52515 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		E1A276782C665A830056D225 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +276,7 @@
 		FE2636BA2C5FF32E00B907CC /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
+				E17576DB2C691C1C00C52515 /* Data */,
 				E1F2DD0B2C67C7A50081477E /* Recipe.entitlements */,
 				786896CF2C63D8DB0038B60C /* Model */,
 				788008322C628FE600AA1EEA /* CommonUI */,

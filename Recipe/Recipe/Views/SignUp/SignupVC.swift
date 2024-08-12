@@ -59,7 +59,8 @@ class SignupVC: UIViewController {
         btnNext.isEnabled = false
         btnNext.backgroundColor = .disabledBtn
         btnNext.setButtonTitleStyle(.popSemiB14, .pureWhite)
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        navigationController?.isNavigationBarHidden = true
+
 
     }
     
