@@ -12,7 +12,9 @@ protocol SignupViewDelegate {
     
     func onError(error: String)
     
-    func onLoginSuccess()
+    func onRegisterSuccess()
+    
+    func onUserAlreadyExist()
      
 }
 
@@ -49,7 +51,8 @@ class SignupVM {
             validate()
         }
     }
-    
+    private let repository: AuthRepository = .init()
+
     func setEmail(email: String?) {
         self.email = email
     }
@@ -73,6 +76,36 @@ class SignupVM {
     func setConfirmPassword(confirmPassword: String?) {
         self.confirmPassword = confirmPassword
     }
+    
+    func register() {
+        
+        if let displayName = displayName,
+           let email = email,
+           let password = password,
+           !displayName.isEmpty,
+           !email.isEmpty,
+           !password.isEmpty
+        {
+            repository
+                .signup(username: displayName,
+                        email: email,
+                        phone: "",
+                        password: password) { [weak self] in
+                    self?.delegate.onRegisterSuccess()
+                } onFail: { [weak self] error in
+                    switch error {
+                    case .USER_ALREADY_REGISTERED:
+                        self?.delegate.onUserAlreadyExist()
+                    case .UNKNOWN(let error):
+                        self?.delegate.onError(error: error)
+                    default:
+                        break
+                    }
+                }
+        }
+    }
+
+         
 
     private func validate() {
         

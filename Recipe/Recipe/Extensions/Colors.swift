@@ -16,4 +16,5 @@ public extension UIColor {
     static var blue: UIColor { UIColor(hex: "#1877F2") }
     static var premium: UIColor { UIColor(hex: "#ECDCCE") }
     static var disabledBtn:  UIColor { UIColor(hex: "#D8DBDF") }
+    static var facebookBtn: UIColor { UIColor(hex: "#415792") }
 }

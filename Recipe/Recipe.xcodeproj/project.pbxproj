@@ -38,6 +38,27 @@
 		E1E1FDF52C6782C900862CFC /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = E1E1FDF42C6782C900862CFC /* FacebookCore */; };
 		E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E1E1FDF62C6782C900862CFC /* FacebookLogin */; };
 		E1E1FDFA2C6782F700862CFC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E1E1FDF92C6782F700862CFC /* GoogleSignIn */; };
+		CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */; };
+		CE6364712C67507B00944D1F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364702C67507B00944D1F /* LoginRequest.swift */; };
+		CE6364732C67521C00944D1F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364722C67521C00944D1F /* LoginResponse.swift */; };
+		CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE8A6D5A2C661CA600DE54C5 /* Alamofire */; };
+		CE8A6D5E2C661D2F00DE54C5 /* AlamofireEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6D5D2C661D2F00DE54C5 /* AlamofireEndpoint.swift */; };
+		CE8A6D602C661D3F00DE54C5 /* AlamofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6D5F2C661D3F00DE54C5 /* AlamofireNetwork.swift */; };
+		CE8FACA72C68CDEE00A1527A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */; };
+		CE8FACAA2C68CEBB00A1527A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = CE8FACA92C68CEBB00A1527A /* KeychainAccess */; };
+		CEA024EC2C65049A00CA0CF7 /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024EA2C65049A00CA0CF7 /* EmailLoginVC.swift */; };
+		CEA024ED2C65049A00CA0CF7 /* EmailLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA024EB2C65049A00CA0CF7 /* EmailLoginVC.xib */; };
+		CEA024EF2C65152500CA0CF7 /* CustomPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024EE2C65152500CA0CF7 /* CustomPasswordTextField.swift */; };
+		CEA024F12C65182800CA0CF7 /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024F02C65182800CA0CF7 /* MaterialTextField.swift */; };
+		CEA024F82C6611E200CA0CF7 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024F72C6611E200CA0CF7 /* ValidationService.swift */; };
+		CEAD430C2C6500610058B337 /* LoginSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD430A2C6500610058B337 /* LoginSelectVC.swift */; };
+		CEAD430D2C6500610058B337 /* LoginSelectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAD430B2C6500610058B337 /* LoginSelectVC.xib */; };
+		CEBB3F202C675CD100042C52 /* AuthRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB3F1F2C675CD100042C52 /* AuthRemoteDatasource.swift */; };
+		CEBB3F222C6768A600042C52 /* RecipeRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB3F212C6768A600042C52 /* RecipeRequestInterceptor.swift */; };
+		CEBB3F242C676C7000042C52 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB3F232C676C7000042C52 /* RegisterRequest.swift */; };
+		CEC6BC472C677A2E0033A30E /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BC462C677A2E0033A30E /* AuthRepository.swift */; };
+		CEC6BC492C677C160033A30E /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BC482C677C160033A30E /* LoginVM.swift */; };
+		CEF628AA2C66711E00DA0C7B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF628A92C66711E00DA0C7B /* NetworkError.swift */; };
 		FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */; };
 		FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */; };
 		FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BF2C5FF32E00B907CC /* ViewController.swift */; };
@@ -81,6 +102,25 @@
 		E1C5A6D92C6766380035ABC8 /* SignupOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOptionsVC.swift; sourceTree = "<group>"; };
 		E1C5A6DA2C6766380035ABC8 /* SignupOptionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupOptionsVC.xib; sourceTree = "<group>"; };
 		E1F2DD0B2C67C7A50081477E /* Recipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Recipe.entitlements; sourceTree = "<group>"; };
+		CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRecipeEndpoint.swift; sourceTree = "<group>"; };
+		CE6364702C67507B00944D1F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		CE6364722C67521C00944D1F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		CE8A6D5D2C661D2F00DE54C5 /* AlamofireEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireEndpoint.swift; sourceTree = "<group>"; };
+		CE8A6D5F2C661D3F00DE54C5 /* AlamofireNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetwork.swift; sourceTree = "<group>"; };
+		CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		CEA024EA2C65049A00CA0CF7 /* EmailLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginVC.swift; sourceTree = "<group>"; };
+		CEA024EB2C65049A00CA0CF7 /* EmailLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailLoginVC.xib; sourceTree = "<group>"; };
+		CEA024EE2C65152500CA0CF7 /* CustomPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordTextField.swift; sourceTree = "<group>"; };
+		CEA024F02C65182800CA0CF7 /* MaterialTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		CEA024F72C6611E200CA0CF7 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
+		CEAD430A2C6500610058B337 /* LoginSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectVC.swift; sourceTree = "<group>"; };
+		CEAD430B2C6500610058B337 /* LoginSelectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginSelectVC.xib; sourceTree = "<group>"; };
+		CEBB3F1F2C675CD100042C52 /* AuthRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDatasource.swift; sourceTree = "<group>"; };
+		CEBB3F212C6768A600042C52 /* RecipeRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequestInterceptor.swift; sourceTree = "<group>"; };
+		CEBB3F232C676C7000042C52 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		CEC6BC462C677A2E0033A30E /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		CEC6BC482C677C160033A30E /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		CEF628A92C66711E00DA0C7B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		FE2636B82C5FF32E00B907CC /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +144,8 @@
 				E1E1FDFA2C6782F700862CFC /* GoogleSignIn in Frameworks */,
 				E1E1FDF52C6782C900862CFC /* FacebookCore in Frameworks */,
 				E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */,
+				CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */,
+				CE8FACAA2C68CEBB00A1527A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +225,8 @@
 				786896C72C63803A0038B60C /* UIView.swift */,
 				E1A276832C66915B0056D225 /* String.swift */,
 				E1A276852C6691C10056D225 /* Regex.swift */,
+				CEA024EE2C65152500CA0CF7 /* CustomPasswordTextField.swift */,
+				CEA024F02C65182800CA0CF7 /* MaterialTextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -213,13 +257,91 @@
 				E17576E12C69258E00C52515 /* repository */,
 				E17576DE2C69254600C52515 /* Models */,
 				E17576DF2C69255500C52515 /* datasource */,
+					);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		CE4E86B42C6678940082E5AD /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				CEBB3F1F2C675CD100042C52 /* AuthRemoteDatasource.swift */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		CE63646F2C67506300944D1F /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CE6364702C67507B00944D1F /* LoginRequest.swift */,
+				CEBB3F232C676C7000042C52 /* RegisterRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CE8A6D5C2C661CE900DE54C5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6D5D2C661D2F00DE54C5 /* AlamofireEndpoint.swift */,
+				CE8A6D5F2C661D3F00DE54C5 /* AlamofireNetwork.swift */,
+				CEF628A92C66711E00DA0C7B /* NetworkError.swift */,
+				CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */,
+				CEBB3F212C6768A600042C52 /* RecipeRequestInterceptor.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE8FACA52C68CDD700A1527A /* local */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		CEA024E02C65038600CA0CF7 /* LoginSelect */ = {
+			isa = PBXGroup;
+			children = (
+				CEAD430A2C6500610058B337 /* LoginSelectVC.swift */,
+				CEAD430B2C6500610058B337 /* LoginSelectVC.xib */,
+			);
+			path = LoginSelect;
+			sourceTree = "<group>";
+		};
+		CEA024E52C6503BF00CA0CF7 /* EmailLogin */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6BC482C677C160033A30E /* LoginVM.swift */,
+				CEA024EA2C65049A00CA0CF7 /* EmailLoginVC.swift */,
+				CEA024EB2C65049A00CA0CF7 /* EmailLoginVC.xib */,
+			);
+			path = EmailLogin;
+			sourceTree = "<group>";
+		};
+		CEA024F22C6610FA00CA0CF7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE8A6D5C2C661CE900DE54C5 /* Network */,
+				CEA024F52C66112200CA0CF7 /* DataSources */,
+				CEA024F42C66111800CA0CF7 /* Models */,
+				CEA024F32C66110D00CA0CF7 /* Repositories */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		E17576DE2C69254600C52515 /* Models */ = {
+		
+		CEA024F32C66110D00CA0CF7 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				CEC6BC462C677A2E0033A30E /* AuthRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CEA024F42C66111800CA0CF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEC6BC452C6778370033A30E /* Responses */,
+				CE63646F2C67506300944D1F /* Requests */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +379,31 @@
 			path = SignupOptions;
 			sourceTree = "<group>";
 		};
+		CEA024F52C66112200CA0CF7 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				CE8FACA52C68CDD700A1527A /* local */,
+				CE4E86B42C6678940082E5AD /* remote */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		CEA024F62C6611B800CA0CF7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEA024F72C6611E200CA0CF7 /* ValidationService.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEC6BC452C6778370033A30E /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CE6364722C67521C00944D1F /* LoginResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
 		FE2636AF2C5FF32D00B907CC = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +427,8 @@
 				E1F2DD0B2C67C7A50081477E /* Recipe.entitlements */,
 				786896CF2C63D8DB0038B60C /* Model */,
 				788008322C628FE600AA1EEA /* CommonUI */,
+				CEA024F62C6611B800CA0CF7 /* Utils */,
+				CEA024F22C6610FA00CA0CF7 /* Data */,
 				788008292C627E0500AA1EEA /* Extensions */,
 				FE2636D02C5FF34800B907CC /* Views */,
 				FE2636D12C5FF36300B907CC /* Storyboards */,
@@ -308,6 +457,8 @@
 				786896D42C63DA6B0038B60C /* PersonalizeGoals */,
 				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
+				CEA024E02C65038600CA0CF7 /* LoginSelect */,
+				CEA024E52C6503BF00CA0CF7 /* EmailLogin */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -362,6 +513,8 @@
 				E1E1FDF42C6782C900862CFC /* FacebookCore */,
 				E1E1FDF62C6782C900862CFC /* FacebookLogin */,
 				E1E1FDF92C6782F700862CFC /* GoogleSignIn */,
+				CE8A6D5A2C661CA600DE54C5 /* Alamofire */,
+				CE8FACA92C68CEBB00A1527A /* KeychainAccess */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -395,6 +548,8 @@
 				FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				E1E1FDF32C6782C900862CFC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				E1E1FDF82C6782F700862CFC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				CE8A6D592C661CA600DE54C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CE8FACA82C68CEBB00A1527A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -418,11 +573,13 @@
 				E1A276802C665CC10056D225 /* SignupVC.xib in Resources */,
 				786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
+				CEAD430D2C6500610058B337 /* LoginSelectVC.xib in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
 				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
 				786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */,
+				CEA024ED2C65049A00CA0CF7 /* EmailLoginVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +600,12 @@
 				E1A276822C668C570056D225 /* SignupVM.swift in Sources */,
 				786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */,
 				788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */,
+				CEF628AA2C66711E00DA0C7B /* NetworkError.swift in Sources */,
+				CE6364712C67507B00944D1F /* LoginRequest.swift in Sources */,
+				CE8A6D602C661D3F00DE54C5 /* AlamofireNetwork.swift in Sources */,
+				CE8FACA72C68CDEE00A1527A /* KeychainManager.swift in Sources */,
+				CEA024EC2C65049A00CA0CF7 /* EmailLoginVC.swift in Sources */,
+				CEBB3F202C675CD100042C52 /* AuthRemoteDatasource.swift in Sources */,
 				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
 				786896D72C63DA870038B60C /* PersonalizeGoalsVC.swift in Sources */,
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
@@ -453,11 +616,22 @@
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
 				E1A276862C6691C10056D225 /* Regex.swift in Sources */,
 				E1A2767F2C665CC10056D225 /* SignupVC.swift in Sources */,
+				CEC6BC472C677A2E0033A30E /* AuthRepository.swift in Sources */,
+				CEAD430C2C6500610058B337 /* LoginSelectVC.swift in Sources */,
+				CEBB3F242C676C7000042C52 /* RegisterRequest.swift in Sources */,
+				CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */,
+				CEA024F12C65182800CA0CF7 /* MaterialTextField.swift in Sources */,
+				CE6364732C67521C00944D1F /* LoginResponse.swift in Sources */,
+				CE8A6D5E2C661D2F00DE54C5 /* AlamofireEndpoint.swift in Sources */,
+				CEA024F82C6611E200CA0CF7 /* ValidationService.swift in Sources */,
+				CEA024EF2C65152500CA0CF7 /* CustomPasswordTextField.swift in Sources */,
+				CEC6BC492C677C160033A30E /* LoginVM.swift in Sources */,
 				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
 				786896C62C637DF20038B60C /* NSObject.swift in Sources */,
 				786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
 				E1A276772C665A600056D225 /* FloatingLabelInput.swift in Sources */,
+				CEBB3F222C6768A600042C52 /* RecipeRequestInterceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -592,7 +766,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -618,7 +792,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,7 +823,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -702,6 +876,22 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 7.1.0;
+				};
+		};
+		CE8A6D592C661CA600DE54C5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		CE8FACA82C68CEBB00A1527A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
 			};
 		};
 		FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
@@ -729,6 +919,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E1E1FDF82C6782F700862CFC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		CE8A6D5A2C661CA600DE54C5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8A6D592C661CA600DE54C5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CE8FACA92C68CEBB00A1527A /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE8FACA82C68CEBB00A1527A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		FE2636D92C5FF58C00B907CC /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

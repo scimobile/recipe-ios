@@ -21,37 +21,56 @@
 			</array>
 		</dict>
 	</dict>
-    <key>CFBundleURLTypes</key>
-    <array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.451862807740-imjgdqvcs8qef0kdteur00befhbpccgh</string>
+				<string>fb1164410451492898</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>451862807740-imjgdqvcs8qef0kdteur00befhbpccgh.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>451862807740-gpjt43g8pkvbo9rua9oq9oltr4bhmgfj.apps.googleusercontent.com</string>
+	<key>FacebookAppID</key>
+	<string>1164410451492898</string>
+	<key>FacebookClientToken</key>
+	<string>8aea5f0080abc21022e51bb721f6b1f9</string>
+	<key>FacebookDisplayName</key>
+	<string>TryLoginIOS</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
+	<key>BASE_URL</key>
+	<string>http://54.179.102.152/api</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+	</array>
+    
+        <key>NSExceptionDomains</key>
         <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>com.googleusercontent.apps.451862807740-imjgdqvcs8qef0kdteur00befhbpccgh</string>
-                <string>fb1164410451492898</string>
-            </array>
+            <key>54.179.102.152</key>
+            <dict>
+                <!--Include to allow subdomains-->
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <!--Include to allow HTTP requests-->
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <!--Include to specify minimum TLS version-->
+                <key>NSTemporaryExceptionMinimumTLSVersion</key>
+                <string>TLSv1.1</string>
+            </dict>
         </dict>
-    </array>
-    <key>GIDClientID</key>
-    <string>451862807740-imjgdqvcs8qef0kdteur00befhbpccgh.apps.googleusercontent.com</string>
-    <key>GIDServerClientID</key>
-    <string>451862807740-gpjt43g8pkvbo9rua9oq9oltr4bhmgfj.apps.googleusercontent.com</string>
-    <key>FacebookAppID</key>
-    <string>1164410451492898</string>
-    <key>FacebookClientToken</key>
-    <string>8aea5f0080abc21022e51bb721f6b1f9</string>
-    <key>FacebookDisplayName</key>
-    <string>TryLoginIOS</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-share-api</string>
-    </array>
-    <key>UIAppFonts</key>
-    <array>
-        <string>Poppins-Bold.ttf</string>
-        <string>Poppins-Medium.ttf</string>
-        <string>Poppins-Regular.ttf</string>
-        <string>Poppins-SemiBold.ttf</string>
-    </array>
+ 
 </dict>
 </plist>

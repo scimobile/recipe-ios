@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SignupVC: UIViewController {
 
     @IBOutlet weak var tfDisplayName: FloatingLabelInput!
@@ -25,8 +26,10 @@ class SignupVC: UIViewController {
     
     @IBOutlet weak var btnTnC: UIButton!
     
+    @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var btnPassword: UIButton!
     @IBOutlet weak var btnConfirmPassword: UIButton!
+    
     private var acceptedTnC: Bool = false {
         didSet {
             ImgCheck.image =  UIImage(named: acceptedTnC ? "ic.check" : "ic.uncheck")
@@ -59,9 +62,15 @@ class SignupVC: UIViewController {
         btnNext.isEnabled = false
         btnNext.backgroundColor = .disabledBtn
         btnNext.setButtonTitleStyle(.popSemiB14, .pureWhite)
+        btnRegister.addTarget(self, action: #selector(onClickRegisterBtn), for: .touchUpInside)
         navigationController?.isNavigationBarHidden = true
 
 
+    }
+    
+    @objc func onClickRegisterBtn() {
+        vm.register()
+        
     }
     
     @IBAction func onClickBackBtn(_ sender: UIButton) {
@@ -124,10 +133,26 @@ class SignupVC: UIViewController {
         lblPassword.isHidden = true
         lblConfirmPassword.isHidden = true
     }
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 
     
 }
 extension SignupVC: SignupViewDelegate {
+    func onUserAlreadyExist() {
+    
+    }
+    
+    func onRegisterSuccess() {
+        DispatchQueue.main.async {
+            self.showAlert(message: "Register Success")
+        }
+        
+    }
+    
     func onValidate(validationError: [SignupVM.FormInput]) {
        print(validationError.count)
         if validationError.isEmpty {
@@ -156,12 +181,11 @@ extension SignupVC: SignupViewDelegate {
     }
     
     func onError(error: String) {
-    
+        DispatchQueue.main.async {
+            self.showAlert(message: error)
+            print("DEBUG: \(error.localizedCapitalized)")
+        }
     }
-    
-    func onLoginSuccess() {
-    
-    }
-    
+
     
 }
