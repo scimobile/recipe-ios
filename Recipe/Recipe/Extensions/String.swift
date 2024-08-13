@@ -20,7 +20,7 @@ extension Optional where Wrapped == String {
 
 extension Optional where Wrapped == String {
     var isValidPassword: Bool {
-        guard let password = self, !password.isEmpty, password.wholeMatch(of: passwordRegex) != nil else { return false }
+        guard let password = self, !password.isEmpty, password.wholeMatch(of: passwordCheckRegex) != nil else { return false }
         return true
     }
 }

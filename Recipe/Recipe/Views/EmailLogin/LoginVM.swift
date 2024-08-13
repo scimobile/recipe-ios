@@ -50,7 +50,7 @@ class LoginVM {
     func login() {
   
 
-        if let email = email, let password = password, !email.isEmpty, !password.isEmpty, ValidationService.validatePassword(password), ValidationService.validateEmail(email){
+        if let email = email, let password = password, !email.isEmpty, !password.isEmpty {
             repository.login(
                 email: email,
                 password: password,
@@ -73,6 +73,14 @@ class LoginVM {
     private func validate() {
         var errors: [LoginVM.FormInput ] = []
         
+        if email.isValidEmail == false {
+            errors.append(FormInput.UserNameTextField("*Email is not valid"))
+        }
+        print(password)
+        if !password.isValidPassword {
+            errors.append(FormInput.PasswordTextField("*Password is not valid"))
+        }
+    
 //        if !ValidationService.validateEmail(email!) {
 //            errors.append(
 //                FormInput.UserNameTextField("* Username cannot be empty")

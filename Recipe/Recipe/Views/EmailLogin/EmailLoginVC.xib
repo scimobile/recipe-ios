@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmailLoginVC" customModule="Recipe" customModuleProvider="target">
             <connections>
+                <outlet property="btnBack" destination="KBA-j4-ajY" id="rbm-Be-kM3"/>
+                <outlet property="btnClear" destination="zSs-sd-Q77" id="HTk-lx-sLT"/>
+                <outlet property="btnPasswordIcon" destination="7Kp-yM-xhw" id="V3S-y6-l5E"/>
                 <outlet property="emailTextField" destination="XbD-UQ-KCI" id="gLB-pF-BnW"/>
                 <outlet property="loginButton" destination="sDj-jk-2dR" id="zFc-J8-NKf"/>
-                <outlet property="passwordTextField" destination="Isv-f7-eR5" id="0ry-1P-6kP"/>
+                <outlet property="passwordTextField" destination="g2N-Rt-JEn" id="tNi-5q-ZOY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,42 +37,124 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Nqy-fr-0qN">
-                    <rect key="frame" x="20" y="79" width="353" height="292.66666666666669"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zl-cJ-xdg" userLabel="HeaderView">
+                    <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-7H-O96">
-                            <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBA-j4-ajY">
+                            <rect key="frame" x="20" y="10" width="38" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="U5f-gM-px2"/>
+                                <constraint firstAttribute="width" constant="38" id="bsh-gv-2gK"/>
+                            </constraints>
+                            <color key="tintColor" name="171717"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic.arrow.left">
+                                <color key="titleColor" name="171717"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="KBA-j4-ajY" secondAttribute="bottom" constant="10" id="Imp-45-93Q"/>
+                        <constraint firstItem="KBA-j4-ajY" firstAttribute="leading" secondItem="0Zl-cJ-xdg" secondAttribute="leading" constant="20" id="NyM-OR-9Qe"/>
+                        <constraint firstItem="KBA-j4-ajY" firstAttribute="top" secondItem="0Zl-cJ-xdg" secondAttribute="top" constant="10" id="Xtc-pe-UYd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjL-Lx-ceR" userLabel="LineView">
+                    <rect key="frame" x="0.0" y="109" width="393" height="0.3333333333333286"/>
+                    <color key="backgroundColor" name="C3C3C3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.25" id="b5Y-MQ-8Ot"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Nqy-fr-0qN">
+                    <rect key="frame" x="20" y="129.33333333333337" width="353" height="356"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPM-7H-O96">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="36.666666666666664"/>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="26"/>
+                            <color key="textColor" name="171717"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back? You’re just a tap away from something delicious." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9E-se-NxY">
+                            <rect key="frame" x="0.0" y="76.666666666666657" width="353" height="39.333333333333343"/>
+                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9E-se-NxY">
-                            <rect key="frame" x="0.0" y="54" width="353" height="40.666666666666657"/>
-                            <string key="text">Welcome back?You'e just a tap away from 
-something delicious.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbD-UQ-KCI" customClass="MaterialTextField" customModule="Recipe" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="124.66666666666666" width="353" height="34"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbD-UQ-KCI" customClass="FloatingLabelInput" customModule="Recipe" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="155.99999999999997" width="353" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="DPy-M9-7Vu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                             <textInputTraits key="textInputTraits" textContentType="email"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="_bottomBorderColor">
+                                    <color key="value" name="6B7280"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Isv-f7-eR5" customClass="CustomPasswordTextField" customModule="Recipe" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="188.66666666666669" width="353" height="34"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ge-fu-Iqi">
+                            <rect key="frame" x="0.0" y="235.99999999999997" width="353" height="40.000000000000028"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2N-Rt-JEn" customClass="FloatingLabelInput" customModule="Recipe" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Password"/>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="_bottomBorderColor">
+                                            <color key="value" name="6B7280"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kp-yM-xhw" userLabel="Eyebtn">
+                                    <rect key="frame" x="337" y="14.333333333333371" width="16" height="11"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="11" id="Kg4-5V-vVh"/>
+                                        <constraint firstAttribute="width" constant="16" id="eU9-F6-MSP"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="ic.show-psw"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-sd-Q77" userLabel="Clearbtn">
+                                    <rect key="frame" x="306" y="12" width="16" height="16"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16" id="C0Q-cW-xQc"/>
+                                        <constraint firstAttribute="width" constant="16" id="xHC-5I-XBa"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.84705882352941175" green="0.85882352941176465" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="5Et-ud-BEu"/>
+                                <constraint firstItem="7Kp-yM-xhw" firstAttribute="leading" secondItem="zSs-sd-Q77" secondAttribute="trailing" constant="15" id="E9E-9s-IdK"/>
+                                <constraint firstItem="zSs-sd-Q77" firstAttribute="centerY" secondItem="7Kp-yM-xhw" secondAttribute="centerY" id="Feu-io-wc4"/>
+                                <constraint firstAttribute="trailing" secondItem="g2N-Rt-JEn" secondAttribute="trailing" id="Ul4-mH-adf"/>
+                                <constraint firstItem="g2N-Rt-JEn" firstAttribute="top" secondItem="2ge-fu-Iqi" secondAttribute="top" id="ZGN-Na-l7E"/>
+                                <constraint firstItem="g2N-Rt-JEn" firstAttribute="leading" secondItem="2ge-fu-Iqi" secondAttribute="leading" id="d5z-lW-Vq0"/>
+                                <constraint firstAttribute="bottom" secondItem="g2N-Rt-JEn" secondAttribute="bottom" id="dgP-IN-GUZ"/>
+                                <constraint firstItem="7Kp-yM-xhw" firstAttribute="centerY" secondItem="g2N-Rt-JEn" secondAttribute="centerY" id="pAB-oW-HVD"/>
+                                <constraint firstAttribute="trailing" secondItem="7Kp-yM-xhw" secondAttribute="trailing" id="ucK-Zq-6hR"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDj-jk-2dR">
-                            <rect key="frame" x="0.0" y="252.66666666666669" width="353" height="40"/>
+                            <rect key="frame" x="0.0" y="316" width="353" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="j2S-tP-Pwy"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="START COOKING!" cornerStyle="capsule">
-                                <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                            </buttonConfiguration>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="START COOKING!"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
                 </stackView>
@@ -64,19 +162,34 @@ something delicious.</string>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Nqy-fr-0qN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="U9R-9b-M2h"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nqy-fr-0qN" secondAttribute="trailing" constant="20" id="mwu-7x-D9a"/>
-                <constraint firstItem="Nqy-fr-0qN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="ymb-05-pfY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Nqy-fr-0qN" secondAttribute="trailing" constant="20" id="0mj-ho-WDO"/>
+                <constraint firstItem="UjL-Lx-ceR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1wH-XT-vbg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Zl-cJ-xdg" secondAttribute="trailing" id="D0y-Am-UbE"/>
+                <constraint firstItem="Nqy-fr-0qN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QkP-Bi-PTU"/>
+                <constraint firstAttribute="trailing" secondItem="UjL-Lx-ceR" secondAttribute="trailing" id="SWM-Mq-qq7"/>
+                <constraint firstItem="UjL-Lx-ceR" firstAttribute="top" secondItem="0Zl-cJ-xdg" secondAttribute="bottom" id="XPn-8N-adT"/>
+                <constraint firstItem="0Zl-cJ-xdg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="x4I-AN-U9I"/>
+                <constraint firstItem="Nqy-fr-0qN" firstAttribute="top" secondItem="UjL-Lx-ceR" secondAttribute="bottom" constant="20" id="xuS-hL-k6z"/>
+                <constraint firstItem="0Zl-cJ-xdg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ydV-hE-UbM"/>
             </constraints>
-            <point key="canvasLocation" x="111" y="-20"/>
+            <point key="canvasLocation" x="110.68702290076335" y="-20.422535211267608"/>
         </view>
     </objects>
     <resources>
+        <image name="ic.arrow.left" width="18" height="14.333333015441895"/>
+        <image name="ic.show-psw" width="16" height="11.333333015441895"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="171717">
+            <color red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="6B7280">
+            <color red="0.41960784313725491" green="0.44705882352941179" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="C3C3C3">
+            <color red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

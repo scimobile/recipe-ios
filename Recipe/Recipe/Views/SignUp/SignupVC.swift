@@ -161,6 +161,9 @@ extension SignupVC: SignupViewDelegate {
             resetErrors()
         } else {
             
+            btnNext.isEnabled = false
+            btnNext.backgroundColor = .disabledBtn
+            
             validationError.forEach { inputType in
                 switch inputType {
                 case .DisplayNameTextField(let error):

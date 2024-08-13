@@ -51,13 +51,15 @@ class FloatingLabelInput: UITextField {
         }
     }
     
+
+    
     var bottomBorder = UIView()
     override func awakeFromNib() {
 
         //MARK: Setup Bottom-Border
         self.translatesAutoresizingMaskIntoConstraints = false
         bottomBorder = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        bottomBorder.backgroundColor = UIColor(named: "C3C3C3")
+        bottomBorder.backgroundColor = _bottomBorderColor
         bottomBorder.translatesAutoresizingMaskIntoConstraints = false
         addSubview(bottomBorder)
         //Mark: Setup Anchors
@@ -67,6 +69,13 @@ class FloatingLabelInput: UITextField {
         bottomBorder.heightAnchor.constraint(equalToConstant: 0.5).isActive = true // Set Border-Strength
 
        }
+    
+    @IBInspectable
+    var _bottomBorderColor: UIColor = UIColor.white {
+        didSet {
+            bottomBorder.backgroundColor = self._bottomBorderColor
+        }
+    }
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -92,7 +101,7 @@ class FloatingLabelInput: UITextField {
             self.addSubview(self.floatingLabel)
             self.layer.borderColor = self.activeBorderColor.cgColor
             
-            self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -10).isActive = true // Place our label 10 pts above the text field
+            self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -5).isActive = true // Place our label 10 pts above the text field
             self.placeholder = ""
         }
         // Floating label may be stuck behind text input. we bring it forward as it was the last item added to the view heirachy

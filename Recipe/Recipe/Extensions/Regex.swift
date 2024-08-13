@@ -8,6 +8,50 @@
 import Foundation
 import RegexBuilder
 
+
+let passwordCheckRegex = Regex {
+    /^/
+    Lookahead {
+        Regex {
+            ZeroOrMore {
+                /./
+            }
+            Repeat(2...) {
+                One(.digit)
+            }
+        }
+    }
+    Lookahead {
+        Regex {
+            ZeroOrMore {
+                /./
+            }
+            CharacterClass(
+                ("a"..."z"),
+                ("A"..."Z")
+            )
+        }
+    }
+    Lookahead {
+        Regex {
+            ZeroOrMore {
+                /./
+            }
+            One(.anyOf("!@#$%^&*()_+-=[]{};':\"\\|,.<>/?"))
+        }
+    }
+    Repeat(9...) {
+        CharacterClass(
+            .anyOf("!@#$%^&*()_+-=[]{};':\"\\|,.<>/?"),
+            ("A"..."Z"),
+            ("a"..."z"),
+            .digit
+        )
+    }
+    /$/
+}
+
+
 let passwordRegex = Regex {
     /^/
     Lookahead {

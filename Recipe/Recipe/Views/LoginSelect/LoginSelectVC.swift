@@ -18,19 +18,61 @@ class LoginSelectVC: UIViewController {
     @IBOutlet weak var btnGoogleLogin: UIButton!
     @IBOutlet weak var btnCreateAccount: UIButton!
     
+    @IBOutlet weak var lblTC: UILabel!
     @IBOutlet weak var btnFacebookLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.checkUserLoginStatus()
 
+        setUnderLine()
+      
+    }
+    
+    func setUnderLine() {
+        // The full text for the label
+        let fullText = "By using SideChef, you agree to our Privacy Notice and Terms of Use"
+
+        // The word or phrase you want to underline
+        let wordToUnderline = "Privacy Notice"
+        let wordToUnderline2 = "Terms of Use"
+
+        // Create an attributed string
+        let attributedString = NSMutableAttributedString(string: fullText)
+
+        // Find the range of the word or phrase you want to underline
+        if let range = fullText.range(of: wordToUnderline) {
+            let nsRange = NSRange(range, in: fullText)
+            
+            // Apply the underline attribute to the desired range
+            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: nsRange)
+        }
+        
+        if let range = fullText.range(of: wordToUnderline2) {
+            let nsRange = NSRange(range, in: fullText)
+            
+            // Apply the underline attribute to the desired range
+            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: nsRange)
+        }
+
+
+        // Set the attributed text to the label
+        lblTC.attributedText = attributedString
+    }
+    
+    func setupUI() {
+        
+        
         btnEmail.addTarget(self, action: #selector(navigateToEmailScreen), for: .touchUpInside)
         btnCreateAccount.addTarget(self, action: #selector(navigateToRegisterScreen), for: .touchUpInside)
         
         btnGoogleLogin.addTarget(self, action: #selector(onClickGoogleLogin), for: .touchUpInside)
-        
+        btnCreateAccount.setTitle("Already have an account?", for: .normal)
+        btnCreateAccount.setTitleUnderLine(title: "Log In")
         btnFacebookLogin.addTarget(self, action: #selector(onClickFacebooLogin), for: .touchUpInside)
     }
+    
+
     
     @objc func onClickFacebooLogin() {
         let loginManager = LoginManager()
@@ -88,16 +130,14 @@ class LoginSelectVC: UIViewController {
             guard let signInResult = signInResult else { return }
 
                 let user = signInResult.user
-            
-            
-
+         
                 let emailAddress = user.profile?.email
             
                 let fullName = user.profile?.name
                 let givenName = user.profile?.givenName
                 let familyName = user.profile?.familyName
             
-            print("loginGoogle \(String(describing: user.accessToken))")
+            print("loginGoogle \(String(describing: user.accessToken.tokenString))")
 
                 let profilePicUrl = user.profile?.imageURL(withDimension: 320)
          }
