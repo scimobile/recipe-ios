@@ -25,41 +25,10 @@ class LoginSelectVC: UIViewController {
         
         self.checkUserLoginStatus()
 
-        setUnderLine()
-      
+        setupUI()
     }
     
-    func setUnderLine() {
-        // The full text for the label
-        let fullText = "By using SideChef, you agree to our Privacy Notice and Terms of Use"
 
-        // The word or phrase you want to underline
-        let wordToUnderline = "Privacy Notice"
-        let wordToUnderline2 = "Terms of Use"
-
-        // Create an attributed string
-        let attributedString = NSMutableAttributedString(string: fullText)
-
-        // Find the range of the word or phrase you want to underline
-        if let range = fullText.range(of: wordToUnderline) {
-            let nsRange = NSRange(range, in: fullText)
-            
-            // Apply the underline attribute to the desired range
-            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: nsRange)
-        }
-        
-        if let range = fullText.range(of: wordToUnderline2) {
-            let nsRange = NSRange(range, in: fullText)
-            
-            // Apply the underline attribute to the desired range
-            attributedString.addAttribute(.underlineStyle, value: NSUnderlineStyle.single.rawValue, range: nsRange)
-        }
-
-
-        // Set the attributed text to the label
-        lblTC.attributedText = attributedString
-    }
-    
     func setupUI() {
         
         
@@ -67,11 +36,21 @@ class LoginSelectVC: UIViewController {
         btnCreateAccount.addTarget(self, action: #selector(navigateToRegisterScreen), for: .touchUpInside)
         
         btnGoogleLogin.addTarget(self, action: #selector(onClickGoogleLogin), for: .touchUpInside)
-        btnCreateAccount.setTitle("Already have an account?", for: .normal)
-        btnCreateAccount.setTitleUnderLine(title: "Log In")
         btnFacebookLogin.addTarget(self, action: #selector(onClickFacebooLogin), for: .touchUpInside)
+        
+        setUpFooterText()
+       
     }
     
+    func setUpFooterText() {
+        
+        let fullText = "By using SideChef, you agree to our Privacy Notice and Terms of Use"
+        let underlinedWordsWithActions: [(word: String, action: () -> Void, font: UIFont?)] = [
+                   ("Privacy Notice", { print("First word tapped!") }, UIFont(name: "Courier", size: 14)),
+                   ("Terms of Use", { print("Second word tapped!") }, UIFont(name: "Courier", size: 14))
+               ]
+        lblTC.setUnderlinedTextWithActions(fullText: fullText, underlinedWordsWithActions: underlinedWordsWithActions)
+    }
 
     
     @objc func onClickFacebooLogin() {
