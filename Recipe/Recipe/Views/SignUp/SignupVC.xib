@@ -80,13 +80,13 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMu-RQ-FQp">
                                             <rect key="frame" x="20" y="19.999999999999996" width="353" height="33.666666666666657"/>
                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="SignupTitle"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save delicious recipes and get personalized content." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bls-Zb-b7S">
                                             <rect key="frame" x="20" y="73.666666666666671" width="353" height="39.333333333333329"/>
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="SignupTitle"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -114,7 +114,7 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Display Name"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="_bottomBorderColor">
-                                                    <color key="value" name="C3C3C3"/>
+                                                    <color key="value" name="TextFieldBottomDividerLight"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -149,7 +149,7 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Email"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="_bottomBorderColor">
-                                                    <color key="value" name="C3C3C3"/>
+                                                    <color key="value" name="TextFieldBottomDivider"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -184,7 +184,7 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Password"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="_bottomBorderColor">
-                                                    <color key="value" name="C3C3C3"/>
+                                                    <color key="value" name="TextFieldBottomDivider"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -230,7 +230,7 @@
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="_placeholder" value="Confirm Password"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="_bottomBorderColor">
-                                                    <color key="value" name="C3C3C3"/>
+                                                    <color key="value" name="TextFieldBottomDivider"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
@@ -371,6 +371,15 @@
         <image name="ic.show-psw" width="16" height="11.333333015441895"/>
         <image name="ic.uncheck" width="800" height="800"/>
         <namedColor name="C3C3C3">
+            <color red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SignupTitle">
+            <color red="0.14509803921568629" green="0.15294117647058825" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBottomDivider">
+            <color red="0.41960784313725491" green="0.44705882352941179" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextFieldBottomDividerLight">
             <color red="0.76470588235294112" green="0.76470588235294112" blue="0.76470588235294112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">

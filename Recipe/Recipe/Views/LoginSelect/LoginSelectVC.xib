@@ -39,7 +39,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yYg-8I-j2o">
                     <rect key="frame" x="20" y="483.66666666666674" width="353" height="314.33333333333326"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic.app-logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-vS-FHT">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img.logo" translatesAutoresizingMaskIntoConstraints="NO" id="KJb-vS-FHT">
                             <rect key="frame" x="0.0" y="0.0" width="353" height="32"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
@@ -83,7 +83,7 @@
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" image="ic.email" title="   LOGIN WITH EMAIL" cornerStyle="capsule">
+                            <buttonConfiguration key="configuration" style="filled" image="ic.email" title="  SIGN UP WITH EMAIL" cornerStyle="capsule">
                                 <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                 <color key="baseForegroundColor" systemColor="labelColor"/>
                                 <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,10 +191,10 @@ Terms of Use</string>
     </objects>
     <resources>
         <image name="SignupBg" width="375" height="812"/>
-        <image name="ic.app-logo-white" width="179" height="32"/>
         <image name="ic.email" width="18" height="15"/>
         <image name="ic.facebook" width="9" height="18"/>
         <image name="ic.google" width="18" height="18"/>
+        <image name="img.logo" width="179" height="32"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

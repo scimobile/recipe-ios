@@ -48,8 +48,6 @@ class LoginVM {
     }
     
     func login() {
-  
-
         if let email = email, let password = password, !email.isEmpty, !password.isEmpty {
             repository.login(
                 email: email,
@@ -76,23 +74,9 @@ class LoginVM {
         if email.isValidEmail == false {
             errors.append(FormInput.UserNameTextField("*Email is not valid"))
         }
-        print(password)
         if !password.isValidPassword {
             errors.append(FormInput.PasswordTextField("*Password is not valid"))
         }
-    
-//        if !ValidationService.validateEmail(email!) {
-//            errors.append(
-//                FormInput.UserNameTextField("* Username cannot be empty")
-//            )
-//        }
-//        
-//        if !ValidationService.validatePassword(password!) {
-//            errors.append(
-//                FormInput.PasswordTextField("* Password cannot be empty")
-//            )
-//        }
-        
         delegate.onValidate(validationError: errors)
     }
 }

@@ -15,7 +15,7 @@ protocol SignupViewDelegate {
     func onRegisterSuccess()
     
     func onUserAlreadyExist()
-     
+    
 }
 
 class SignupVM {
@@ -26,8 +26,6 @@ class SignupVM {
         case PasswordTextField(String)
         case ConfirmPasswordTextField(String)
     }
-    
-    
     
     private let delegate: SignupViewDelegate
     
@@ -52,7 +50,7 @@ class SignupVM {
         }
     }
     private let repository: AuthRepository = .init()
-
+    
     func setEmail(email: String?) {
         self.email = email
     }
@@ -104,18 +102,15 @@ class SignupVM {
                 }
         }
     }
-
-         
-
+    
+    
+    
     private func validate() {
         
         var errors: [SignupVM.FormInput] = []
-        
         if displayName == nil || displayName == "" {
             errors.append(FormInput.DisplayNameTextField("*Display name cannot be empty"))
         }
-    
-        print(email.isValidEmail)
         if email.isValidEmail == false {
             errors.append(FormInput.EmailTextField("*Email is not valid"))
         }
@@ -128,9 +123,6 @@ class SignupVM {
         if password != confirmPassword  {
             errors.append(FormInput.PasswordTextField("*Password does not match"))
         }
-        
-        
-        
         delegate.onValidate(validationError: errors)
     }
 }

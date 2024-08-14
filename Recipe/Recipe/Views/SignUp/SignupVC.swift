@@ -7,25 +7,19 @@
 
 import UIKit
 
-
 class SignupVC: UIViewController {
-
+    
     @IBOutlet weak var tfDisplayName: FloatingLabelInput!
     @IBOutlet weak var btnNext: UIButton!
-    
     @IBOutlet weak var ImgCheck: UIImageView!
     @IBOutlet weak var tfEmail: FloatingLabelInput!
-    
     @IBOutlet weak var tfPassword: FloatingLabelInput!
     @IBOutlet weak var tfConfirmPassword: FloatingLabelInput!
-    
     @IBOutlet weak var lblDisplayNameError: UILabel!
     @IBOutlet weak var lblEmailError: UILabel!
     @IBOutlet weak var lblPassword: UILabel!
     @IBOutlet weak var lblConfirmPassword: UILabel!
-    
     @IBOutlet weak var btnTnC: UIButton!
-    
     @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var btnPassword: UIButton!
     @IBOutlet weak var btnConfirmPassword: UIButton!
@@ -47,7 +41,7 @@ class SignupVC: UIViewController {
             tfConfirmPassword.isSecureTextEntry = isConfirmSecure
         }
     }
-
+    
     
     lazy var vm: SignupVM = .init(delegate: self)
     
@@ -57,35 +51,30 @@ class SignupVC: UIViewController {
         setupBinding()
         // Do any additional setup after loading the view.
     }
-
+    
     private func setupUI() {
         btnNext.isEnabled = false
         btnNext.backgroundColor = .disabledBtn
         btnNext.setButtonTitleStyle(.popSemiB14, .pureWhite)
         btnRegister.addTarget(self, action: #selector(onClickRegisterBtn), for: .touchUpInside)
         navigationController?.isNavigationBarHidden = true
-
-
     }
     
     @objc func onClickRegisterBtn() {
         vm.register()
-        
     }
     
     @IBAction func onClickBackBtn(_ sender: UIButton) {
-        
         navigationController?.popViewController(animated: true)
     }
+    
     private func setupBinding() {
         
         tfDisplayName.addTarget(self, action: #selector(onChangeDisplayName), for: .editingChanged)
         tfEmail.addTarget(self, action: #selector(onChangeEmailName), for: .editingChanged)
         tfPassword.addTarget(self, action:#selector(onChangePassword), for: .editingChanged)
         tfConfirmPassword.addTarget(self, action:#selector(onChangeConfirmPassword), for: .editingChanged)
-        
         btnTnC.addTarget(self, action: #selector(onChangeTnC), for: .touchUpInside)
-        
         btnConfirmPassword.addTarget(self, action: #selector(onClickConfirmPassword), for: .touchUpInside)
         btnPassword.addTarget(self, action: #selector(onClickPassword), for: .touchUpInside)
     }
@@ -98,16 +87,12 @@ class SignupVC: UIViewController {
         isPasswordSecure = !isPasswordSecure
     }
     
-
-    
     @objc func onChangeTnC() {
         acceptedTnC = !acceptedTnC
     }
     
-    
     @objc func onChangeDisplayName() {
         vm.setDisplayName(displayName: tfDisplayName.text)
-        
     }
     
     @objc func onChangeEmailName() {
@@ -133,17 +118,17 @@ class SignupVC: UIViewController {
         lblPassword.isHidden = true
         lblConfirmPassword.isHidden = true
     }
+    
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-
     
 }
 extension SignupVC: SignupViewDelegate {
     func onUserAlreadyExist() {
-    
+        
     }
     
     func onRegisterSuccess() {
@@ -154,7 +139,7 @@ extension SignupVC: SignupViewDelegate {
     }
     
     func onValidate(validationError: [SignupVM.FormInput]) {
-       print(validationError.count)
+        print(validationError.count)
         if validationError.isEmpty {
             btnNext.isEnabled = true
             btnNext.backgroundColor = .activeOrange
@@ -167,16 +152,16 @@ extension SignupVC: SignupViewDelegate {
             validationError.forEach { inputType in
                 switch inputType {
                 case .DisplayNameTextField(let error):
-                        setErrorMesage(with: lblDisplayNameError, and: error)
+                    setErrorMesage(with: lblDisplayNameError, and: error)
                     break;
                 case .EmailTextField(let error):
-                        setErrorMesage(with: lblEmailError, and: error)
+                    setErrorMesage(with: lblEmailError, and: error)
                     break;
                 case .PasswordTextField(let error):
-                        setErrorMesage(with: lblPassword, and: error)
+                    setErrorMesage(with: lblPassword, and: error)
                     break;
                 case .ConfirmPasswordTextField(let error):
-                        setErrorMesage(with: lblConfirmPassword, and: error)
+                    setErrorMesage(with: lblConfirmPassword, and: error)
                     break;
                 }
             }
@@ -189,6 +174,6 @@ extension SignupVC: SignupViewDelegate {
             print("DEBUG: \(error.localizedCapitalized)")
         }
     }
-
+    
     
 }

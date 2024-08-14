@@ -10,48 +10,38 @@ import FacebookLogin
 import GoogleSignIn
 
 class LoginSelectVC: UIViewController {
-
+    
     // MARK: Properties
     
     @IBOutlet weak var btnEmail: UIButton!
-    
     @IBOutlet weak var btnGoogleLogin: UIButton!
     @IBOutlet weak var btnCreateAccount: UIButton!
-    
     @IBOutlet weak var lblTC: UILabel!
     @IBOutlet weak var btnFacebookLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.checkUserLoginStatus()
-
         setupUI()
     }
     
-
     func setupUI() {
-        
-        
         btnEmail.addTarget(self, action: #selector(navigateToEmailScreen), for: .touchUpInside)
         btnCreateAccount.addTarget(self, action: #selector(navigateToRegisterScreen), for: .touchUpInside)
         
         btnGoogleLogin.addTarget(self, action: #selector(onClickGoogleLogin), for: .touchUpInside)
         btnFacebookLogin.addTarget(self, action: #selector(onClickFacebooLogin), for: .touchUpInside)
-        
         setUpFooterText()
-       
     }
     
     func setUpFooterText() {
-        
         let fullText = "By using SideChef, you agree to our Privacy Notice and Terms of Use"
         let underlinedWordsWithActions: [(word: String, action: () -> Void, font: UIFont?)] = [
-                   ("Privacy Notice", { print("First word tapped!") }, UIFont(name: "Courier", size: 14)),
-                   ("Terms of Use", { print("Second word tapped!") }, UIFont(name: "Courier", size: 14))
-               ]
+            ("Privacy Notice", { print("First word tapped!") }, UIFont(name: "Courier", size: 14)),
+            ("Terms of Use", { print("Second word tapped!") }, UIFont(name: "Courier", size: 14))
+        ]
         lblTC.setUnderlinedTextWithActions(fullText: fullText, underlinedWordsWithActions: underlinedWordsWithActions)
     }
-
+    
     
     @objc func onClickFacebooLogin() {
         let loginManager = LoginManager()
@@ -68,7 +58,6 @@ class LoginSelectVC: UIViewController {
                 return
             }
             
-          
             if result.isCancelled {
                 // Handle case where user cancelled the login
                 print("Login cancelled by user")
@@ -102,45 +91,31 @@ class LoginSelectVC: UIViewController {
     
     @objc func onClickGoogleLogin() {
         GIDSignIn.sharedInstance.signIn(withPresenting: self) { signInResult, error in
-           guard error == nil else { return }
-
-           // If sign in succeeded, display the app's main content View.
-           
+            guard error == nil else { return }
+            
+            // If sign in succeeded, display the app's main content View.
             guard let signInResult = signInResult else { return }
-
-                let user = signInResult.user
-         
-                let emailAddress = user.profile?.email
             
-                let fullName = user.profile?.name
-                let givenName = user.profile?.givenName
-                let familyName = user.profile?.familyName
-            
+            let user = signInResult.user
+            let emailAddress = user.profile?.email
+            let fullName = user.profile?.name
+            let givenName = user.profile?.givenName
+            let familyName = user.profile?.familyName
             print("loginGoogle \(String(describing: user.accessToken.tokenString))")
-
-                let profilePicUrl = user.profile?.imageURL(withDimension: 320)
-         }
+            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            
+        }
         
     }
     
     @objc func navigateToEmailScreen() {
-        print("Email Screen")
-        
-        let emailLoginVC = EmailLoginVC()
-//        emailLoginVC.modalPresentationStyle = .fullScreen
-//        self.present(emailLoginVC, animated: true)
-        
-        navigationController?.pushViewController(emailLoginVC, animated: true)
-        
+        let signupVC = SignupVC()
+        navigationController?.pushViewController(signupVC, animated: true)
     }
     
     @objc func navigateToRegisterScreen() {
-        print("Email Screen")
-        
-        let signupVC = SignupVC()
-        
-        navigationController?.pushViewController(signupVC, animated: true)
-        
+        let emailLoginVC = EmailLoginVC()
+        navigationController?.pushViewController(emailLoginVC, animated: true)
     }
     
     
@@ -149,5 +124,5 @@ class LoginSelectVC: UIViewController {
             print("DEBUG: HomeScreen")
         }
     }
-
+    
 }

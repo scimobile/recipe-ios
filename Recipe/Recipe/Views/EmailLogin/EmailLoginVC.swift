@@ -9,17 +9,14 @@ import UIKit
 
 
 class EmailLoginVC: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var btnBack: UIButton!
-    
     @IBOutlet weak var btnClear: UIButton!
     @IBOutlet weak var btnPasswordIcon: UIButton!
+    
     var passwordShowHide: Bool = false {
         didSet {
             passwordTextField.isSecureTextEntry = passwordShowHide
@@ -36,7 +33,6 @@ class EmailLoginVC: UIViewController {
     }
     
     // MARK: Selector
-    
     func setupUI() {
         
         emailTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
@@ -44,19 +40,13 @@ class EmailLoginVC: UIViewController {
         loginButton.addTarget(self, action: #selector(onTapLogin), for: .touchUpInside)
         updateLoginButtonState()
         btnBack.addTarget(self, action: #selector(onTapBack), for: .touchUpInside)
-        
         btnClear.addTarget(self, action: #selector(onTapClearButton), for: .touchUpInside)
-        
-        //btnLogin.setTitleUnderLine(title: "Log In")
         loginButton.isEnabled = false
         loginButton.backgroundColor = .disabledBtn
         loginButton.setTitleColor(.pureWhite, for: .normal)
-       // loginButton.backgroundColor = .activeOrange
-       //btnLogin.setTitleUnderLine(title: "Log In")
         btnPasswordIcon.addTarget(self, action: #selector(onTapPasswordIcon), for: .touchUpInside)
         btnClear.isHidden = true
         navigationController?.isNavigationBarHidden = true
-        
     }
     
     @objc func onTapClearButton() {
@@ -67,7 +57,6 @@ class EmailLoginVC: UIViewController {
     }
     
     @objc func onTapPasswordIcon() {
-        
         passwordShowHide = !passwordShowHide
     }
     
@@ -77,7 +66,6 @@ class EmailLoginVC: UIViewController {
     
     @objc func onTapBack() {
         navigationController?.popViewController(animated: true)
-
     }
     
     @objc func textFieldDidChange() {
@@ -85,6 +73,7 @@ class EmailLoginVC: UIViewController {
     }
     
     func updateLoginButtonState() {
+        
         let email = emailTextField.text
         let password = passwordTextField.text
         
@@ -92,16 +81,11 @@ class EmailLoginVC: UIViewController {
             btnClear.isHidden = false
         }
         
-        
         vm.setEmail(email: email)
         vm.setPassword(password: password)
         
-//        if let email = email, let password = password, !email.isEmpty, !password.isEmpty {
-//            loginButton.isEnabled = ValidationService.validateEmail(email) && ValidationService.validatePassword(password)
-//        }
-       
     }
-
+    
     // MARK: Helpers
     
     func showAlert(message: String) {
@@ -115,7 +99,6 @@ extension EmailLoginVC: LoginViewDelegate {
     
     func onValidate(validationError: [LoginVM.FormInput]) {
         
-        print(validationError.count)
         if validationError.isEmpty {
             loginButton.isEnabled = true
             loginButton.backgroundColor = .activeOrange
@@ -130,7 +113,6 @@ extension EmailLoginVC: LoginViewDelegate {
     func onError(error: String) {
         DispatchQueue.main.async {
             self.showAlert(message: error)
-            print("DEBUG: \(error.localizedCapitalized)")
         }
     }
     

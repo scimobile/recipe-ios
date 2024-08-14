@@ -52,10 +52,9 @@ class FloatingLabelInput: UITextField {
     }
     
 
-    
     var bottomBorder = UIView()
     override func awakeFromNib() {
-
+        
         //MARK: Setup Bottom-Border
         self.translatesAutoresizingMaskIntoConstraints = false
         bottomBorder = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
@@ -67,8 +66,8 @@ class FloatingLabelInput: UITextField {
         bottomBorder.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         bottomBorder.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         bottomBorder.heightAnchor.constraint(equalToConstant: 0.5).isActive = true // Set Border-Strength
-
-       }
+        
+    }
     
     @IBInspectable
     var _bottomBorderColor: UIColor = UIColor.white {

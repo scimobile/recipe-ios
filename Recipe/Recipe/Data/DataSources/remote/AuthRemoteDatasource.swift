@@ -27,36 +27,6 @@ class AuthRemoteDatasource {
     ) {
         let endpoint = AlamofireRecipeEndpoint.Login(LoginRequest(email: email, password: password))
         
-        // MARK: Error Still fixing and searching
-        
-//        network.request(endpoint: endpoint) { (result: Result<LoginResponse, NetworkError>) in
-//            switch result {
-//                case .success(let response):
-//                    if let accessToken = response.data?.accessToken, !accessToken.isEmpty {
-//                        onSuccess(accessToken)
-//                    } else {
-//                        onFail(.UNKNOWN("Access token is missing or empty"))
-//                    }
-//                case .failure(let error):
-//                    switch error {
-//                        case .unexpectedStatusCode(let code):
-//                            if code == self.newUserErrorCode {
-//                                onFail(.NEW_USER)
-//                            } else if code == self.duplicateUserErrorCode {
-//                                onFail(.USER_ALREADY_REGISTERED)
-//                            } else {
-//                                onFail(.UNKNOWN("Unexpected status code: \(code)"))
-//                            }
-//                        case .emptyResponse:
-//                            onFail(.UNKNOWN("The response was empty"))
-//                        default:
-//                            onFail(.UNKNOWN("An unknown error occurred"))
-//                    }
-//            }
-//        }
-        
-        // MARK:
-        
         network.request(
             endpoint: endpoint,
             onSuccessHandler: { (response: LoginResponse) in
@@ -68,25 +38,25 @@ class AuthRemoteDatasource {
             },
             onFailedHandler: { error in
                 switch error {
-                    case .unexpectedStatusCode(let code):
-                        if code == self.newUserErrorCode {
-                            onFail(.NEW_USER)
-                        } else if code == self.duplicateUserErrorCode {
-                            onFail(.USER_ALREADY_REGISTERED)
-                        } else {
-                            onFail(.UNKNOWN("Unexpected status code: \(code)"))
-                        }
-                    case .emptyResponse:
-                        onFail(.UNKNOWN("The response was empty"))
-                    default:
-                        onFail(.UNKNOWN("An unknown error occurred"))
+                case .unexpectedStatusCode(let code):
+                    if code == self.newUserErrorCode {
+                        onFail(.NEW_USER)
+                    } else if code == self.duplicateUserErrorCode {
+                        onFail(.USER_ALREADY_REGISTERED)
+                    } else {
+                        onFail(.UNKNOWN("Unexpected status code: \(code)"))
+                    }
+                case .emptyResponse:
+                    onFail(.UNKNOWN("The response was empty"))
+                default:
+                    onFail(.UNKNOWN("An unknown error occurred"))
                 }
             }
         )
         
     }
     
-    // MARK: 
+    // MARK:
     
     func signUp(
         userName: String,
@@ -110,20 +80,20 @@ class AuthRemoteDatasource {
             },
             onFailedHandler: { error in
                 switch error {
-                    case .unexpectedStatusCode(let code):
-                        if code == self.duplicateUserErrorCode {
-                            onFail(.USER_ALREADY_REGISTERED)
-                        } else {
-                            onFail(.UNKNOWN("Unexpected status code: \(code)"))
-                        }
-                    case .emptyResponse:
-                        onFail(.UNKNOWN("The response was empty"))
-                    default:
-                        onFail(.UNKNOWN("An unknown error occurred"))
+                case .unexpectedStatusCode(let code):
+                    if code == self.duplicateUserErrorCode {
+                        onFail(.USER_ALREADY_REGISTERED)
+                    } else {
+                        onFail(.UNKNOWN("Unexpected status code: \(code)"))
+                    }
+                case .emptyResponse:
+                    onFail(.UNKNOWN("The response was empty"))
+                default:
+                    onFail(.UNKNOWN("An unknown error occurred"))
                 }
             }
         )
     }
-
+    
 }
 

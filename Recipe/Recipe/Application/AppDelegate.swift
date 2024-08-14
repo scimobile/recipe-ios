@@ -23,14 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     application,
                     didFinishLaunchingWithOptions: launchOptions
                 )
-        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
-           if error != nil || user == nil {
-             // Show the app's signed-out state.
-           } else {
-               print("User Google Login Key ", String(describing: user?.accessToken) )
-             // Show the app's signed-in state.
-           }
-         }
         return true
     }
     
