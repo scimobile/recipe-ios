@@ -61,12 +61,12 @@ class OnBoardingVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupViews()
         initBindings()
     }
     
     private func setupViews(){
+        navigationController?.isNavigationBarHidden = true
         currentPage = 0
         cvOnBoarding.register(.init(nibName: "OnBoardingCell", bundle: nil), forCellWithReuseIdentifier: "OnBoardingCell")
         cvOnBoarding.delegate = self
@@ -102,8 +102,9 @@ class OnBoardingVC: UIViewController {
     @objc private func onTapLogin(){
     }
     @objc private func onTapGetStart(){
+        let vc = PersonalizeOptionVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
-
 
 }
 

@@ -124,7 +124,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iF9-3d-Dkp" secondAttribute="bottom" constant="24" id="kQT-rR-MVd"/>
                 <constraint firstAttribute="trailing" secondItem="iF9-3d-Dkp" secondAttribute="trailing" id="peL-iw-GhE"/>
             </constraints>
-            <point key="canvasLocation" x="-404" y="20"/>
+            <point key="canvasLocation" x="-691" y="-24"/>
         </view>
     </objects>
     <resources>
