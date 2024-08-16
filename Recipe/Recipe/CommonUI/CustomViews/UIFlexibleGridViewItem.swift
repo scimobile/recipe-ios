@@ -18,6 +18,8 @@ open class UIFlexibleGridViewItem: UIView {
         return label
     } ()
     
+    var isSelected: Bool = false
+    
     public required init() {
         super.init(frame: CGRect.zero)
         initView()
@@ -33,12 +35,14 @@ open class UIFlexibleGridViewItem: UIView {
     }
     
     open func onSelected() {
+        isSelected = true
         backgroundColor = .activeOrange
         layer.borderColor = UIColor.clear.cgColor
         titleLabel.textColor = .white
     }
     
     open func onDeselected() {
+        isSelected = false
         backgroundColor = .clear
         layer.borderColor = UIColor.secondary.cgColor
         titleLabel.textColor = .secondary

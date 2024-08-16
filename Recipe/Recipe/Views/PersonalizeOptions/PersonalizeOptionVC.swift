@@ -14,8 +14,7 @@ class PersonalizeOptionVC: UIViewController {
     @IBOutlet weak var dietTitleLabel: UILabel!
     @IBOutlet weak var ingredientTitleLabel: UILabel!
    
-    @IBOutlet weak var flexibleGridView: UIFlexibleGridView!
-    @IBOutlet weak var flexibleGridViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var ingredientsCollectionView: UICollectionView!
     @IBOutlet weak var recipesCollectionView: UICollectionView!
     
     @IBOutlet weak var btnContinue: UIButton!
@@ -24,22 +23,32 @@ class PersonalizeOptionVC: UIViewController {
     // MARK: - Properties
     /// initialize
     let dummyRecipes = DummyData.dummyRecipes()
-    let dummyIngredients = [
-        "Gluten",
-        "Dairy",
-        "Egg",
-        "Soy",
-        "Peanut",
-        "Tree Nut",
-        "Fish",
-        "Shellfish"
-    ]
+    let dummyIngredients = DummyData.dummyIngredients()
+    var selectedIngredients: [DummyData] = [] {
+        didSet {
+            updateContinueButtonState()
+        }
+    }
+    
+    var selectedRecipe: DummyData? {
+        didSet {
+            recipesCollectionView.reloadData()
+            updateContinueButtonState()
+        }
+    }
     
     // MARK: - View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+        updateContinueButtonState()
+        viewDidLayoutSubviews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        ingredientsCollectionView.reloadData()
+        recipesCollectionView.reloadData()
     }
     
     // MARK: - UI setup & Helper Functions
@@ -52,27 +61,39 @@ class PersonalizeOptionVC: UIViewController {
         btnSkip.setTitleUnderLine(title: "SKIP")
         btnContinue.backgroundColor = .activeOrange
         btnContinue.setButtonTitleStyle(.popSemiB14, .pureWhite)
-        setupCollectionView()
-        setupFlexibleGridView()
+        setupRecipesCollectionView()
+        setupIngredientCollectinView()
     }
 
-    private func setupCollectionView() {
+    private func setupRecipesCollectionView() {
         recipesCollectionView.delegate = self
         recipesCollectionView.dataSource = self
         recipesCollectionView.register(cell: PersonalizeRecipesCell.self)
         recipesCollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+        recipesCollectionView.reloadData()
     }
     
-    private func setupFlexibleGridView() {
-        flexibleGridView.dataSource = self
-        flexibleGridView.delegate = self
-        flexibleGridView.itemHeight = 40
-        flexibleGridView.itemSpacing = 16
-        flexibleGridView.lineSpacing = 12
-        flexibleGridView.selectionStyle = .single
-        flexibleGridView.contentInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
-        flexibleGridView.register(with: UIFlexibleGridViewItem.self, identifier: "flexible-item")
-        flexibleGridView.reloadData()
+    private func setupIngredientCollectinView() {
+        ingredientsCollectionView.dataSource = self
+        ingredientsCollectionView.delegate = self
+        ingredientsCollectionView.allowsMultipleSelection = true
+        ingredientsCollectionView.register(cell: PersonalizeIngredientsCell.self)
+        let layout = CollectionViewFlowLayout(
+            minimumInteritemSpacing: 10,
+            minimumLineSpacing: 10,
+            sectionInset: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 50)
+        )
+        ingredientsCollectionView.collectionViewLayout = layout
+    }
+    
+    private func updateContinueButtonState() {
+        if selectedRecipe != nil && !selectedIngredients.isEmpty {
+            btnContinue.isEnabled = true
+            btnContinue.backgroundColor = .activeOrange
+        } else {
+            btnContinue.isEnabled = false
+            btnContinue.backgroundColor = .lightGray
+        }
     }
     
     // MARK: - IBActions
@@ -84,7 +105,8 @@ class PersonalizeOptionVC: UIViewController {
     
     @IBAction
     private func didTapSkip(_ sender: UIButton) {
-        
+        let personalizeGoalsVC = PersonalizeGoalsVC()
+        navigationController?.pushViewController(personalizeGoalsVC, animated: true)
     }
     
 }
@@ -120,7 +142,23 @@ extension PersonalizeOptionVC: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        print(dummyRecipes[indexPath.row])
+        if collectionView == ingredientsCollectionView {
+            let selectedItem = dummyIngredients[indexPath.item]
+            
+            if let index = selectedIngredients.firstIndex(where: { $0.id == selectedItem.id }) {
+                // Deselect the item
+                selectedIngredients.remove(at: index)
+            } else {
+                // Select the item
+                selectedIngredients.append(selectedItem)
+            }
+            UIView.performWithoutAnimation { [weak self] in
+                self?.ingredientsCollectionView.reloadItems(at: [indexPath])
+            }
+        } else {
+            let recipesSelectedItem = dummyRecipes[indexPath.row]
+            selectedRecipe = recipesSelectedItem
+        }
     }
 }
 // MARK: - UICollectionViewDataSource
@@ -129,58 +167,41 @@ extension PersonalizeOptionVC: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return dummyRecipes.count
+        return collectionView == recipesCollectionView ?
+        dummyRecipes.count :
+        dummyIngredients.count
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell = collectionView.deque(
-            PersonalizeRecipesCell.self,
-            index: indexPath
-        )
-        cell.bind(data: dummyRecipes[indexPath.row])
-        return cell
+        if collectionView == recipesCollectionView {
+            let cell = collectionView.deque(
+                PersonalizeRecipesCell.self,
+                index: indexPath
+            )
+            let recipeItem = dummyRecipes[indexPath.row]
+            let isSelected = recipeItem.id == selectedRecipe?.id
+            cell.bind(data: recipeItem)
+            cell.setSelectedState(isSelected)
+            return cell
+        } else {
+            let cell = collectionView.deque(
+                PersonalizeIngredientsCell.self,
+                index: indexPath
+            )
+            let ingredientsItem = dummyIngredients[indexPath.item]
+            let selectedIngredientsContain = selectedIngredients.contains { element in
+                return element.id == ingredientsItem.id
+            }
+            cell.render(
+                flag: selectedIngredientsContain,
+                title: ingredientsItem.title
+            )
+            return cell
+        }
     }
 
 }
-// MARK: - UIFlexibleGridViewDataSource, UIFlexibleGridViewDelegate
-extension PersonalizeOptionVC: UIFlexibleGridViewDataSource, UIFlexibleGridViewDelegate {
-    
-    func layoutForGridView(
-        _ flexibleGridView: UIFlexibleGridView
-    ) -> UIGridLayout {
-        return .auto
-    }
-    
-    func numberOfItemsInGridView(
-        _ flexibleGridView: UIFlexibleGridView
-    ) -> Int {
-        return dummyIngredients.count
-    }
-    
-    func flexibleGridView(
-        _ flexibleGridView: UIFlexibleGridView,
-        itemForIndexAt index: Int
-    ) -> UIFlexibleGridViewItem {
-        let item = flexibleGridView.dequeItem(withIdentifier: "flexible-item", for: index)
-        item.setChipStyle(with: dummyIngredients[index])
-        return item
-    }
-    
-    func flexibleGridView(
-        _ flexibleGridView: UIFlexibleGridView,
-        didSelectItemAt index: Int
-    ) {
-        print(index)
-    }
-    
-    func flexibleGridView(
-        _ flexibleGridView: UIFlexibleGridView,
-        contentHeight height: CGFloat
-    ) {
-        flexibleGridViewHeight.constant = height
-    }
 
-}

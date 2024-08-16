@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7844749D2C6CA424003E9672 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844749C2C6CA424003E9672 /* Optionals.swift */; };
+		7844749F2C6CC310003E9672 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844749E2C6CC310003E9672 /* CollectionViewFlowLayout.swift */; };
+		784474A32C6CC388003E9672 /* PersonalizeIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784474A12C6CC388003E9672 /* PersonalizeIngredientsCell.swift */; };
+		784474A42C6CC388003E9672 /* PersonalizeIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784474A22C6CC388003E9672 /* PersonalizeIngredientsCell.xib */; };
 		78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */; };
 		78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */; };
 		786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */; };
@@ -51,6 +55,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7844749C2C6CA424003E9672 /* Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
+		7844749E2C6CC310003E9672 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		784474A12C6CC388003E9672 /* PersonalizeIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeIngredientsCell.swift; sourceTree = "<group>"; };
+		784474A22C6CC388003E9672 /* PersonalizeIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeIngredientsCell.xib; sourceTree = "<group>"; };
 		78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeOptionVC.swift; sourceTree = "<group>"; };
 		78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeOptionVC.xib; sourceTree = "<group>"; };
 		786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeRecipesCell.swift; sourceTree = "<group>"; };
@@ -107,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		784474A02C6CC362003E9672 /* PersonalizeIngredientsCell */ = {
+			isa = PBXGroup;
+			children = (
+				784474A12C6CC388003E9672 /* PersonalizeIngredientsCell.swift */,
+				784474A22C6CC388003E9672 /* PersonalizeIngredientsCell.xib */,
+			);
+			path = PersonalizeIngredientsCell;
+			sourceTree = "<group>";
+		};
 		78607D142C6124AA008AA26B /* PersonalizeOptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +144,7 @@
 		786896BE2C637D340038B60C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				784474A02C6CC362003E9672 /* PersonalizeIngredientsCell */,
 				786896DA2C63DD1D0038B60C /* PersonalizeGoalsCell */,
 				786896D92C63DD100038B60C /* PersonalizeRecipesCell */,
 			);
@@ -178,6 +196,7 @@
 				786896C32C637DBB0038B60C /* UICollectionView.swift */,
 				786896C52C637DF20038B60C /* NSObject.swift */,
 				786896C72C63803A0038B60C /* UIView.swift */,
+				7844749C2C6CA424003E9672 /* Optionals.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,6 +216,7 @@
 				786896C92C63CD130038B60C /* UIFlexibleGridView.swift */,
 				786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */,
 				786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */,
+				7844749E2C6CC310003E9672 /* CollectionViewFlowLayout.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -420,6 +440,7 @@
 				B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
 				786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */,
+				784474A42C6CC388003E9672 /* PersonalizeIngredientsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,10 +451,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784474A32C6CC388003E9672 /* PersonalizeIngredientsCell.swift in Sources */,
 				786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */,
 				786896C82C63803A0038B60C /* UIView.swift in Sources */,
 				B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */,
+				7844749D2C6CA424003E9672 /* Optionals.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
+				7844749F2C6CC310003E9672 /* CollectionViewFlowLayout.swift in Sources */,
 				786896DD2C63DD3F0038B60C /* PersonalizeGoalsCell.swift in Sources */,
 				786896D12C63D8E60038B60C /* DummyData.swift in Sources */,
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,

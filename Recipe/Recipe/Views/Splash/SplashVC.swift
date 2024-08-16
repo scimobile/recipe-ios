@@ -15,8 +15,8 @@ class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupViews()
+        Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(navigateToOnBoarding), userInfo: nil, repeats: true)
     }
     
     private func setupViews()  {
@@ -30,5 +30,11 @@ class SplashVC: UIViewController {
 
     }
 
+    @objc func navigateToOnBoarding() {
+        let vc = OnBoardingVC()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        present(nav, animated: true)
+    }
 
 }

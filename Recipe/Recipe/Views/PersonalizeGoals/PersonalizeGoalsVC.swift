@@ -21,12 +21,23 @@ class PersonalizeGoalsVC: UIViewController {
     // MARK: - Properties
     /// initialize
     let dummyGoals = DummyData.dummyGoals()
+    var selectedGoals: DummyData? {
+        didSet {
+            goalsCollectionView.reloadData()
+            updateContinueButtonState()
+        }
+    }
     
     // MARK: - View Lifecyle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
+        updateContinueButtonState()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        goalsCollectionView.reloadData()
     }
 
     // MARK: - UI setup & Helper Functions
@@ -46,6 +57,16 @@ class PersonalizeGoalsVC: UIViewController {
         goalsCollectionView.dataSource = self
         goalsCollectionView.register(cell: PersonalizeGoalsCell.self)
         goalsCollectionView.contentInset = .init(top: 0, left: 16, bottom: 0, right: 16)
+    }
+    
+    private func updateContinueButtonState() {
+        if selectedGoals != nil {
+            btnContinue.isEnabled = true
+            btnContinue.backgroundColor = .activeOrange
+        } else {
+            btnContinue.isEnabled = false
+            btnContinue.backgroundColor = .lightGray
+        }
     }
     
     // MARK: - IBActions
@@ -93,7 +114,8 @@ extension PersonalizeGoalsVC: UICollectionViewDelegate {
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath
     ) {
-        print(dummyGoals[indexPath.row])
+        let selectedItem = dummyGoals[indexPath.row]
+        selectedGoals = selectedItem
     }
 }
 // MARK: - UICollectionViewDataSource
@@ -113,7 +135,10 @@ extension PersonalizeGoalsVC: UICollectionViewDataSource {
             PersonalizeGoalsCell.self,
             index: indexPath
         )
-        cell.bind(data: dummyGoals[indexPath.row])
+        let goalsItem = dummyGoals[indexPath.row]
+        let isSelected = goalsItem.id == selectedGoals?.id
+        cell.bind(data: goalsItem)
+        cell.setSelectedState(isSelected)
         return cell
     }
 

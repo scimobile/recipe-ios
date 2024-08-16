@@ -26,8 +26,8 @@
                                     <constraint firstAttribute="height" constant="80" id="gIz-0U-eBH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7A-4x-YNA">
-                                <rect key="frame" x="5" y="80" width="76" height="20.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7A-4x-YNA">
+                                <rect key="frame" x="3" y="80" width="80" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,10 +36,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y7A-4x-YNA" firstAttribute="top" secondItem="sie-ug-LLS" secondAttribute="bottom" id="BDx-lS-M2j"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="y7A-4x-YNA" secondAttribute="bottom" constant="5" id="PB2-e3-Wf6"/>
+                            <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="y7A-4x-YNA" secondAttribute="bottom" id="PB2-e3-Wf6"/>
                             <constraint firstItem="sie-ug-LLS" firstAttribute="leading" secondItem="Pa6-bK-CUO" secondAttribute="leading" constant="5" id="ROH-8T-CrE"/>
-                            <constraint firstAttribute="trailing" secondItem="y7A-4x-YNA" secondAttribute="trailing" constant="5" id="W2v-I9-oev"/>
-                            <constraint firstItem="y7A-4x-YNA" firstAttribute="leading" secondItem="Pa6-bK-CUO" secondAttribute="leading" constant="5" id="b1u-Sl-KI9"/>
+                            <constraint firstAttribute="trailing" secondItem="y7A-4x-YNA" secondAttribute="trailing" constant="3" id="W2v-I9-oev"/>
+                            <constraint firstItem="y7A-4x-YNA" firstAttribute="leading" secondItem="Pa6-bK-CUO" secondAttribute="leading" constant="3" id="b1u-Sl-KI9"/>
                             <constraint firstAttribute="trailing" secondItem="sie-ug-LLS" secondAttribute="trailing" constant="5" id="gil-KW-ssg"/>
                             <constraint firstItem="sie-ug-LLS" firstAttribute="top" secondItem="Pa6-bK-CUO" secondAttribute="top" id="ha0-7x-VCd"/>
                         </constraints>

@@ -54,7 +54,6 @@ public class UIFlexibleGridView: UIView {
     }
     
     private func commonInit() {
-        
         scrollView.showsVerticalScrollIndicator = showsScrollIndicator
         scrollView.backgroundColor = .clear
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -173,7 +172,6 @@ public class UIFlexibleGridView: UIView {
                 _ = items.filter{ $0 != item }.map { $0.onDeselected() }
             }
         }
-        
     }
     
     @objc fileprivate func didPressItem(_ sender: UIFlexibleGridViewItemEditor) {
@@ -237,4 +235,48 @@ public class UIFlexibleGridView: UIView {
         loadView()
     }
     
+    public func reloadItems(at indices: [Int]) {
+        for index in indices {
+            guard index < items.count else { continue }
+            let item = items[index]
+            
+            // Remove the old item from its superview
+            item.removeFromSuperview()
+            
+            // Get the updated item from the data source
+            let newItem = dataSource?.flexibleGridView(self, itemForIndexAt: index)
+            guard let newItem = newItem else { continue }
+            
+            // Configure gestures for the new item
+            configureGesutres(for: newItem)
+            
+            // Replace the old item with the new one
+            items[index] = newItem
+            
+            // Find the corresponding position in the containerView and replace it
+            replaceItem(at: index, with: newItem)
+        }
+        
+        // Adjust the layout if needed after updating the items
+        loadView()
+    }
+    
+    private func replaceItem(at index: Int, with newItem: UIFlexibleGridViewItem) {
+        // Iterate through containerView's subviews to find where to place the new item
+        for subview in containerView.subviews {
+            if let stack = subview as? UIStackView {
+                for (i, view) in stack.arrangedSubviews.enumerated() {
+                    if view.tag == index {
+                        stack.removeArrangedSubview(view)
+                        view.removeFromSuperview()
+                        newItem.translatesAutoresizingMaskIntoConstraints = false
+                        newItem.tag = index
+                        stack.insertArrangedSubview(newItem, at: i)
+                        break
+                    }
+                }
+            }
+        }
+    }
+
 }

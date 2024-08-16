@@ -13,9 +13,8 @@
                 <outlet property="btnContinue" destination="us0-H0-6rK" id="esb-B1-Tq5"/>
                 <outlet property="btnSkip" destination="8x2-sw-AFJ" id="Nhf-kL-n6C"/>
                 <outlet property="dietTitleLabel" destination="WrA-93-qP3" id="T6W-R5-SN8"/>
-                <outlet property="flexibleGridView" destination="J2c-Zu-XdX" id="2ay-kB-WQN"/>
-                <outlet property="flexibleGridViewHeight" destination="9yG-ra-nnu" id="cgo-or-Bmq"/>
                 <outlet property="ingredientTitleLabel" destination="BUq-Z2-ElM" id="qiv-eL-4ZJ"/>
+                <outlet property="ingredientsCollectionView" destination="F2K-XI-zWd" id="PgQ-MY-mv9"/>
                 <outlet property="recipesCollectionView" destination="x0c-KL-0qb" id="Jsv-5H-ht8"/>
                 <outlet property="titleLabel" destination="LIG-aW-oFF" id="FXJ-f6-Rm3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -76,7 +75,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="508.66666666666669"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Y9D-Z7-Gao" userLabel="recipesStackView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="248.33333333333334"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="320.33333333333331"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ll only show you recipes for your diet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrA-93-qP3" userLabel="recipesTitleLabel">
                                                             <rect key="frame" x="41.333333333333343" y="0.0" width="310.33333333333326" height="20.333333333333332"/>
@@ -85,7 +84,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="189" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="x0c-KL-0qb" userLabel="recipesCollectionView" customClass="DynamicHeightCV" customModule="Recipe" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="39.333333333333314" width="393" height="209"/>
+                                                            <rect key="frame" x="0.0" y="39.333333333333314" width="393" height="281"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pgO-NH-R8l">
                                                                 <size key="itemSize" width="128" height="128"/>
@@ -97,7 +96,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pRV-6Y-7Mj" userLabel="ingredientStackView">
-                                                    <rect key="frame" x="0.0" y="268.33333333333337" width="393" height="240.33333333333337"/>
+                                                    <rect key="frame" x="0.0" y="340.33333333333326" width="393" height="168.33333333333337"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any ingredient allergies or intolerances?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUq-Z2-ElM" userLabel="ingredientsTitleLabel">
                                                             <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
@@ -105,13 +104,16 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="353" placeholderIntrinsicHeight="180" translatesAutoresizingMaskIntoConstraints="NO" id="J2c-Zu-XdX" userLabel="ingredientsFlexibleGridView" customClass="UIFlexibleGridView" customModule="Recipe" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="40.333333333333314" width="393" height="200"/>
+                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="128" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="F2K-XI-zWd" customClass="DynamicHeightCV" customModule="Recipe" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="40.333333333333371" width="393" height="128"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="200" id="9yG-ra-nnu"/>
-                                                            </constraints>
-                                                        </view>
+                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T7x-Bq-KV3">
+                                                                <size key="itemSize" width="128" height="128"/>
+                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                            </collectionViewFlowLayout>
+                                                        </collectionView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -173,7 +175,7 @@
                 <constraint firstItem="us0-H0-6rK" firstAttribute="top" secondItem="LoL-Kj-Dhu" secondAttribute="bottom" id="rwa-Rv-fJJ"/>
                 <constraint firstItem="N2o-Cp-wO2" firstAttribute="trailing" secondItem="us0-H0-6rK" secondAttribute="trailing" constant="20" id="ziq-Zj-3Fk"/>
             </constraints>
-            <point key="canvasLocation" x="-1176.3358778625955" y="-36.619718309859159"/>
+            <point key="canvasLocation" x="-1590" y="-18"/>
         </view>
     </objects>
     <resources>

@@ -13,16 +13,6 @@ class PersonalizeGoalsCell: UICollectionViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    override var isSelected: Bool {
-        didSet {
-            UIView.animate(withDuration: 0.3) { [weak self] in
-                guard let self = self else { return }
-                containerView.borderStyle(width: isSelected ? 1 : 0, borderColor: isSelected ? .activeOrange : .clear)
-            }
-            
-        }
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = .clear
@@ -39,5 +29,13 @@ class PersonalizeGoalsCell: UICollectionViewCell {
     func bind(data: DummyData) {
         iconImage.image = data.icon
         titleLabel.text = data.title
+    }
+    
+    func setSelectedState(_ isSelected: Bool) {
+        // Update cell UI based on selection state
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let self = self else { return }
+            containerView.borderStyle(width: isSelected ? 1 : 0, borderColor: isSelected ? .activeOrange : .clear)
+        }
     }
 }
