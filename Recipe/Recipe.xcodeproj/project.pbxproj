@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7844749D2C6CA424003E9672 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844749C2C6CA424003E9672 /* Optionals.swift */; };
+		7844749F2C6CC310003E9672 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7844749E2C6CC310003E9672 /* CollectionViewFlowLayout.swift */; };
+		784474A32C6CC388003E9672 /* PersonalizeIngredientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784474A12C6CC388003E9672 /* PersonalizeIngredientsCell.swift */; };
+		784474A42C6CC388003E9672 /* PersonalizeIngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 784474A22C6CC388003E9672 /* PersonalizeIngredientsCell.xib */; };
+		78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */; };
+		78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */; };
+		786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */; };
+		786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */; };
+		786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C32C637DBB0038B60C /* UICollectionView.swift */; };
+		786896C62C637DF20038B60C /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C52C637DF20038B60C /* NSObject.swift */; };
+		786896C82C63803A0038B60C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C72C63803A0038B60C /* UIView.swift */; };
+		786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896C92C63CD130038B60C /* UIFlexibleGridView.swift */; };
+		786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */; };
+		786896CE2C63CEE20038B60C /* FlexibleGridViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */; };
+		786896D12C63D8E60038B60C /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896D02C63D8E60038B60C /* DummyData.swift */; };
+		786896D72C63DA870038B60C /* PersonalizeGoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896D52C63DA870038B60C /* PersonalizeGoalsVC.swift */; };
+		786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896D62C63DA870038B60C /* PersonalizeGoalsVC.xib */; };
+		786896DD2C63DD3F0038B60C /* PersonalizeGoalsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786896DB2C63DD3F0038B60C /* PersonalizeGoalsCell.swift */; };
+		786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786896DC2C63DD3F0038B60C /* PersonalizeGoalsCell.xib */; };
+		7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082A2C627E6400AA1EEA /* Fonts.swift */; };
+		7880082D2C627EF500AA1EEA /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082C2C627EF500AA1EEA /* Colors.swift */; };
+		7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880082E2C627F2F00AA1EEA /* UIColor.swift */; };
+		788008312C62867F00AA1EEA /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788008302C62867F00AA1EEA /* UIButton.swift */; };
+		788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788008342C62900500AA1EEA /* DynamicHeightCV.swift */; };
+		B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */; };
+		B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */; };
+		B94BAE992C634EB200B043B7 /* OnBoardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */; };
+		B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */; };
+		B94BAE9F2C63DD8500B043B7 /* OnBoardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */; };
+		B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEA02C63ECBE00B043B7 /* color.xcassets */; };
+		B94BAEA82C63FDEF00B043B7 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */; };
+		B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */; };
+		B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B94BAEAB2C64001F00B043B7 /* Lottie */; };
+		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
 		FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */; };
 		FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */; };
 		FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BF2C5FF32E00B907CC /* ViewController.swift */; };
@@ -21,6 +55,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7844749C2C6CA424003E9672 /* Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
+		7844749E2C6CC310003E9672 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		784474A12C6CC388003E9672 /* PersonalizeIngredientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeIngredientsCell.swift; sourceTree = "<group>"; };
+		784474A22C6CC388003E9672 /* PersonalizeIngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeIngredientsCell.xib; sourceTree = "<group>"; };
+		78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeOptionVC.swift; sourceTree = "<group>"; };
+		78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeOptionVC.xib; sourceTree = "<group>"; };
+		786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeRecipesCell.swift; sourceTree = "<group>"; };
+		786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeRecipesCell.xib; sourceTree = "<group>"; };
+		786896C32C637DBB0038B60C /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		786896C52C637DF20038B60C /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		786896C72C63803A0038B60C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		786896C92C63CD130038B60C /* UIFlexibleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlexibleGridView.swift; sourceTree = "<group>"; };
+		786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlexibleGridViewItem.swift; sourceTree = "<group>"; };
+		786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleGridViewComponents.swift; sourceTree = "<group>"; };
+		786896D02C63D8E60038B60C /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		786896D52C63DA870038B60C /* PersonalizeGoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeGoalsVC.swift; sourceTree = "<group>"; };
+		786896D62C63DA870038B60C /* PersonalizeGoalsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeGoalsVC.xib; sourceTree = "<group>"; };
+		786896DB2C63DD3F0038B60C /* PersonalizeGoalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeGoalsCell.swift; sourceTree = "<group>"; };
+		786896DC2C63DD3F0038B60C /* PersonalizeGoalsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalizeGoalsCell.xib; sourceTree = "<group>"; };
+		7880082A2C627E6400AA1EEA /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		7880082C2C627EF500AA1EEA /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		7880082E2C627F2F00AA1EEA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		788008302C62867F00AA1EEA /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		788008342C62900500AA1EEA /* DynamicHeightCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCV.swift; sourceTree = "<group>"; };
+		B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
+		B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCell.xib; sourceTree = "<group>"; };
+		B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingEntity.swift; sourceTree = "<group>"; };
+		B94BAEA02C63ECBE00B043B7 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
+		B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		B94BAEAD2C64015300B043B7 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 		FE2636B82C5FF32E00B907CC /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +108,170 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2636DA2C5FF58C00B907CC /* IQKeyboardManagerSwift in Frameworks */,
+				B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		784474A02C6CC362003E9672 /* PersonalizeIngredientsCell */ = {
+			isa = PBXGroup;
+			children = (
+				784474A12C6CC388003E9672 /* PersonalizeIngredientsCell.swift */,
+				784474A22C6CC388003E9672 /* PersonalizeIngredientsCell.xib */,
+			);
+			path = PersonalizeIngredientsCell;
+			sourceTree = "<group>";
+		};
+		78607D142C6124AA008AA26B /* PersonalizeOptions */ = {
+			isa = PBXGroup;
+			children = (
+				78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */,
+				78607D162C6124EC008AA26B /* PersonalizeOptionVC.xib */,
+			);
+			path = PersonalizeOptions;
+			sourceTree = "<group>";
+		};
+		786896BD2C637D2E0038B60C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				786896BE2C637D340038B60C /* Cell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		786896BE2C637D340038B60C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				784474A02C6CC362003E9672 /* PersonalizeIngredientsCell */,
+				786896DA2C63DD1D0038B60C /* PersonalizeGoalsCell */,
+				786896D92C63DD100038B60C /* PersonalizeRecipesCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		786896CF2C63D8DB0038B60C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				786896D02C63D8E60038B60C /* DummyData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		786896D42C63DA6B0038B60C /* PersonalizeGoals */ = {
+			isa = PBXGroup;
+			children = (
+				786896D52C63DA870038B60C /* PersonalizeGoalsVC.swift */,
+				786896D62C63DA870038B60C /* PersonalizeGoalsVC.xib */,
+			);
+			path = PersonalizeGoals;
+			sourceTree = "<group>";
+		};
+		786896D92C63DD100038B60C /* PersonalizeRecipesCell */ = {
+			isa = PBXGroup;
+			children = (
+				786896BF2C637D590038B60C /* PersonalizeRecipesCell.swift */,
+				786896C02C637D590038B60C /* PersonalizeRecipesCell.xib */,
+			);
+			path = PersonalizeRecipesCell;
+			sourceTree = "<group>";
+		};
+		786896DA2C63DD1D0038B60C /* PersonalizeGoalsCell */ = {
+			isa = PBXGroup;
+			children = (
+				786896DB2C63DD3F0038B60C /* PersonalizeGoalsCell.swift */,
+				786896DC2C63DD3F0038B60C /* PersonalizeGoalsCell.xib */,
+			);
+			path = PersonalizeGoalsCell;
+			sourceTree = "<group>";
+		};
+		788008292C627E0500AA1EEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7880082A2C627E6400AA1EEA /* Fonts.swift */,
+				7880082C2C627EF500AA1EEA /* Colors.swift */,
+				7880082E2C627F2F00AA1EEA /* UIColor.swift */,
+				788008302C62867F00AA1EEA /* UIButton.swift */,
+				786896C32C637DBB0038B60C /* UICollectionView.swift */,
+				786896C52C637DF20038B60C /* NSObject.swift */,
+				786896C72C63803A0038B60C /* UIView.swift */,
+				7844749C2C6CA424003E9672 /* Optionals.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		788008322C628FE600AA1EEA /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+				788008332C628FED00AA1EEA /* CustomViews */,
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		788008332C628FED00AA1EEA /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				788008342C62900500AA1EEA /* DynamicHeightCV.swift */,
+				786896C92C63CD130038B60C /* UIFlexibleGridView.swift */,
+				786896CB2C63CE020038B60C /* UIFlexibleGridViewItem.swift */,
+				786896CD2C63CEE20038B60C /* FlexibleGridViewComponents.swift */,
+				7844749E2C6CC310003E9672 /* CollectionViewFlowLayout.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		B94BAE8D2C63316A00B043B7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE942C634DB500B043B7 /* Cells */,
+				B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */,
+				B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		B94BAE942C634DB500B043B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */,
+				B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B94BAE9B2C63DD5C00B043B7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B94BAE9C2C63DD6500B043B7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE9D2C63DD6E00B043B7 /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B94BAE9D2C63DD6E00B043B7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B94BAEA52C63FDE000B043B7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */,
+				B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		FE2636AF2C5FF32D00B907CC = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +291,11 @@
 		FE2636BA2C5FF32E00B907CC /* Recipe */ = {
 			isa = PBXGroup;
 			children = (
-				FE2636E42C5FF98E00B907CC /* Constants */,
-				FE2636D72C5FF50F00B907CC /* Extensions */,
-				FE2636D22C5FF37900B907CC /* Utils */,
-				FE2636D32C5FF38100B907CC /* Data */,
+				786896CF2C63D8DB0038B60C /* Model */,
+				788008322C628FE600AA1EEA /* CommonUI */,
+				B94BAE9C2C63DD6500B043B7 /* Data */,
+				B94BAE9B2C63DD5C00B043B7 /* Domain */,
+				788008292C627E0500AA1EEA /* Extensions */,
 				FE2636D02C5FF34800B907CC /* Views */,
 				FE2636D12C5FF36300B907CC /* Storyboards */,
 				FE2636CF2C5FF33900B907CC /* Application */,
@@ -91,6 +317,11 @@
 		FE2636D02C5FF34800B907CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				786896BD2C637D2E0038B60C /* CollectionView */,
+				786896D42C63DA6B0038B60C /* PersonalizeGoals */,
+				B94BAEA52C63FDE000B043B7 /* Splash */,
+				B94BAE8D2C63316A00B043B7 /* OnBoarding */,
+				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
 			);
 			path = Views;
@@ -105,50 +336,15 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FE2636D22C5FF37900B907CC /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		FE2636D32C5FF38100B907CC /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				FE2636D62C5FF4FA00B907CC /* Models */,
-				FE2636D52C5FF4F400B907CC /* Network */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		FE2636D42C5FF38C00B907CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B94BAEAD2C64015300B043B7 /* splashAnimation.json */,
 				FE2636DB2C5FF75400B907CC /* Fonts */,
 				FE2636C42C5FF32F00B907CC /* Assets.xcassets */,
+				B94BAEA02C63ECBE00B043B7 /* color.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		FE2636D52C5FF4F400B907CC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		FE2636D62C5FF4FA00B907CC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		FE2636D72C5FF50F00B907CC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FE2636DB2C5FF75400B907CC /* Fonts */ = {
@@ -160,13 +356,6 @@
 				FE2636DC2C5FF76800B907CC /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		FE2636E42C5FF98E00B907CC /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +376,7 @@
 			name = Recipe;
 			packageProductDependencies = (
 				FE2636D92C5FF58C00B907CC /* IQKeyboardManagerSwift */,
+				B94BAEAB2C64001F00B043B7 /* Lottie */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -218,6 +408,7 @@
 			mainGroup = FE2636AF2C5FF32D00B907CC;
 			packageReferences = (
 				FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -233,13 +424,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94BAE992C634EB200B043B7 /* OnBoardingCell.xib in Resources */,
 				FE2636C52C5FF32F00B907CC /* Assets.xcassets in Resources */,
 				FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */,
+				786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */,
 				FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */,
+				786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
+				B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
+				B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */,
+				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
+				B94BAEA82C63FDEF00B043B7 /* SplashVC.xib in Resources */,
+				B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
+				786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */,
+				784474A42C6CC388003E9672 /* PersonalizeIngredientsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +451,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				784474A32C6CC388003E9672 /* PersonalizeIngredientsCell.swift in Sources */,
+				786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */,
+				786896C82C63803A0038B60C /* UIView.swift in Sources */,
+				B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */,
+				7844749D2C6CA424003E9672 /* Optionals.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
+				7844749F2C6CC310003E9672 /* CollectionViewFlowLayout.swift in Sources */,
+				786896DD2C63DD3F0038B60C /* PersonalizeGoalsCell.swift in Sources */,
+				786896D12C63D8E60038B60C /* DummyData.swift in Sources */,
+				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
+				786896CA2C63CD130038B60C /* UIFlexibleGridView.swift in Sources */,
+				788008352C62900500AA1EEA /* DynamicHeightCV.swift in Sources */,
+				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
+				786896D72C63DA870038B60C /* PersonalizeGoalsVC.swift in Sources */,
+				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
+				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
+				786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */,
+				786896CE2C63CEE20038B60C /* FlexibleGridViewComponents.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
+				B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */,
+				B94BAE9F2C63DD8500B043B7 /* OnBoardingEntity.swift in Sources */,
+				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
+				786896C62C637DF20038B60C /* NSObject.swift in Sources */,
+				786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
+				B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +705,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -492,6 +724,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B94BAEAB2C64001F00B043B7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		FE2636D92C5FF58C00B907CC /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
