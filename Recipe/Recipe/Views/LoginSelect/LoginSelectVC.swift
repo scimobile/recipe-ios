@@ -32,6 +32,22 @@ class LoginSelectVC: UIViewController {
         btnFacebookLogin.addTarget(self, action: #selector(onClickFacebooLogin), for: .touchUpInside)
         setUpFooterText()
     }
+
+
+    class EmailValidationService: ValidationService {
+        func validate(_ email: String) -> Bool {
+            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+            let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+            return emailPredicate.evaluate(with: email)
+        }
+    }
+
+    class PasswordValidationService: ValidationService {
+        func validate(_ password: String) -> Bool {
+            return password.count >= 8 && !password.isEmpty
+        }
+    }
+
     
     func setUpFooterText() {
         let fullText = "By using SideChef, you agree to our Privacy Notice and Terms of Use"
