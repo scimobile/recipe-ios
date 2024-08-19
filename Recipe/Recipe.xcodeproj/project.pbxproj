@@ -60,6 +60,16 @@
 		E1E1FDF52C6782C900862CFC /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = E1E1FDF42C6782C900862CFC /* FacebookCore */; };
 		E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = E1E1FDF62C6782C900862CFC /* FacebookLogin */; };
 		E1E1FDFA2C6782F700862CFC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = E1E1FDF92C6782F700862CFC /* GoogleSignIn */; };
+		B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */; };
+		B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */; };
+		B94BAE992C634EB200B043B7 /* OnBoardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */; };
+		B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */; };
+		B94BAE9F2C63DD8500B043B7 /* OnBoardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */; };
+		B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEA02C63ECBE00B043B7 /* color.xcassets */; };
+		B94BAEA82C63FDEF00B043B7 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */; };
+		B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */; };
+		B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B94BAEAB2C64001F00B043B7 /* Lottie */; };
+		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
 		FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */; };
 		FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */; };
 		FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2636BF2C5FF32E00B907CC /* ViewController.swift */; };
@@ -123,6 +133,15 @@
 		E1C5A6D92C6766380035ABC8 /* SignupOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOptionsVC.swift; sourceTree = "<group>"; };
 		E1C5A6DA2C6766380035ABC8 /* SignupOptionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupOptionsVC.xib; sourceTree = "<group>"; };
 		E1F2DD0B2C67C7A50081477E /* Recipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Recipe.entitlements; sourceTree = "<group>"; };
+		B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
+		B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCell.xib; sourceTree = "<group>"; };
+		B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingEntity.swift; sourceTree = "<group>"; };
+		B94BAEA02C63ECBE00B043B7 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
+		B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
+		B94BAEAD2C64015300B043B7 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
 		FE2636B82C5FF32E00B907CC /* Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2636BB2C5FF32E00B907CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2636BD2C5FF32E00B907CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +167,7 @@
 				E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */,
 				CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */,
 				CE8FACAA2C68CEBB00A1527A /* KeychainAccess in Frameworks */,
+				B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +337,35 @@
 				CEA024F52C66112200CA0CF7 /* DataSources */,
 				CEA024F42C66111800CA0CF7 /* Models */,
 				CEA024F32C66110D00CA0CF7 /* Repositories */,
-			);
+				B94BAE9D2C63DD6E00B043B7 /* Entity */,
+				);
 			path = Data;
+			sourceTree = "<group>";			
+		};
+		B94BAE8D2C63316A00B043B7 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE942C634DB500B043B7 /* Cells */,
+				B94BAE902C6331C800B043B7 /* OnBoardingVC.swift */,
+				B94BAE912C6331C800B043B7 /* OnBoardingVC.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		B94BAE942C634DB500B043B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE972C634EB200B043B7 /* OnBoardingCell.swift */,
+				B94BAE982C634EB200B043B7 /* OnBoardingCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B94BAE9B2C63DD5C00B043B7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		CEA024F32C66110D00CA0CF7 /* Repositories */ = {
@@ -405,6 +452,23 @@
 			path = SignupOptions;
 			sourceTree = "<group>";
 		};
+		B94BAE9D2C63DD6E00B043B7 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B94BAEA52C63FDE000B043B7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */,
+				B94BAEA72C63FDEF00B043B7 /* SplashVC.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		FE2636AF2C5FF32D00B907CC = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +494,7 @@
 				788008322C628FE600AA1EEA /* CommonUI */,
 				CEA024F62C6611B800CA0CF7 /* Utils */,
 				CEA024F22C6610FA00CA0CF7 /* Data */,
+				B94BAE9B2C63DD5C00B043B7 /* Domain */,
 				788008292C627E0500AA1EEA /* Extensions */,
 				FE2636D02C5FF34800B907CC /* Views */,
 				FE2636D12C5FF36300B907CC /* Storyboards */,
@@ -456,6 +521,8 @@
 				E1A276782C665A830056D225 /* SignUp */,
 				786896BD2C637D2E0038B60C /* CollectionView */,
 				786896D42C63DA6B0038B60C /* PersonalizeGoals */,
+				B94BAEA52C63FDE000B043B7 /* Splash */,
+				B94BAE8D2C63316A00B043B7 /* OnBoarding */,
 				78607D142C6124AA008AA26B /* PersonalizeOptions */,
 				FE2636BF2C5FF32E00B907CC /* ViewController.swift */,
 				CEA024E02C65038600CA0CF7 /* LoginSelect */,
@@ -476,8 +543,10 @@
 		FE2636D42C5FF38C00B907CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B94BAEAD2C64015300B043B7 /* splashAnimation.json */,
 				FE2636DB2C5FF75400B907CC /* Fonts */,
 				FE2636C42C5FF32F00B907CC /* Assets.xcassets */,
+				B94BAEA02C63ECBE00B043B7 /* color.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -516,6 +585,7 @@
 				E1E1FDF92C6782F700862CFC /* GoogleSignIn */,
 				CE8A6D5A2C661CA600DE54C5 /* Alamofire */,
 				CE8FACA92C68CEBB00A1527A /* KeychainAccess */,
+				B94BAEAB2C64001F00B043B7 /* Lottie */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -551,6 +621,7 @@
 				E1E1FDF82C6782F700862CFC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				CE8A6D592C661CA600DE54C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CE8FACA82C68CEBB00A1527A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -566,6 +637,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94BAE992C634EB200B043B7 /* OnBoardingCell.xib in Resources */,
 				FE2636C52C5FF32F00B907CC /* Assets.xcassets in Resources */,
 				FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */,
 				E1C5A6DC2C6766380035ABC8 /* SignupOptionsVC.xib in Resources */,
@@ -576,8 +648,12 @@
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				CEAD430D2C6500610058B337 /* LoginSelectVC.xib in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
+				B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
 				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
+				B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */,
+				B94BAEA82C63FDEF00B043B7 /* SplashVC.xib in Resources */,
+				B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
 				786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */,
 				CEA024ED2C65049A00CA0CF7 /* EmailLoginVC.xib in Resources */,
@@ -634,6 +710,18 @@
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
 				E1A276772C665A600056D225 /* FloatingLabelInput.swift in Sources */,
 				CEBB3F222C6768A600042C52 /* RecipeRequestInterceptor.swift in Sources */,
+				B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */,
+				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
+				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
+				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
+				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
+				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
+				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
+				B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */,
+				B94BAE9F2C63DD8500B043B7 /* OnBoardingEntity.swift in Sources */,
+				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
+				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
+				B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +984,14 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		FE2636D82C5FF58C00B907CC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -931,6 +1027,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E1E1FDF82C6782F700862CFC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		B94BAEAB2C64001F00B043B7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
 		};
 		FE2636D92C5FF58C00B907CC /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
