@@ -1,47 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qwx-vT-KLf">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Poppins-Regular.ttf">
-            <string>Poppins-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--SplashVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Recipe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SplashVC" customModule="Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="JDn-Im-Lbd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poppins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyG-2O-dPl">
-                                <rect key="frame" x="162.66666666666666" y="414" width="67.666666666666657" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Ingredients  For Any Recipe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sbm-er-RSB">
+                                <rect key="frame" x="129.66666666666669" y="687.33333333333337" width="133.66666666666669" height="40.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogoWithText" translatesAutoresizingMaskIntoConstraints="NO" id="15Y-Rj-WZh">
+                                <rect key="frame" x="107.33333333333333" y="621.33333333333337" width="178.33333333333337" height="32"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lY9-b2-Cfp">
+                                <rect key="frame" x="24" y="351" width="345" height="170.33333333333337"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="uw6-fj-4bV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tyG-2O-dPl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hBu-3H-2FD"/>
-                            <constraint firstItem="tyG-2O-dPl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rA9-oV-6mI"/>
+                            <constraint firstItem="uw6-fj-4bV" firstAttribute="trailing" secondItem="lY9-b2-Cfp" secondAttribute="trailing" constant="24" id="1oL-ph-5n5"/>
+                            <constraint firstItem="15Y-Rj-WZh" firstAttribute="centerX" secondItem="JDn-Im-Lbd" secondAttribute="centerX" id="NDC-Xb-HLt"/>
+                            <constraint firstItem="15Y-Rj-WZh" firstAttribute="top" secondItem="lY9-b2-Cfp" secondAttribute="bottom" constant="100" id="VmA-bU-JYk"/>
+                            <constraint firstItem="uw6-fj-4bV" firstAttribute="bottom" secondItem="Sbm-er-RSB" secondAttribute="bottom" constant="90" id="WDy-2h-IIy"/>
+                            <constraint firstItem="lY9-b2-Cfp" firstAttribute="height" secondItem="JDn-Im-Lbd" secondAttribute="height" multiplier="0.2" id="XIt-4B-lIZ"/>
+                            <constraint firstItem="lY9-b2-Cfp" firstAttribute="centerX" secondItem="JDn-Im-Lbd" secondAttribute="centerX" id="ZEF-Qh-qD9"/>
+                            <constraint firstItem="Sbm-er-RSB" firstAttribute="centerX" secondItem="JDn-Im-Lbd" secondAttribute="centerX" id="fAO-R2-VN9"/>
+                            <constraint firstItem="Sbm-er-RSB" firstAttribute="top" secondItem="15Y-Rj-WZh" secondAttribute="bottom" constant="34" id="fPs-49-Cf6"/>
+                            <constraint firstItem="lY9-b2-Cfp" firstAttribute="leading" secondItem="uw6-fj-4bV" secondAttribute="leading" constant="24" id="uVj-fs-gUh"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ygc-b0-jXY"/>
+                    <connections>
+                        <outlet property="animationView" destination="lY9-b2-Cfp" id="ZCl-Gu-OLM"/>
+                        <outlet property="lblDesc" destination="Sbm-er-RSB" id="GZy-CZ-n7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+        </scene>
+        <!--RootNC-->
+        <scene sceneID="ehV-ak-zdc">
+            <objects>
+                <navigationController storyboardIdentifier="RootNC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="qwx-vT-KLf" customClass="RootNC" customModule="Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kdl-sa-cXa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RK1-A0-dwL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzN-gY-qE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
+        <image name="appLogoWithText" width="178.33332824707031" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

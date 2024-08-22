@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,7 +15,7 @@
                 <outlet property="btnGetStart" destination="Iex-Gv-EOa" id="pi7-Sx-MDb"/>
                 <outlet property="btnLogin" destination="Rra-dX-VIO" id="gXP-1T-V3C"/>
                 <outlet property="btnNext" destination="LbB-qX-LnP" id="cAP-7K-CbK"/>
-                <outlet property="cvOnBoarding" destination="Pld-89-KBI" id="6ba-Yn-hnx"/>
+                <outlet property="cvOnBoarding" destination="TcO-kW-MDF" id="qQt-6C-U7K"/>
                 <outlet property="indicator" destination="4OX-TY-0B6" id="sMX-V3-Pwf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewGetStart" destination="3e5-g2-TCo" id="ezq-Oh-pYV"/>
@@ -22,21 +23,11 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="OnBoardingVC" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-89-KBI">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="681.66666666666663"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QGE-c9-jap">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-g2-TCo">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3e5-g2-TCo">
                     <rect key="frame" x="0.0" y="714" width="393" height="80"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iex-Gv-EOa">
@@ -64,7 +55,7 @@
                         <constraint firstItem="Iex-Gv-EOa" firstAttribute="top" secondItem="3e5-g2-TCo" secondAttribute="top" constant="16" id="rBd-PB-K3p"/>
                     </constraints>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF9-3d-Dkp">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iF9-3d-Dkp">
                     <rect key="frame" x="0.0" y="714" width="393" height="80"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rra-dX-VIO">
@@ -109,22 +100,32 @@
                         <constraint firstItem="LbB-qX-LnP" firstAttribute="top" secondItem="iF9-3d-Dkp" secondAttribute="top" constant="16" id="zdN-Nd-GQn"/>
                     </constraints>
                 </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="TcO-kW-MDF">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="681.66666666666663"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bRB-dh-K66">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="colorBgPrimary"/>
             <constraints>
-                <constraint firstItem="Pld-89-KBI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1lB-UO-RCV"/>
+                <constraint firstItem="TcO-kW-MDF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0pk-iI-Vdd"/>
                 <constraint firstItem="iF9-3d-Dkp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7ND-Pa-kZX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3e5-g2-TCo" secondAttribute="bottom" constant="24" id="A3z-Cr-zYb"/>
-                <constraint firstItem="Pld-89-KBI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="BN9-0z-3hq"/>
-                <constraint firstItem="Pld-89-KBI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CV7-Ht-w6A"/>
+                <constraint firstItem="TcO-kW-MDF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="FaU-dZ-IRk"/>
+                <constraint firstItem="TcO-kW-MDF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="Mjd-ND-DKE"/>
                 <constraint firstItem="3e5-g2-TCo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Pmn-bf-ES6"/>
                 <constraint firstItem="3e5-g2-TCo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RTq-Pi-u2T"/>
-                <constraint firstItem="Pld-89-KBI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="fV7-1H-ZSn"/>
+                <constraint firstItem="TcO-kW-MDF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hqT-z8-rYd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="iF9-3d-Dkp" secondAttribute="bottom" constant="24" id="kQT-rR-MVd"/>
                 <constraint firstAttribute="trailing" secondItem="iF9-3d-Dkp" secondAttribute="trailing" id="peL-iw-GhE"/>
             </constraints>
-            <point key="canvasLocation" x="-404" y="20"/>
+            <point key="canvasLocation" x="-405.34351145038164" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>

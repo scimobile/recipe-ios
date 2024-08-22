@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -23,14 +24,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="2RI-QM-L4x">
                                 <rect key="frame" x="0.0" y="0.0" width="386" height="450"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tell us your food preferences and we’ll only serve you delicious recipes ideas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mel-IN-oeP">
-                                <rect key="frame" x="16" y="529.33333333333348" width="354" height="40.666666666666629"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Tell us your food preferences and we’ll only serve you delicious recipes ideas." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mel-IN-oeP">
+                                <rect key="frame" x="16" y="529.33333333333337" width="354" height="40.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="colorTextPrimary"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dR-JY-oD9">
-                                <rect key="frame" x="24" y="464.66666666666663" width="338" height="40.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dR-JY-oD9">
+                                <rect key="frame" x="24" y="465.66666666666669" width="338" height="39.666666666666686"/>
                                 <string key="text">Personalized Recipe 
 Discovery</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -47,7 +48,6 @@ Discovery</string>
                             <constraint firstAttribute="trailing" secondItem="2RI-QM-L4x" secondAttribute="trailing" id="Nb6-Ug-fsm"/>
                             <constraint firstItem="mel-IN-oeP" firstAttribute="top" secondItem="7dR-JY-oD9" secondAttribute="bottom" constant="24" id="RSb-af-RMs"/>
                             <constraint firstItem="7dR-JY-oD9" firstAttribute="centerX" secondItem="kvI-Cv-kra" secondAttribute="centerX" id="Rha-h5-m8N"/>
-                            <constraint firstItem="7dR-JY-oD9" firstAttribute="top" secondItem="2RI-QM-L4x" secondAttribute="bottom" constant="24" id="cHN-Cg-6lt"/>
                             <constraint firstItem="2RI-QM-L4x" firstAttribute="leading" secondItem="kvI-Cv-kra" secondAttribute="leading" id="dhR-Bz-sgV"/>
                             <constraint firstAttribute="trailing" secondItem="7dR-JY-oD9" secondAttribute="trailing" constant="24" id="fHw-IS-YuT"/>
                             <constraint firstItem="2RI-QM-L4x" firstAttribute="top" secondItem="kvI-Cv-kra" secondAttribute="top" id="fws-B2-mcr"/>
