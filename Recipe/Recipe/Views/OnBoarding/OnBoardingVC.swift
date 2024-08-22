@@ -8,6 +8,8 @@
 import UIKit
 
 class OnBoardingVC: UIViewController {
+    
+
 
     @IBOutlet weak var cvOnBoarding: UICollectionView!
     @IBOutlet weak var btnNext: UIButton!
@@ -68,7 +70,7 @@ class OnBoardingVC: UIViewController {
     
     private func setupViews(){
         currentPage = 0
-        cvOnBoarding.register(.init(nibName: "OnBoardingCell", bundle: nil), forCellWithReuseIdentifier: "OnBoardingCell")
+        cvOnBoarding.register(cell: OnBoardingCell.self)
         cvOnBoarding.delegate = self
         cvOnBoarding.dataSource = self
         indicator.numberOfPages = onBoardingList.count
@@ -96,14 +98,19 @@ class OnBoardingVC: UIViewController {
         if currentPage < onBoardingList.count - 1 {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
-            cvOnBoarding.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+            cvOnBoarding.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
     @objc private func onTapLogin(){
+        navigateToLoginSelect()
     }
     @objc private func onTapGetStart(){
+        navigateToLoginSelect()
     }
 
+    private func navigateToLoginSelect(){
+        self.navigationController?.pushViewController(LoginSelectVC(), animated: true)
+    }
 
 }
 
@@ -130,7 +137,7 @@ extension OnBoardingVC : UICollectionViewDelegate {
 }
 extension OnBoardingVC : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height * 0.8)
+        return .init(width: cvOnBoarding.bounds.width, height: cvOnBoarding.bounds.height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
