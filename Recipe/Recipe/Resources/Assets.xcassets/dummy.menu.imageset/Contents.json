@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "dummy.menu.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

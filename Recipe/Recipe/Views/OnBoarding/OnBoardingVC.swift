@@ -82,7 +82,7 @@ class OnBoardingVC: UIViewController {
         let underlineAttributedString = NSAttributedString(string: "LOG IN", attributes: underlineAttribute)
         btnLogin.setAttributedTitle(underlineAttributedString, for: .normal)
         
-
+ 
     }
     
     private func initBindings(){
