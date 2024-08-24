@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
     
     private func setupViews(){
         tvRecipe.registerCell(ofType: RecipeHorizontalCell.self)
+        tvRecipe.registerCell(ofType: RecipeGridCell.self)
 
         tvRecipe.dataSource = self
         tvRecipe.delegate = self
@@ -44,8 +45,14 @@ extension HomeVC : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.deque(RecipeHorizontalCell.self, indexPath)
-        return cell
+       
+        if indexPath.row == 2 {
+            let cell = tableView.deque(RecipeGridCell.self, indexPath)
+            return cell
+        }else {
+            let cell = tableView.deque(RecipeHorizontalCell.self, indexPath)
+            return cell
+        }
     }
     
     

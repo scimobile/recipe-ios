@@ -56,6 +56,10 @@
 		B9E136D92C79E16F00EEAA5B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E136D82C79E16F00EEAA5B /* UITableView.swift */; };
 		B9E136DC2C79E1AC00EEAA5B /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E136DB2C79E1AC00EEAA5B /* UITableViewCell.swift */; };
 		B9E136DE2C7A354A00EEAA5B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E136DD2C7A354A00EEAA5B /* CardView.swift */; };
+		B9E136E32C7A534200EEAA5B /* RecipeGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E136E22C7A534200EEAA5B /* RecipeGridCell.xib */; };
+		B9E136E42C7A534200EEAA5B /* RecipeGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E136E12C7A534200EEAA5B /* RecipeGridCell.swift */; };
+		B9E136EC2C7A726600EEAA5B /* RecipeGridItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E136EB2C7A726600EEAA5B /* RecipeGridItemCell.xib */; };
+		B9E136ED2C7A726600EEAA5B /* RecipeGridItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E136EA2C7A726600EEAA5B /* RecipeGridItemCell.swift */; };
 		CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */; };
 		CE6364712C67507B00944D1F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364702C67507B00944D1F /* LoginRequest.swift */; };
 		CE6364732C67521C00944D1F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364722C67521C00944D1F /* LoginResponse.swift */; };
@@ -151,6 +155,10 @@
 		B9E136D82C79E16F00EEAA5B /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		B9E136DB2C79E1AC00EEAA5B /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		B9E136DD2C7A354A00EEAA5B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B9E136E12C7A534200EEAA5B /* RecipeGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGridCell.swift; sourceTree = "<group>"; };
+		B9E136E22C7A534200EEAA5B /* RecipeGridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeGridCell.xib; sourceTree = "<group>"; };
+		B9E136EA2C7A726600EEAA5B /* RecipeGridItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeGridItemCell.swift; sourceTree = "<group>"; };
+		B9E136EB2C7A726600EEAA5B /* RecipeGridItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeGridItemCell.xib; sourceTree = "<group>"; };
 		CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRecipeEndpoint.swift; sourceTree = "<group>"; };
 		CE6364702C67507B00944D1F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		CE6364722C67521C00944D1F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -361,6 +369,8 @@
 		B903FE022C79CC03009AA30E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B9E136E92C7A724A00EEAA5B /* RecipeGridItemCell */,
+				B9E136E02C7A531D00EEAA5B /* RecipeGridCell */,
 				B903FE0D2C79D1B5009AA30E /* RecipeItemCell */,
 				B903FE032C79CC09009AA30E /* RecipeHorizontalCell */,
 			);
@@ -461,6 +471,24 @@
 				B9E136DB2C79E1AC00EEAA5B /* UITableViewCell.swift */,
 			);
 			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		B9E136E02C7A531D00EEAA5B /* RecipeGridCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9E136E12C7A534200EEAA5B /* RecipeGridCell.swift */,
+				B9E136E22C7A534200EEAA5B /* RecipeGridCell.xib */,
+			);
+			path = RecipeGridCell;
+			sourceTree = "<group>";
+		};
+		B9E136E92C7A724A00EEAA5B /* RecipeGridItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				B9E136EA2C7A726600EEAA5B /* RecipeGridItemCell.swift */,
+				B9E136EB2C7A726600EEAA5B /* RecipeGridItemCell.xib */,
+			);
+			path = RecipeGridItemCell;
 			sourceTree = "<group>";
 		};
 		CE4E86B42C6678940082E5AD /* remote */ = {
@@ -799,10 +827,12 @@
 				E1C5A6DC2C6766380035ABC8 /* SignupOptionsVC.xib in Resources */,
 				786896C12C637D590038B60C /* PersonalizeRecipesCell.xib in Resources */,
 				FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */,
+				B9E136E32C7A534200EEAA5B /* RecipeGridCell.xib in Resources */,
 				E1A276802C665CC10056D225 /* SignupVC.xib in Resources */,
 				786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				B903FDF72C77BD63009AA30E /* SettingsVC.xib in Resources */,
+				B9E136EC2C7A726600EEAA5B /* RecipeGridItemCell.xib in Resources */,
 				CEAD430D2C6500610058B337 /* LoginSelectVC.xib in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
 				B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */,
@@ -831,6 +861,7 @@
 				B903FDEC2C77BD33009AA30E /* HomeVC.swift in Sources */,
 				786896C82C63803A0038B60C /* UIView.swift in Sources */,
 				E1A276842C66915B0056D225 /* String.swift in Sources */,
+				B9E136ED2C7A726600EEAA5B /* RecipeGridItemCell.swift in Sources */,
 				B903FE192C79D3B2009AA30E /* StarRatingStackView.swift in Sources */,
 				B903FDF82C77BD63009AA30E /* SettingsVC.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* ViewController.swift in Sources */,
@@ -884,6 +915,7 @@
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
 				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,
+				B9E136E42C7A534200EEAA5B /* RecipeGridCell.swift in Sources */,
 				B903FE112C79D1DE009AA30E /* RecipeItemCell.swift in Sources */,
 				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,

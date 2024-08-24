@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecipeGridItemCell" customModule="Recipe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="971" height="1383"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="971" height="1383"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOO-vz-1UY">
+                        <rect key="frame" x="0.0" y="0.0" width="971" height="287"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWt-s8-xxs">
+                                <rect key="frame" x="0.0" y="0.0" width="971" height="267"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy.menu" translatesAutoresizingMaskIntoConstraints="NO" id="Bgz-Gv-odB">
+                                        <rect key="frame" x="0.0" y="0.0" width="971" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="wGN-FQ-aqs"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpf-0g-RuG">
+                                        <rect key="frame" x="10" y="223" width="951" height="34"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="tGs-qo-tC0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="ADD 12 INGREDIENTS" image="ic.cart.plus">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cajun Spiced Cauliflower Rice Cajun Spiced Cauliflower Rice Cajun Spiced Cauliflower Rice " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7P-Tb-Bqb">
+                                        <rect key="frame" x="10" y="182" width="951" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j85-1A-U3Z" customClass="StarRatingView" customModule="Recipe" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="170" width="80" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="2je-El-ZEk"/>
+                                            <constraint firstAttribute="width" constant="80" id="mOF-R8-JZ9"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="starColor">
+                                                <color key="value" name="colorPrimary"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-nd-a2Z">
+                                        <rect key="frame" x="0.0" y="159" width="971" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="zOz-4t-N1N"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8q-jA-MuH">
+                                        <rect key="frame" x="937" y="147.66666666666666" width="24" height="24"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy.blogger" translatesAutoresizingMaskIntoConstraints="NO" id="y2Z-l1-IyB">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="9K9-Ee-bTt"/>
+                                                    <constraint firstAttribute="height" constant="24" id="wp1-bh-7K5"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="y2Z-l1-IyB" secondAttribute="trailing" id="6wY-Oa-TNk"/>
+                                            <constraint firstAttribute="width" constant="24" id="CYy-pc-dCl"/>
+                                            <constraint firstAttribute="height" constant="24" id="J4Z-5f-ESS"/>
+                                            <constraint firstAttribute="bottom" secondItem="y2Z-l1-IyB" secondAttribute="bottom" id="cWP-t4-yN0"/>
+                                            <constraint firstItem="y2Z-l1-IyB" firstAttribute="leading" secondItem="X8q-jA-MuH" secondAttribute="leading" id="jaW-of-2he"/>
+                                            <constraint firstItem="y2Z-l1-IyB" firstAttribute="top" secondItem="X8q-jA-MuH" secondAttribute="top" id="rEU-4C-cKP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1vm-nd-a2Z" firstAttribute="leading" secondItem="Bgz-Gv-odB" secondAttribute="leading" id="7ct-Xb-63Y"/>
+                                    <constraint firstItem="W7P-Tb-Bqb" firstAttribute="top" secondItem="j85-1A-U3Z" secondAttribute="bottom" id="Ffh-qh-nL6"/>
+                                    <constraint firstItem="j85-1A-U3Z" firstAttribute="top" secondItem="Bgz-Gv-odB" secondAttribute="bottom" constant="10" id="I4L-Em-UE0"/>
+                                    <constraint firstItem="Bgz-Gv-odB" firstAttribute="trailing" secondItem="1vm-nd-a2Z" secondAttribute="trailing" id="L6X-c7-f2V"/>
+                                    <constraint firstItem="Bgz-Gv-odB" firstAttribute="leading" secondItem="wWt-s8-xxs" secondAttribute="leading" id="NBg-w2-1BS"/>
+                                    <constraint firstItem="X8q-jA-MuH" firstAttribute="centerY" secondItem="1vm-nd-a2Z" secondAttribute="centerY" id="RJ0-rN-Kc3"/>
+                                    <constraint firstItem="kpf-0g-RuG" firstAttribute="leading" secondItem="wWt-s8-xxs" secondAttribute="leading" constant="10" id="RVx-ls-vbb"/>
+                                    <constraint firstItem="j85-1A-U3Z" firstAttribute="leading" secondItem="kpf-0g-RuG" secondAttribute="leading" id="Zkq-qs-whN"/>
+                                    <constraint firstAttribute="trailing" secondItem="X8q-jA-MuH" secondAttribute="trailing" constant="10" id="bLc-Vs-dX1"/>
+                                    <constraint firstAttribute="height" constant="267" id="e4H-MQ-MzZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bgz-Gv-odB" secondAttribute="trailing" id="em2-ms-VUm"/>
+                                    <constraint firstItem="Bgz-Gv-odB" firstAttribute="top" secondItem="wWt-s8-xxs" secondAttribute="top" id="f3D-SW-c4H"/>
+                                    <constraint firstItem="W7P-Tb-Bqb" firstAttribute="leading" secondItem="kpf-0g-RuG" secondAttribute="leading" id="hzs-mJ-oyI"/>
+                                    <constraint firstItem="1vm-nd-a2Z" firstAttribute="bottom" secondItem="Bgz-Gv-odB" secondAttribute="bottom" id="jRb-3H-HSi"/>
+                                    <constraint firstAttribute="trailing" secondItem="kpf-0g-RuG" secondAttribute="trailing" constant="10" id="l9f-i9-iHA"/>
+                                    <constraint firstAttribute="bottom" secondItem="kpf-0g-RuG" secondAttribute="bottom" constant="10" id="pvx-iJ-FN8"/>
+                                    <constraint firstItem="kpf-0g-RuG" firstAttribute="top" secondItem="W7P-Tb-Bqb" secondAttribute="bottom" constant="5" id="sG4-GZ-0aq"/>
+                                    <constraint firstItem="W7P-Tb-Bqb" firstAttribute="trailing" secondItem="kpf-0g-RuG" secondAttribute="trailing" id="um2-qh-jJn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="24"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="287" id="9yv-sA-6u7"/>
+                            <constraint firstItem="wWt-s8-xxs" firstAttribute="leading" secondItem="oOO-vz-1UY" secondAttribute="leading" id="NDt-uQ-tYR"/>
+                            <constraint firstAttribute="bottom" secondItem="wWt-s8-xxs" secondAttribute="bottom" constant="10" id="det-JV-HzM"/>
+                            <constraint firstAttribute="trailing" secondItem="wWt-s8-xxs" secondAttribute="trailing" id="uLZ-Cr-EZP"/>
+                            <constraint firstItem="wWt-s8-xxs" firstAttribute="top" secondItem="oOO-vz-1UY" secondAttribute="top" id="wHv-ze-Zi5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="oOO-vz-1UY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3cY-1O-5rv"/>
+                <constraint firstAttribute="trailing" secondItem="oOO-vz-1UY" secondAttribute="trailing" id="7oc-vc-clk"/>
+                <constraint firstItem="oOO-vz-1UY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Gmi-1J-bM6"/>
+                <constraint firstAttribute="bottom" secondItem="oOO-vz-1UY" secondAttribute="bottom" id="y0E-yh-sW2"/>
+            </constraints>
+            <size key="customSize" width="971" height="1383"/>
+            <connections>
+                <outlet property="btnAddRecipe" destination="kpf-0g-RuG" id="G08-tB-ARo"/>
+                <outlet property="ivBlogger" destination="y2Z-l1-IyB" id="gHn-XY-Nzo"/>
+                <outlet property="ivRecipe" destination="Bgz-Gv-odB" id="FJV-XR-igy"/>
+                <outlet property="lblRecipeName" destination="W7P-Tb-Bqb" id="ug8-dU-DUh"/>
+                <outlet property="viewBody" destination="wWt-s8-xxs" id="gG6-eP-Ft7"/>
+                <outlet property="viewStar" destination="j85-1A-U3Z" id="3tl-zX-bKy"/>
+            </connections>
+            <point key="canvasLocation" x="503" y="161"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dummy.blogger" width="20" height="20"/>
+        <image name="dummy.menu" width="260" height="260"/>
+        <image name="ic.cart.plus" width="11.333333015441895" height="11"/>
+        <namedColor name="colorPrimary">
+            <color red="0.94509803921568625" green="0.44313725490196076" blue="0.0078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
