@@ -39,6 +39,7 @@
 		B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B94BAEAB2C64001F00B043B7 /* Lottie */; };
 		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
 		CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */; };
+		CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = CE4F9EA32C8F4C410060EA44 /* DropDown */; };
 		CE6364712C67507B00944D1F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364702C67507B00944D1F /* LoginRequest.swift */; };
 		CE6364732C67521C00944D1F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364722C67521C00944D1F /* LoginResponse.swift */; };
 		CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE8A6D5A2C661CA600DE54C5 /* Alamofire */; };
@@ -46,6 +47,14 @@
 		CE8A6D602C661D3F00DE54C5 /* AlamofireNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8A6D5F2C661D3F00DE54C5 /* AlamofireNetwork.swift */; };
 		CE8FACA72C68CDEE00A1527A /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */; };
 		CE8FACAA2C68CEBB00A1527A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = CE8FACA92C68CEBB00A1527A /* KeychainAccess */; };
+		CE91AE532C8EF3FA00D3FB58 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AE4B2C8EF3F900D3FB58 /* CartVC.swift */; };
+		CE91AE602C8EF59700D3FB58 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE91AE5A2C8EF59600D3FB58 /* CategoryTableViewCell.xib */; };
+		CE91AE612C8EF59700D3FB58 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AE5B2C8EF59600D3FB58 /* CategoryTableViewCell.swift */; };
+		CE91AE622C8EF59700D3FB58 /* RecipeCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE91AE5C2C8EF59600D3FB58 /* RecipeCardViewCell.xib */; };
+		CE91AE632C8EF59700D3FB58 /* RecipeCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE91AE5D2C8EF59600D3FB58 /* RecipeCardCell.xib */; };
+		CE91AE642C8EF59700D3FB58 /* RecipeCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AE5E2C8EF59700D3FB58 /* RecipeCardCell.swift */; };
+		CE91AE652C8EF59700D3FB58 /* RecipeCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AE5F2C8EF59700D3FB58 /* RecipeCardViewCell.swift */; };
+		CE91AE682C8F008700D3FB58 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE91AE672C8F008600D3FB58 /* Recipe.swift */; };
 		CEA024EC2C65049A00CA0CF7 /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024EA2C65049A00CA0CF7 /* EmailLoginVC.swift */; };
 		CEA024ED2C65049A00CA0CF7 /* EmailLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA024EB2C65049A00CA0CF7 /* EmailLoginVC.xib */; };
 		CEA024EF2C65152500CA0CF7 /* CustomPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024EE2C65152500CA0CF7 /* CustomPasswordTextField.swift */; };
@@ -121,6 +130,14 @@
 		CE8A6D5D2C661D2F00DE54C5 /* AlamofireEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireEndpoint.swift; sourceTree = "<group>"; };
 		CE8A6D5F2C661D3F00DE54C5 /* AlamofireNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetwork.swift; sourceTree = "<group>"; };
 		CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		CE91AE4B2C8EF3F900D3FB58 /* CartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		CE91AE5A2C8EF59600D3FB58 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		CE91AE5B2C8EF59600D3FB58 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		CE91AE5C2C8EF59600D3FB58 /* RecipeCardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeCardViewCell.xib; sourceTree = "<group>"; };
+		CE91AE5D2C8EF59600D3FB58 /* RecipeCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeCardCell.xib; sourceTree = "<group>"; };
+		CE91AE5E2C8EF59700D3FB58 /* RecipeCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCardCell.swift; sourceTree = "<group>"; };
+		CE91AE5F2C8EF59700D3FB58 /* RecipeCardViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCardViewCell.swift; sourceTree = "<group>"; };
+		CE91AE672C8F008600D3FB58 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		CEA024EA2C65049A00CA0CF7 /* EmailLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginVC.swift; sourceTree = "<group>"; };
 		CEA024EB2C65049A00CA0CF7 /* EmailLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailLoginVC.xib; sourceTree = "<group>"; };
 		CEA024EE2C65152500CA0CF7 /* CustomPasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPasswordTextField.swift; sourceTree = "<group>"; };
@@ -168,6 +185,7 @@
 				E1E1FDF52C6782C900862CFC /* FacebookCore in Frameworks */,
 				E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */,
 				CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */,
+				CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */,
 				CE8FACAA2C68CEBB00A1527A /* KeychainAccess in Frameworks */,
 				B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */,
 			);
@@ -206,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				786896D02C63D8E60038B60C /* DummyData.swift */,
+				CE91AE672C8F008600D3FB58 /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +345,13 @@
 			path = remote;
 			sourceTree = "<group>";
 		};
+		CE4F9EA22C8F4C410060EA44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE63646F2C67506300944D1F /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +379,28 @@
 				CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */,
 			);
 			path = local;
+			sourceTree = "<group>";
+		};
+		CE91AE482C8EEFA200D3FB58 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				CE91AE592C8EF57700D3FB58 /* Cell */,
+				CE91AE4B2C8EF3F900D3FB58 /* CartVC.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		CE91AE592C8EF57700D3FB58 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE91AE5B2C8EF59600D3FB58 /* CategoryTableViewCell.swift */,
+				CE91AE5A2C8EF59600D3FB58 /* CategoryTableViewCell.xib */,
+				CE91AE5E2C8EF59700D3FB58 /* RecipeCardCell.swift */,
+				CE91AE5D2C8EF59600D3FB58 /* RecipeCardCell.xib */,
+				CE91AE5F2C8EF59700D3FB58 /* RecipeCardViewCell.swift */,
+				CE91AE5C2C8EF59600D3FB58 /* RecipeCardViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CEA024E02C65038600CA0CF7 /* LoginSelect */ = {
@@ -476,6 +524,7 @@
 			children = (
 				FE2636BA2C5FF32E00B907CC /* Recipe */,
 				FE2636B92C5FF32E00B907CC /* Products */,
+				CE4F9EA22C8F4C410060EA44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -519,6 +568,7 @@
 		FE2636D02C5FF34800B907CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE91AE482C8EEFA200D3FB58 /* Cart */,
 				E1C5A6D82C67660A0035ABC8 /* SignupOptions */,
 				E1A276782C665A830056D225 /* SignUp */,
 				786896BD2C637D2E0038B60C /* CollectionView */,
@@ -589,6 +639,7 @@
 				CE8A6D5A2C661CA600DE54C5 /* Alamofire */,
 				CE8FACA92C68CEBB00A1527A /* KeychainAccess */,
 				B94BAEAB2C64001F00B043B7 /* Lottie */,
+				CE4F9EA32C8F4C410060EA44 /* DropDown */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -625,6 +676,7 @@
 				CE8A6D592C661CA600DE54C5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CE8FACA82C68CEBB00A1527A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				CE91AE662C8EF84900D3FB58 /* XCRemoteSwiftPackageReference "DropDown" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -650,13 +702,16 @@
 				786896D82C63DA870038B60C /* PersonalizeGoalsVC.xib in Resources */,
 				FE2636E02C5FF76800B907CC /* Poppins-SemiBold.ttf in Resources */,
 				CEAD430D2C6500610058B337 /* LoginSelectVC.xib in Resources */,
+				CE91AE622C8EF59700D3FB58 /* RecipeCardViewCell.xib in Resources */,
 				FE2636C82C5FF32F00B907CC /* Base in Resources */,
+				CE91AE602C8EF59700D3FB58 /* CategoryTableViewCell.xib in Resources */,
 				B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */,
 				FE2636C32C5FF32E00B907CC /* Base in Resources */,
 				78607D172C6124EC008AA26B /* PersonalizeOptionVC.xib in Resources */,
 				B94BAEA12C63ECBE00B043B7 /* color.xcassets in Resources */,
 				B94BAE922C6331C800B043B7 /* OnBoardingVC.xib in Resources */,
 				FE2636E12C5FF76800B907CC /* Poppins-Medium.ttf in Resources */,
+				CE91AE632C8EF59700D3FB58 /* RecipeCardCell.xib in Resources */,
 				786896DE2C63DD3F0038B60C /* PersonalizeGoalsCell.xib in Resources */,
 				CEA024ED2C65049A00CA0CF7 /* EmailLoginVC.xib in Resources */,
 			);
@@ -698,10 +753,12 @@
 				E1A276862C6691C10056D225 /* Regex.swift in Sources */,
 				E1A2767F2C665CC10056D225 /* SignupVC.swift in Sources */,
 				CEC6BC472C677A2E0033A30E /* AuthRepository.swift in Sources */,
+				CE91AE682C8F008700D3FB58 /* Recipe.swift in Sources */,
 				CEAD430C2C6500610058B337 /* LoginSelectVC.swift in Sources */,
 				CEBB3F242C676C7000042C52 /* RegisterRequest.swift in Sources */,
 				CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */,
 				CEA024F12C65182800CA0CF7 /* MaterialTextField.swift in Sources */,
+				CE91AE642C8EF59700D3FB58 /* RecipeCardCell.swift in Sources */,
 				CE6364732C67521C00944D1F /* LoginResponse.swift in Sources */,
 				CE8A6D5E2C661D2F00DE54C5 /* AlamofireEndpoint.swift in Sources */,
 				CEA024F82C6611E200CA0CF7 /* ValidationService.swift in Sources */,
@@ -711,9 +768,11 @@
 				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
 				786896C62C637DF20038B60C /* NSObject.swift in Sources */,
 				786896C42C637DBB0038B60C /* UICollectionView.swift in Sources */,
+				CE91AE612C8EF59700D3FB58 /* CategoryTableViewCell.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
 				E1A276772C665A600056D225 /* FloatingLabelInput.swift in Sources */,
 				CEBB3F222C6768A600042C52 /* RecipeRequestInterceptor.swift in Sources */,
+				CE91AE652C8EF59700D3FB58 /* RecipeCardViewCell.swift in Sources */,
 				B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* BaseViewController.swift in Sources */,
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
@@ -726,6 +785,7 @@
 				78607D182C6124EC008AA26B /* PersonalizeOptionVC.swift in Sources */,
 				FE2636BE2C5FF32E00B907CC /* SceneDelegate.swift in Sources */,
 				B94BAE932C6331C800B043B7 /* OnBoardingVC.swift in Sources */,
+				CE91AE532C8EF3FA00D3FB58 /* CartVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,6 +1040,14 @@
 				kind = branch;
 			};
 		};
+		CE91AE662C8EF84900D3FB58 /* XCRemoteSwiftPackageReference "DropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AssistoLab/DropDown.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		E1E1FDF32C6782C900862CFC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
@@ -1011,6 +1079,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		CE4F9EA32C8F4C410060EA44 /* DropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE91AE662C8EF84900D3FB58 /* XCRemoteSwiftPackageReference "DropDown" */;
+			productName = DropDown;
 		};
 		CE8A6D5A2C661CA600DE54C5 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
