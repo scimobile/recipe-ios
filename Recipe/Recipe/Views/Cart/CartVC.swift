@@ -141,16 +141,13 @@ class CartVC: UIViewController {
         var selectedIngredient: (Recipe, Ingredient)
         
         if indexPath.section < ingredientsByCategory.count {
-            // Move from the original section to "Done"
             selectedIngredient = ingredientsByCategory[indexPath.section].1.remove(at: indexPath.row)
             doneIngredients.append((selectedIngredient.0, selectedIngredient.1, indexPath.section, indexPath.row))
             
-            // Remove empty sections if necessary
             if ingredientsByCategory[indexPath.section].1.isEmpty {
                 ingredientsByCategory.remove(at: indexPath.section)
             }
         } else {
-            // Move back from "Done" to the original section
             let (recipe, ingredient, originalSection, originalIndex) = doneIngredients.remove(at: indexPath.row)
             
             if originalSection < ingredientsByCategory.count {
@@ -161,7 +158,6 @@ class CartVC: UIViewController {
             }
         }
         
-        // Reload the table view to reflect the changes
         tableView.reloadData()    }
 }
 
@@ -211,34 +207,4 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return ingredientsByCategory.count + (doneIngredients.isEmpty ? 0 : 1)
     }
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-//
-//        // var selectedIngredient: (Recipe, Ingredient)
-//
-//        if indexPath.section < ingredientsByCategory.count {
-//            let (recipe, ingredient) = ingredientsByCategory[indexPath.section].1.remove(at: indexPath.row)
-//
-//            doneIngredients.append((recipe, ingredient, indexPath.section, indexPath.row))
-//
-//            // Remove empty sections if necessary
-//            if ingredientsByCategory[indexPath.section].1.isEmpty {
-//                ingredientsByCategory.remove(at: indexPath.section)
-//            }
-//        } else {
-//            let (recipe, ingredient, originalSection, originalIndex) = doneIngredients.remove(at: indexPath.row)
-//            // If the original section still exists
-//            if originalSection < ingredientsByCategory.count {
-//                ingredientsByCategory[originalSection].1.insert((recipe, ingredient), at: originalIndex)
-//            } else {
-//                // If the original section was removed, recreate it
-//                ingredientsByCategory.append((ingredient.category, [(recipe, ingredient)]))
-//                ingredientsByCategory.sort(by: { $0.0 < $1.0 }) // Ensure sections are sorted
-//            }
-//        }
-//
-//        // Reload the table view to reflect the changes
-//        tableView.reloadData()
-//    }
 }
