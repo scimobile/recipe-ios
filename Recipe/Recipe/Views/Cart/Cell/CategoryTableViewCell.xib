@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="77" id="KGk-i7-Jjw" customClass="CategoryTableViewCell" customModule="Recipe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="345" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XTq-9W-Bzs">
+                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="2Fx-Fs-0ET"/>
+                            <constraint firstAttribute="height" constant="60" id="mfZ-Cr-A96"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6m6-SV-Kqi">
+                        <rect key="frame" x="90.000000000000014" y="10" width="155.33333333333337" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName                      " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oN-A9-fsP">
+                                <rect key="frame" x="0.0" y="0.0" width="155.33333333333334" height="15.666666666666666"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="IngredientName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dY-77-qjF">
+                                <rect key="frame" x="0.0" y="15.666666666666668" width="155.33333333333334" height="32.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serving" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1j-w1-tDr">
+                                <rect key="frame" x="0.0" y="48" width="155.33333333333334" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-J0-gBy" userLabel="CheckBtn">
+                        <rect key="frame" x="299.33333333333331" y="27.333333333333329" width="25.666666666666686" height="25.666666666666671"/>
+                        <color key="tintColor" name="171717"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="circle" catalog="system"/>
+                        <connections>
+                            <action selector="checkboxTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qik-bs-LaN"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="XTq-9W-Bzs" secondAttribute="bottom" constant="10" id="1BA-y1-vqx"/>
+                    <constraint firstItem="6m6-SV-Kqi" firstAttribute="bottom" secondItem="XTq-9W-Bzs" secondAttribute="bottom" id="1GL-8k-7Mh"/>
+                    <constraint firstItem="6m6-SV-Kqi" firstAttribute="top" secondItem="XTq-9W-Bzs" secondAttribute="top" id="JEg-O2-fsj"/>
+                    <constraint firstAttribute="trailing" secondItem="4wn-J0-gBy" secondAttribute="trailing" constant="20" id="Jvr-uc-Wh9"/>
+                    <constraint firstItem="6m6-SV-Kqi" firstAttribute="leading" secondItem="XTq-9W-Bzs" secondAttribute="trailing" constant="20" id="NGG-vg-n9T"/>
+                    <constraint firstItem="XTq-9W-Bzs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dQu-Cf-HW2"/>
+                    <constraint firstItem="XTq-9W-Bzs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oZI-TY-dLW"/>
+                    <constraint firstItem="4wn-J0-gBy" firstAttribute="centerY" secondItem="XTq-9W-Bzs" secondAttribute="centerY" id="wRV-5q-gBh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryImageView" destination="XTq-9W-Bzs" id="W7w-4P-qng"/>
+                <outlet property="checkboxButton" destination="4wn-J0-gBy" id="o8a-5Y-57b"/>
+                <outlet property="ingredientName" destination="1dY-77-qjF" id="X5l-I4-k7V"/>
+                <outlet property="recipeName" destination="7oN-A9-fsP" id="caz-Xf-PYe"/>
+                <outlet property="servingLabel" destination="o1j-w1-tDr" id="ADm-ZR-Brh"/>
+            </connections>
+            <point key="canvasLocation" x="35.877862595419849" y="0.35211267605633806"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
+        <namedColor name="171717">
+            <color red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
