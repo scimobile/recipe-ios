@@ -62,6 +62,7 @@
 		CEA024F82C6611E200CA0CF7 /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA024F72C6611E200CA0CF7 /* ValidationService.swift */; };
 		CEAD430C2C6500610058B337 /* LoginSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAD430A2C6500610058B337 /* LoginSelectVC.swift */; };
 		CEAD430D2C6500610058B337 /* LoginSelectVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAD430B2C6500610058B337 /* LoginSelectVC.xib */; };
+		CEB44CB82C9C262C00545B41 /* CartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB44CB72C9C262C00545B41 /* CartVM.swift */; };
 		CEBB3F202C675CD100042C52 /* AuthRemoteDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB3F1F2C675CD100042C52 /* AuthRemoteDatasource.swift */; };
 		CEBB3F222C6768A600042C52 /* RecipeRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB3F212C6768A600042C52 /* RecipeRequestInterceptor.swift */; };
 		CEBB3F242C676C7000042C52 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB3F232C676C7000042C52 /* RegisterRequest.swift */; };
@@ -145,6 +146,7 @@
 		CEA024F72C6611E200CA0CF7 /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		CEAD430A2C6500610058B337 /* LoginSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSelectVC.swift; sourceTree = "<group>"; };
 		CEAD430B2C6500610058B337 /* LoginSelectVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginSelectVC.xib; sourceTree = "<group>"; };
+		CEB44CB72C9C262C00545B41 /* CartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVM.swift; sourceTree = "<group>"; };
 		CEBB3F1F2C675CD100042C52 /* AuthRemoteDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDatasource.swift; sourceTree = "<group>"; };
 		CEBB3F212C6768A600042C52 /* RecipeRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequestInterceptor.swift; sourceTree = "<group>"; };
 		CEBB3F232C676C7000042C52 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			children = (
 				CE91AE592C8EF57700D3FB58 /* Cell */,
 				CE91AE4B2C8EF3F900D3FB58 /* CartVC.swift */,
+				CEB44CB72C9C262C00545B41 /* CartVM.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -775,6 +778,7 @@
 				CE91AE652C8EF59700D3FB58 /* RecipeCardViewCell.swift in Sources */,
 				B94BAE9A2C634EB200B043B7 /* OnBoardingCell.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* BaseViewController.swift in Sources */,
+				CEB44CB82C9C262C00545B41 /* CartVM.swift in Sources */,
 				7880082F2C627F2F00AA1EEA /* UIColor.swift in Sources */,
 				7880082D2C627EF500AA1EEA /* Colors.swift in Sources */,
 				788008312C62867F00AA1EEA /* UIButton.swift in Sources */,

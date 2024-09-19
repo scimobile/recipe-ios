@@ -11,19 +11,18 @@ class CartVC: UIViewController {
     
     // MARK: Properties
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    var dummyRecipeData = Recipe.dummyRecipeData()
-    var ingredientsByCategory: [(String, [(Recipe, Ingredient)])] = []
-    var doneIngredients: [(Recipe, Ingredient, originalSection: Int, originalIndex: Int)] = []
+    private var vm: CartVM!
     
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        vm = CartVM()
         configureUI()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if dummyRecipeData.isEmpty {
+        if vm.dummyRecipeData.isEmpty {
             showNoDataView()
         }
     }
@@ -33,7 +32,10 @@ class CartVC: UIViewController {
         title = "My Groceries"
         setupTableView()
         setupNavigationBar()
-        groupIngredientsByCategory()
+        
+        vm.onIngredientsChanged = { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     private func setupTableView() {
@@ -45,7 +47,7 @@ class CartVC: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         
-        if !dummyRecipeData.isEmpty {
+        if !vm.dummyRecipeData.isEmpty {
             registerCells()
         }
     }
@@ -53,7 +55,7 @@ class CartVC: UIViewController {
     private func registerCells() {
         let categoryTableViewCellNib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
         let headerView = Bundle.main.loadNibNamed("RecipeCardCell", owner: self, options: nil)?.first as? RecipeCardCell
-        headerView?.configure(with: dummyRecipeData)
+        headerView?.configure(with: vm.dummyRecipeData)
         tableView.tableHeaderView = headerView
         tableView.register(categoryTableViewCellNib, forCellReuseIdentifier: "CategoryTableViewCell")
     }
@@ -77,18 +79,6 @@ class CartVC: UIViewController {
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(image: UIImage(systemName: "person"), style: .done, target: self, action: #selector(showActionSheet))
         ]
-    }
-    
-    private func groupIngredientsByCategory() {
-        var tempDict = [String: [(Recipe, Ingredient)]]()
-        
-        for recipe in dummyRecipeData {
-            for ingredient in recipe.ingredients {
-                tempDict[ingredient.category, default: []].append((recipe, ingredient))
-            }
-        }
-        
-        ingredientsByCategory = tempDict.sorted(by: { $0.key < $1.key })
     }
     
     // MARK: No Data View
@@ -137,28 +127,7 @@ class CartVC: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
-    func handleCheckboxTap(at indexPath: IndexPath) {
-        var selectedIngredient: (Recipe, Ingredient)
-        
-        if indexPath.section < ingredientsByCategory.count {
-            selectedIngredient = ingredientsByCategory[indexPath.section].1.remove(at: indexPath.row)
-            doneIngredients.append((selectedIngredient.0, selectedIngredient.1, indexPath.section, indexPath.row))
-            
-            if ingredientsByCategory[indexPath.section].1.isEmpty {
-                ingredientsByCategory.remove(at: indexPath.section)
-            }
-        } else {
-            let (recipe, ingredient, originalSection, originalIndex) = doneIngredients.remove(at: indexPath.row)
-            
-            if originalSection < ingredientsByCategory.count {
-                ingredientsByCategory[originalSection].1.insert((recipe, ingredient), at: originalIndex)
-            } else {
-                ingredientsByCategory.append((ingredient.category, [(recipe, ingredient)]))
-                ingredientsByCategory.sort(by: { $0.0 < $1.0 }) // Ensure sections remain sorted
-            }
-        }
-        
-        tableView.reloadData()    }
+    
 }
 
 // MARK: Extensions
@@ -169,12 +138,12 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if indexPath.section < ingredientsByCategory.count {
-            let (recipe, ingredient) = ingredientsByCategory[indexPath.section].1[indexPath.row]
+        if indexPath.section < vm.ingredientsByCategory.count {
+            let (recipe, ingredient) = vm.ingredientsByCategory[indexPath.section].1[indexPath.row]
             cell.configure(with: recipe, ingredient: ingredient, isDone: false)
             cell.setActiveStyle()
         } else {
-            let (recipe, ingredient, _, _) = doneIngredients[indexPath.row]
+            let (recipe, ingredient, _, _) = vm.doneIngredients[indexPath.row]
             cell.configure(with: recipe, ingredient: ingredient, isDone: true)
             UIView.animate(withDuration: 0.5) {
                 cell.setInactiveStyle()
@@ -182,29 +151,25 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.checkboxTapped = { [weak self] in
-            self?.handleCheckboxTap(at: indexPath)
+            self?.vm.handleCheckboxTap(at: indexPath)
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section < ingredientsByCategory.count {
-            return ingredientsByCategory[section].1.count
-        } else {
-            return doneIngredients.count
-        }
+        return vm.numberOfRows(in: section)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section < ingredientsByCategory.count {
-            return ingredientsByCategory[section].0
+        if section < vm.ingredientsByCategory.count {
+            return vm.ingredientsByCategory[section].0
         } else {
             return "Done"
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return ingredientsByCategory.count + (doneIngredients.isEmpty ? 0 : 1)
+        return vm.numberOfSections()
     }
 }
