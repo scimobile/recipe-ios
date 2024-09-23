@@ -22,9 +22,6 @@ class CartVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        if vm.dummyRecipeData.isEmpty {
-            showNoDataView()
-        }
     }
     
     // MARK: UI Configuration
@@ -35,6 +32,10 @@ class CartVC: UIViewController {
         
         vm.onIngredientsChanged = { [weak self] in
             self?.tableView.reloadData()
+        }
+        
+        vm.onNoData = { [weak self] in
+            self?.showNoDataView()
         }
     }
     
