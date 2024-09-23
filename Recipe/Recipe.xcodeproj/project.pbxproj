@@ -38,6 +38,7 @@
 		B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */; };
 		B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B94BAEAB2C64001F00B043B7 /* Lottie */; };
 		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
+		CE3D90422CA018080054F3E0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE3D90412CA018080054F3E0 /* RealmSwift */; };
 		CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */; };
 		CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = CE4F9EA32C8F4C410060EA44 /* DropDown */; };
 		CE6364712C67507B00944D1F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6364702C67507B00944D1F /* LoginRequest.swift */; };
@@ -69,6 +70,7 @@
 		CEC6BC472C677A2E0033A30E /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BC462C677A2E0033A30E /* AuthRepository.swift */; };
 		CEC6BC492C677C160033A30E /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6BC482C677C160033A30E /* LoginVM.swift */; };
 		CEF628AA2C66711E00DA0C7B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF628A92C66711E00DA0C7B /* NetworkError.swift */; };
+		CEFEBC4E2C9D4330001D9A28 /* RecipeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEBC4D2C9D4330001D9A28 /* RecipeEntity.swift */; };
 		E1A276772C665A600056D225 /* FloatingLabelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A276762C665A600056D225 /* FloatingLabelInput.swift */; };
 		E1A2767F2C665CC10056D225 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A2767D2C665CC10056D225 /* SignupVC.swift */; };
 		E1A276802C665CC10056D225 /* SignupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A2767E2C665CC10056D225 /* SignupVC.xib */; };
@@ -93,6 +95,19 @@
 		FE2636E22C5FF76800B907CC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE2636DE2C5FF76800B907CC /* Poppins-Bold.ttf */; };
 		FE2636E32C5FF76800B907CC /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE2636DF2C5FF76800B907CC /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE5E1E3B2C9FC86A00FAF1D9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		78607D152C6124EC008AA26B /* PersonalizeOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizeOptionVC.swift; sourceTree = "<group>"; };
@@ -153,6 +168,7 @@
 		CEC6BC462C677A2E0033A30E /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		CEC6BC482C677C160033A30E /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
 		CEF628A92C66711E00DA0C7B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CEFEBC4D2C9D4330001D9A28 /* RecipeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEntity.swift; sourceTree = "<group>"; };
 		E1A276762C665A600056D225 /* FloatingLabelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelInput.swift; sourceTree = "<group>"; };
 		E1A2767D2C665CC10056D225 /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		E1A2767E2C665CC10056D225 /* SignupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupVC.xib; sourceTree = "<group>"; };
@@ -185,6 +201,7 @@
 				FE2636DA2C5FF58C00B907CC /* IQKeyboardManagerSwift in Frameworks */,
 				E1E1FDFA2C6782F700862CFC /* GoogleSignIn in Frameworks */,
 				E1E1FDF52C6782C900862CFC /* FacebookCore in Frameworks */,
+				CE3D90422CA018080054F3E0 /* RealmSwift in Frameworks */,
 				E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */,
 				CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */,
 				CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */,
@@ -327,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				B94BAE9E2C63DD8400B043B7 /* OnBoardingEntity.swift */,
+				CEFEBC4D2C9D4330001D9A28 /* RecipeEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -628,6 +646,7 @@
 				FE2636B42C5FF32E00B907CC /* Sources */,
 				FE2636B52C5FF32E00B907CC /* Frameworks */,
 				FE2636B62C5FF32E00B907CC /* Resources */,
+				CE5E1E3B2C9FC86A00FAF1D9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -643,6 +662,7 @@
 				CE8FACA92C68CEBB00A1527A /* KeychainAccess */,
 				B94BAEAB2C64001F00B043B7 /* Lottie */,
 				CE4F9EA32C8F4C410060EA44 /* DropDown */,
+				CE3D90412CA018080054F3E0 /* RealmSwift */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -680,6 +700,7 @@
 				CE8FACA82C68CEBB00A1527A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				CE91AE662C8EF84900D3FB58 /* XCRemoteSwiftPackageReference "DropDown" */,
+				CE3D90402CA018080054F3E0 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -729,6 +750,7 @@
 			files = (
 				786896CC2C63CE020038B60C /* UIFlexibleGridViewItem.swift in Sources */,
 				786896C82C63803A0038B60C /* UIView.swift in Sources */,
+				CEFEBC4E2C9D4330001D9A28 /* RecipeEntity.swift in Sources */,
 				E1A276842C66915B0056D225 /* String.swift in Sources */,
 				FE2636C02C5FF32E00B907CC /* BaseViewController.swift in Sources */,
 				786896DD2C63DD3F0038B60C /* PersonalizeGoalsCell.swift in Sources */,
@@ -1028,6 +1050,14 @@
 				minimumVersion = 4.5.0;
 			};
 		};
+		CE3D90402CA018080054F3E0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.40.0;
+			};
+		};
 		CE8A6D592C661CA600DE54C5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1083,6 +1113,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		CE3D90412CA018080054F3E0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE3D90402CA018080054F3E0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		CE4F9EA32C8F4C410060EA44 /* DropDown */ = {
 			isa = XCSwiftPackageProductDependency;
