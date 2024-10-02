@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RecipeCardCell: UITableViewCell {
     
@@ -54,12 +55,15 @@ class RecipeCardCell: UITableViewCell {
 extension RecipeCardCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Recipe.dummyRecipeData().count
+        let realm = try! Realm()
+        return realm.objects(RecipeObject.self).count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let realm = try! Realm()
+        let recipeObj = realm.objects(RecipeObject.self)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCardViewCell.identifier, for: indexPath) as! RecipeCardViewCell
-        cell.config(with: Recipe.dummyRecipeData()[indexPath.row])
+        cell.config(with: recipeObj[indexPath.row])
         return cell
     }
 }

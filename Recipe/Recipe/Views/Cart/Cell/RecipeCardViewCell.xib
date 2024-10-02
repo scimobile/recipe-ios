@@ -117,7 +117,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="32" height="32"/>
         <namedColor name="171717">
             <color red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
