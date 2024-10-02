@@ -38,6 +38,8 @@
 		B94BAEA92C63FDEF00B043B7 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */; };
 		B94BAEAC2C64001F00B043B7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B94BAEAB2C64001F00B043B7 /* Lottie */; };
 		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
+		CE29006F2CA6B0D200AF20DE /* RealmRecipeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29006E2CA6B0D200AF20DE /* RealmRecipeDataSource.swift */; };
+		CE2900712CA6B39600AF20DE /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2900702CA6B39600AF20DE /* RecipeRepository.swift */; };
 		CE3D90422CA018080054F3E0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE3D90412CA018080054F3E0 /* RealmSwift */; };
 		CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */; };
 		CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = CE4F9EA32C8F4C410060EA44 /* DropDown */; };
@@ -140,6 +142,8 @@
 		B94BAEA02C63ECBE00B043B7 /* color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = color.xcassets; sourceTree = "<group>"; };
 		B94BAEA62C63FDEF00B043B7 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		B94BAEAD2C64015300B043B7 /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
+		CE29006E2CA6B0D200AF20DE /* RealmRecipeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRecipeDataSource.swift; sourceTree = "<group>"; };
+		CE2900702CA6B39600AF20DE /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
 		CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRecipeEndpoint.swift; sourceTree = "<group>"; };
 		CE6364702C67507B00944D1F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		CE6364722C67521C00944D1F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -243,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				786896D02C63D8E60038B60C /* DummyData.swift */,
-				CE91AE672C8F008600D3FB58 /* Recipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8FACA62C68CDEE00A1527A /* KeychainManager.swift */,
+				CE29006E2CA6B0D200AF20DE /* RealmRecipeDataSource.swift */,
 			);
 			path = local;
 			sourceTree = "<group>";
@@ -416,10 +420,10 @@
 			children = (
 				CE91AE5B2C8EF59600D3FB58 /* CategoryTableViewCell.swift */,
 				CE91AE5A2C8EF59600D3FB58 /* CategoryTableViewCell.xib */,
-				CE91AE5E2C8EF59700D3FB58 /* RecipeCardCell.swift */,
-				CE91AE5D2C8EF59600D3FB58 /* RecipeCardCell.xib */,
 				CE91AE5F2C8EF59700D3FB58 /* RecipeCardViewCell.swift */,
 				CE91AE5C2C8EF59600D3FB58 /* RecipeCardViewCell.xib */,
+				CE91AE5E2C8EF59700D3FB58 /* RecipeCardCell.swift */,
+				CE91AE5D2C8EF59600D3FB58 /* RecipeCardCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -459,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC6BC462C677A2E0033A30E /* AuthRepository.swift */,
+				CE2900702CA6B39600AF20DE /* RecipeRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 		CEA024F42C66111800CA0CF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE91AE672C8F008600D3FB58 /* Recipe.swift */,
 				CEC6BC452C6778370033A30E /* Responses */,
 				CE63646F2C67506300944D1F /* Requests */,
 			);
@@ -773,8 +779,10 @@
 				7880082B2C627E6400AA1EEA /* Fonts.swift in Sources */,
 				E1C5A6DB2C6766380035ABC8 /* SignupOptionsVC.swift in Sources */,
 				786896C22C637D590038B60C /* PersonalizeRecipesCell.swift in Sources */,
+				CE2900712CA6B39600AF20DE /* RecipeRepository.swift in Sources */,
 				786896CE2C63CEE20038B60C /* FlexibleGridViewComponents.swift in Sources */,
 				FE2636BC2C5FF32E00B907CC /* AppDelegate.swift in Sources */,
+				CE29006F2CA6B0D200AF20DE /* RealmRecipeDataSource.swift in Sources */,
 				E1A276862C6691C10056D225 /* Regex.swift in Sources */,
 				E1A2767F2C665CC10056D225 /* SignupVC.swift in Sources */,
 				CEC6BC472C677A2E0033A30E /* AuthRepository.swift in Sources */,

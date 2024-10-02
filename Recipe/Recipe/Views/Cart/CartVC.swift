@@ -11,12 +11,11 @@ class CartVC: UIViewController {
     
     // MARK: Properties
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    private var vm: CartVM!
+    private lazy var vm: CartVM = CartVM.init()
     
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm = CartVM()
         configureUI()
     }
     
@@ -24,11 +23,17 @@ class CartVC: UIViewController {
         super.viewDidLayoutSubviews()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
+    }
+    
     // MARK: UI Configuration
     private func configureUI() {
         title = "My Groceries"
         setupTableView()
         setupNavigationBar()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
         
         vm.onIngredientsChanged = { [weak self] in
             self?.tableView.reloadData()
@@ -48,13 +53,14 @@ class CartVC: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         
-        if !vm.dummyRecipeData.isEmpty {
+        if !vm.realm.isEmpty {
             registerCells()
         }
     }
     
     private func registerCells() {
         let categoryTableViewCellNib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
+        
         let headerView = Bundle.main.loadNibNamed("RecipeCardCell", owner: self, options: nil)?.first as? RecipeCardCell
         headerView?.configure(with: vm.dummyRecipeData)
         tableView.tableHeaderView = headerView
@@ -117,10 +123,12 @@ class CartVC: UIViewController {
         let actionSheet = UIAlertController(title: "Choose an Option", message: "Select one of the following actions", preferredStyle: .actionSheet)
         
         actionSheet.addAction(UIAlertAction(title: "Clear List", style: .default, handler: { _ in
-            print("Option 1 selected")
+            print("DEBUG: Delete All Realm Data")
+            // self.vm.deleteAllData()
         }))
         actionSheet.addAction(UIAlertAction(title: "Share Ingredient List", style: .default, handler: { _ in
             print("Option 2 selected")
+            self.shareAll()
         }))
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         actionSheet.view.tintColor = .label
@@ -128,7 +136,19 @@ class CartVC: UIViewController {
         present(actionSheet, animated: true, completion: nil)
     }
     
+    func shareAll() {
+        let text = "This is the text...."
+        let image = UIImage(named: "dummy")
+        let myWebsite = NSURL(string:"www.google.com")!
+        let shareAll = [text , image! , myWebsite] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
     
+    @objc func reloadData() {
+        self.vm.loadRecipeDataFromRealm()
+    }
 }
 
 // MARK: Extensions

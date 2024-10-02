@@ -51,12 +51,12 @@ struct Recipe: Codable {
                    imageURL: "https://example.com/korean_beef.jpg",
                    servings: 2,
                    ingredients: [
-                    Ingredient(id: "ing1",
-                               name: "Ground Bee",
-                               IngreimageUrl: "",
-                               quantityPerServing: "",
-                               quantity: "1 lb",
-                               category: "Meat & Seafood", checked: ""),
+//                    Ingredient(id: "ing1",
+//                               name: "Ground Bee",
+//                               IngreimageUrl: "",
+//                               quantityPerServing: "",
+//                               quantity: "1 lb",
+//                               category: "Meat & Seafood", checked: ""),
                     Ingredient(id: "ing3",
                                name: "Soy Sauce",
                                IngreimageUrl: "",
@@ -65,28 +65,28 @@ struct Recipe: Codable {
                                category: "Spices & Seasonings", checked: ""),
                    ]
             ),
-            Recipe(id: "recipe3",
-                   name: "HtanMinKyaw",
-                   imageURL: "https://example.com/cauliflower_rice.jpg",
-                   servings: 8,
-                   ingredients: [
-                    Ingredient(id: "ing1",
-                               name: "MM Foods",
-                               IngreimageUrl: "",
-                               quantityPerServing: "",
-                               quantity: "1 lb",
-                               category: "Meat & Seafood",
-                               checked: ""
-                              ),
-                   ]
-            ),
+//            Recipe(id: "recipe3",
+//                   name: "HtanMinKyaw",
+//                   imageURL: "https://example.com/cauliflower_rice.jpg",
+//                   servings: 8,
+//                   ingredients: [
+//                    Ingredient(id: "ing1",
+//                               name: "MM Foods",
+//                               IngreimageUrl: "",
+//                               quantityPerServing: "",
+//                               quantity: "1 lb",
+//                               category: "Meat & Seafood",
+//                               checked: ""
+//                              ),
+//                   ]
+//            ),
         ]
     }
 }
 
 // MARK: - Ingredient
 struct Ingredient: Codable {
-    let id,
+    var id,
         name,
         IngreimageUrl,
         quantityPerServing,
