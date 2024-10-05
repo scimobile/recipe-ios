@@ -14,6 +14,7 @@ class RecipeCardCell: UITableViewCell {
     static let identifier = "RecipeCardCell"
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var cartCollectionView: UICollectionView!
+    private var vm: CartVM?
     
     // MARK: LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -44,7 +45,8 @@ class RecipeCardCell: UITableViewCell {
     }
     
     // MARK: Configure
-    func configure(with model: [Recipe]) {
+    func configure(with model: [RecipeObject], vm: CartVM) {
+        self.vm = vm 
         let totalRecipes = model.count
         let totalItems = model.reduce(0) { $0 + $1.ingredients.count }
         recipeTitle.text = "\(totalRecipes) Recipes ● \(totalItems) Items"
@@ -55,15 +57,13 @@ class RecipeCardCell: UITableViewCell {
 extension RecipeCardCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let realm = try! Realm()
-        return realm.objects(RecipeObject.self).count
+        return vm?.recipeObjects.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let realm = try! Realm()
-        let recipeObj = realm.objects(RecipeObject.self)
+        let recipeObj = vm?.recipeObjects
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCardViewCell.identifier, for: indexPath) as! RecipeCardViewCell
-        cell.config(with: recipeObj[indexPath.row])
+        cell.config(with: (recipeObj?[indexPath.row])!)
         return cell
     }
 }

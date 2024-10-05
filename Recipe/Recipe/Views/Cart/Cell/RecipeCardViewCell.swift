@@ -22,8 +22,10 @@ class RecipeCardViewCell: UICollectionViewCell {
     
     private let options = ["1", "2", "3", "4", "5", "6", "8", "10", "12", "14"]
     private var dropDown = DropDown()
-    
-    private var ingredient: Ingredient?
+    private let dropDownWidth = 80.0
+
+    private var vm: CartVM?
+    private var recipe: RecipeObject?
     
     // MARK: LifeCycle Methods
     override func awakeFromNib() {
@@ -33,18 +35,21 @@ class RecipeCardViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        configureShadow()
     }
     
     // MARK: - Setup Methods
     private func setupUI() {
         cardImageView.layer.cornerRadius = 10
         selectDropdownMenuButton.addTarget(self, action: #selector(toggleDropdown), for: .touchUpInside)
+        
+        closeButton.addTarget(self, action: #selector(deleteRecipe), for: .touchUpInside)
     }
     
     private func setupDropdown(_ recipe: RecipeObject) {
         dropDown.dataSource = options
         dropDown.anchorView = selectDropdownMenuButton
+        dropDown.width = dropDownWidth
+        dropDown.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             selectPeopleLabel.text = item
             updateIngredientQuantity(recipeId: recipe.id, newQuantity: item)
@@ -57,8 +62,8 @@ class RecipeCardViewCell: UICollectionViewCell {
         if let recipe = realm.object(ofType: RecipeObject.self, forPrimaryKey: recipeId) {
             try! realm.write {
                 for ingredient in recipe.ingredients {
-                    let parts = ingredient.quantity.split(separator: " ")
-                    print("\(parts[0]) and \(parts[1])")
+                    let parts = ingredient.quantityPerServing.split(separator: " ")
+                    print("\(parts[0]) and \(parts[1]) quantityPerServing")
                     let subString = parts.map { Double($0) ?? 0.0}
                     print("\(subString[0] * newQuantityNumber)")
                     let updatedQuantity = subString[0] * newQuantityNumber
@@ -70,18 +75,13 @@ class RecipeCardViewCell: UICollectionViewCell {
         }
     }
     
-    private func configureShadow() {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 0, height: 0)
-        layer.shadowRadius = 1
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: 10).cgPath
-    }
-    
     // MARK: - Selector
     @objc private func toggleDropdown() {
         dropDown.show()
+    }
+    
+    @objc private func deleteRecipe() {
+        
     }
     
     // MARK: - Configuration

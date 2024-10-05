@@ -12,6 +12,7 @@ class IngredientObject: Object {
     @Persisted var id: String
     @Persisted var name: String
     @Persisted var quantity: String
+    @Persisted var quantityPerServing: String
     @Persisted var category: String
     @Persisted var isDone: Bool
     

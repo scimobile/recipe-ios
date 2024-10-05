@@ -32,16 +32,16 @@ struct Recipe: Codable {
                    imageURL: "https://example.com/cauliflower_rice.jpg",
                    servings: 4,
                    ingredients: [
-                        Ingredient(id: "ing1",
-                                   name: "Ground Bee",
+                        Ingredient(id: "ingredient1",
+                                   name: "Ground Beef",
                                    IngreimageUrl: "",
-                                   quantityPerServing: "",
+                                   quantityPerServing: "0.25 lb",
                                    quantity: "1 lb",
                                    category: "Meat & Seafood", checked: ""),
-                        Ingredient(id: "ing2",
+                        Ingredient(id: "ingredient2",
                                    name: "Olive Oil",
                                    IngreimageUrl: "",
-                                   quantityPerServing: "",
+                                   quantityPerServing: "0.5 tbsp",
                                    quantity: "2 tbsp",
                                    category: "Oil & Dressings", checked: "")
                    ]
@@ -60,7 +60,7 @@ struct Recipe: Codable {
                     Ingredient(id: "ing3",
                                name: "Soy Sauce",
                                IngreimageUrl: "",
-                               quantityPerServing: "",
+                               quantityPerServing: "1.5 tbsp",
                                quantity: "3 tbsp",
                                category: "Spices & Seasonings", checked: ""),
                    ]

@@ -35,4 +35,8 @@ class RecipeRepository: RecipeRepositoryProtocol {
     func doneIngredientById(ingredientId: String, isDone: Bool) {
         realmDataSource.doneIngredientById(ingredientId: ingredientId, isDone: isDone)
     }
+    
+    func deleteRecipeById(byId recipeId: String, complection: @escaping (Result<Void, Error>) -> Void) {
+        realmDataSource.deleteRecipeById(byId: recipeId, complection: complection)
+    }
 }

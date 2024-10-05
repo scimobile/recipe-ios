@@ -50,4 +50,18 @@ class RealmRecipeDataSource {
             print("Something went wrong!")
         }
     }
+    
+    func deleteRecipeById(byId recipeId: String, complection: @escaping (Result<Void, Error>) -> Void) {
+        if let recipeToDelete = realm.object(ofType: RecipeObject.self, forPrimaryKey: recipeId) {
+            try! realm.write {
+                if recipeToDelete.isInvalidated {
+                    print("DEBUG: Object is Invalidated")
+                } else {
+                    realm.delete(recipeToDelete)
+                    print("DEBUG: Object delted successful")
+                }
+            }
+            complection(.success(()))
+        }
+    }
 }
