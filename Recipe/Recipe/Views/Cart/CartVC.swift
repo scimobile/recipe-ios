@@ -53,7 +53,7 @@ class CartVC: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.showsHorizontalScrollIndicator = false
         
-        if !vm.realm.isEmpty {
+        if !vm.recipeObjects.isEmpty {
             registerCells()
         }
     }
@@ -62,7 +62,7 @@ class CartVC: UIViewController {
         let categoryTableViewCellNib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
         
         let headerView = Bundle.main.loadNibNamed("RecipeCardCell", owner: self, options: nil)?.first as? RecipeCardCell
-        headerView?.configure(with: vm.dummyRecipeData)
+        headerView?.configure(with: vm.recipeObjects, vm: self.vm)
         tableView.tableHeaderView = headerView
         tableView.register(categoryTableViewCellNib, forCellReuseIdentifier: "CategoryTableViewCell")
     }
@@ -124,7 +124,7 @@ class CartVC: UIViewController {
         
         actionSheet.addAction(UIAlertAction(title: "Clear List", style: .default, handler: { _ in
             print("DEBUG: Delete All Realm Data")
-            // self.vm.deleteAllData()
+            self.vm.deleteAllData()
         }))
         actionSheet.addAction(UIAlertAction(title: "Share Ingredient List", style: .default, handler: { _ in
             print("Option 2 selected")

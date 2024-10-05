@@ -12,27 +12,30 @@ class CartVM {
     
     // MARK: -Properties
     var dummyRecipeData = Recipe.dummyRecipeData()
-    private let recipeRepository: RecipeRepository
-    var realm: Realm = try! Realm()
+    let recipeRepository: RecipeRepository
     private(set) var ingredientsByCategory: [(String, [(Recipe, Ingredient)])] = []
     private(set) var doneIngredients: [(Recipe, Ingredient, originalSection: Int, originalIndex: Int)] = []
     var onIngredientsChanged: (() -> Void)?
     var onNoData: (() -> Void)?
-    var recipeObj: [RecipeObject] = [RecipeObject]()
+    var recipeObjects: [RecipeObject] = []
     
     init() {
-        recipeRepository = RecipeRepository(realmDataSource: RealmRecipeDataSource())
+        self.recipeRepository = RecipeRepository(realmDataSource: RealmRecipeDataSource())
         
 //        deleteAllData()
         defaultRecipeData()
-        
+        fetchRecipes()
+    }
+    
+    private func fetchRecipes() {
         recipeRepository.getRecipe(completion: {  [unowned self] result in
             switch result {
                 case .success(let recipes):
-                    self.recipeObj = recipes
+                    self.recipeObjects = recipes
                     self.loadRecipeDataFromRealm()
                 case .failure(let error):
                     print(error.localizedDescription)
+                    self.onNoData?()
             }
         })
     }
@@ -50,7 +53,6 @@ class CartVM {
     }
     
     private func defaultRecipeData() {
-        let dummyRecipeData = Recipe.dummyRecipeData()
         addRecipeToRealm(dummyRecipeData)
     }
     
@@ -73,22 +75,18 @@ class CartVM {
     }
     
     func loadRecipeDataFromRealm() {
-        let recipes = recipeObj
-        
-        if recipes.isEmpty {
+        if recipeObjects.isEmpty {
             onNoData?()
-            return
         }
-        
         var tempDict = [String: [(Recipe, Ingredient)]]()
         doneIngredients.removeAll()
         
-        for recipeObject in recipes {
+        for recipeObject in recipeObjects {
             let recipe = createRecipe(from: recipeObject)
             
             for ingredientObject in recipeObject.ingredients.sorted(byKeyPath: "category", ascending: true) {
                 let ingredient = createIngredient(from: ingredientObject)
-
+                
                 if ingredientObject.isDone {
                     doneIngredients.append((recipe, ingredient, 0, 0))
                 } else {
@@ -109,6 +107,7 @@ class CartVM {
                     print("Error: deleteAllData")
             }
         })
+        recipeObjects.removeAll()
         loadRecipeDataFromRealm()
     }
     
@@ -125,6 +124,7 @@ class CartVM {
                 ingredientObject.id = ingredient.id
                 ingredientObject.name = ingredient.name
                 ingredientObject.quantity = ingredient.quantity
+                ingredientObject.quantityPerServing = ingredient.quantityPerServing
                 ingredientObject.category = ingredient.category
                 ingredientObject.isDone = false
                 recipeObject.ingredients.append(ingredientObject)
@@ -132,7 +132,7 @@ class CartVM {
             recipeRepository.addRecipe(recipeObject, completion: { result in
                 switch result {
                     case .success():
-                        print("add Recipe data to realmDB")
+                        print("DEBUG: Add Recipe data to realmDB \(recipeObject.name)")
                     case .failure(_):
                         print("Error: Recipe data to realmDB")
                 }
@@ -166,14 +166,6 @@ class CartVM {
             return ingredientsByCategory[section].1.count
         } else {
             return doneIngredients.count
-        }
-    }
-}
-extension CartVM: IngredientCellDelegate {
-    func didUpdateQuantity(_ recipeObj: RecipeObject) {
-        try! realm.write {
-            print(recipeObj.ingredients.count)
-            onIngredientsChanged?()
         }
     }
 }

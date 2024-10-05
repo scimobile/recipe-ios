@@ -409,8 +409,8 @@
 			isa = PBXGroup;
 			children = (
 				CE91AE592C8EF57700D3FB58 /* Cell */,
-				CE91AE4B2C8EF3F900D3FB58 /* CartVC.swift */,
 				CEB44CB72C9C262C00545B41 /* CartVM.swift */,
+				CE91AE4B2C8EF3F900D3FB58 /* CartVC.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
