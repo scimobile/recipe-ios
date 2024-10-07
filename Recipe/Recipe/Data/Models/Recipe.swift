@@ -52,7 +52,7 @@ struct Recipe: Codable {
                    servings: 2,
                    ingredients: [
 //                    Ingredient(id: "ing1",
-//                               name: "Ground Bee",
+//                               name: "Ground Beef",
 //                               IngreimageUrl: "",
 //                               quantityPerServing: "",
 //                               quantity: "1 lb",

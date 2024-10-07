@@ -149,9 +149,13 @@ class CartVM {
                 ingredientsByCategory.remove(at: indexPath.section)
             }
         } else {
-            let (recipe, ingredient, originalSection, originalIndex) = doneIngredients.remove(at: indexPath.row)
+            let (recipe, ingredient, _, originalIndex) = doneIngredients.remove(at: indexPath.row)
             recipeRepository.doneIngredientById(ingredientId: ingredient.id, isDone: false)
-            ingredientsByCategory.append((ingredient.category, [(recipe, ingredient)]))
+            if let sectionIndex = ingredientsByCategory.firstIndex(where: {$0.0 == ingredient.category}) {
+                ingredientsByCategory[sectionIndex].1.insert((recipe, ingredient), at: originalIndex)
+            } else {
+                ingredientsByCategory.append((ingredient.category, [(recipe, ingredient)]))
+            }
             ingredientsByCategory.sort(by: { $0.0 < $1.0 })
         }
         onIngredientsChanged?()

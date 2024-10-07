@@ -87,8 +87,7 @@ class RecipeCardViewCell: UICollectionViewCell {
     // MARK: - Configuration
     func config(with recipe: RecipeObject) {
         titleLabel.text = recipe.name
-        cardImageView.image = UIImage(named: "SignupBg")
-        
+        cardImageView.image = UIImage(named: "SignupBg") // temporary used
         setupDropdown(recipe)
     }
 }
