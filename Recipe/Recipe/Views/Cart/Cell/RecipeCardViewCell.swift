@@ -8,6 +8,7 @@
 import UIKit
 import DropDown
 import RealmSwift
+import SDWebImage
 
 class RecipeCardViewCell: UICollectionViewCell {
     
@@ -24,7 +25,7 @@ class RecipeCardViewCell: UICollectionViewCell {
     private var dropDown = DropDown()
     private let dropDownWidth = 80.0
 
-    private var vm: CartVM?
+    private var vm: CartVM = CartVM.shared
     private var recipe: RecipeObject?
     
     // MARK: LifeCycle Methods
@@ -81,13 +82,21 @@ class RecipeCardViewCell: UICollectionViewCell {
     }
     
     @objc private func deleteRecipe() {
-        
+        guard let recipeId = recipe?.id else { return }
+        print("DEBUG: Deleting recipe with id \(recipeId)")
+        vm.deleteRecipebyId(recipeId: recipeId)
+        NotificationCenter.default.post(name: NSNotification.Name("RecipeDeleted"), object: nil)
     }
     
     // MARK: - Configuration
     func config(with recipe: RecipeObject) {
         titleLabel.text = recipe.name
-        cardImageView.image = UIImage(named: "SignupBg") // temporary used
+        if let imageUrl = URL(string: recipe.imageURL) {
+            cardImageView.sd_setImage(with: imageUrl)
+        } else {
+            cardImageView.image = UIImage(named: "SignupBg")
+        }
         setupDropdown(recipe)
+        self.recipe = recipe
     }
 }

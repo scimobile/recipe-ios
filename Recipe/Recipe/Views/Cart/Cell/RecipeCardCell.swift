@@ -14,7 +14,7 @@ class RecipeCardCell: UITableViewCell {
     static let identifier = "RecipeCardCell"
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var cartCollectionView: UICollectionView!
-    private var vm: CartVM?
+    private var vm: CartVM = CartVM.shared
     
     // MARK: LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -45,11 +45,11 @@ class RecipeCardCell: UITableViewCell {
     }
     
     // MARK: Configure
-    func configure(with model: [RecipeObject], vm: CartVM) {
-        self.vm = vm 
+    func configure(with model: [RecipeObject]) {
         let totalRecipes = model.count
         let totalItems = model.reduce(0) { $0 + $1.ingredients.count }
         recipeTitle.text = "\(totalRecipes) Recipes ● \(totalItems) Items"
+        cartCollectionView.reloadData()
     }
 }
 
@@ -57,14 +57,25 @@ class RecipeCardCell: UITableViewCell {
 extension RecipeCardCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vm?.recipeObjects.count ?? 0
+        if vm.recipeObjects.isEmpty {
+            return 0
+        }
+        return vm.recipeObjects.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let recipeObj = vm?.recipeObjects
+        let recipeObj = vm.recipeObjects
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCardViewCell.identifier, for: indexPath) as! RecipeCardViewCell
-        cell.config(with: (recipeObj?[indexPath.row])!)
+        cell.config(with: recipeObj[indexPath.row])
         return cell
+    }
+    
+    private func updateUIForEmptyState() {
+        if vm.recipeObjects.isEmpty {
+            cartCollectionView.isHidden = true 
+        } else {
+            cartCollectionView.isHidden = false
+        }
     }
 }
 
