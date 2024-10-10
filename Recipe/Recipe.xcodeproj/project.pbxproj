@@ -40,6 +40,7 @@
 		B94BAEAE2C64015300B043B7 /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = B94BAEAD2C64015300B043B7 /* splashAnimation.json */; };
 		CE29006F2CA6B0D200AF20DE /* RealmRecipeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29006E2CA6B0D200AF20DE /* RealmRecipeDataSource.swift */; };
 		CE2900712CA6B39600AF20DE /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2900702CA6B39600AF20DE /* RecipeRepository.swift */; };
+		CE39393C2CB3EF5200811B8B /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CE39393B2CB3EF5200811B8B /* SDWebImage */; };
 		CE3D90422CA018080054F3E0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE3D90412CA018080054F3E0 /* RealmSwift */; };
 		CE4E86B82C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4E86B72C667A9C0082E5AD /* AlamofireRecipeEndpoint.swift */; };
 		CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = CE4F9EA32C8F4C410060EA44 /* DropDown */; };
@@ -206,6 +207,7 @@
 				E1E1FDFA2C6782F700862CFC /* GoogleSignIn in Frameworks */,
 				E1E1FDF52C6782C900862CFC /* FacebookCore in Frameworks */,
 				CE3D90422CA018080054F3E0 /* RealmSwift in Frameworks */,
+				CE39393C2CB3EF5200811B8B /* SDWebImage in Frameworks */,
 				E1E1FDF72C6782C900862CFC /* FacebookLogin in Frameworks */,
 				CE8A6D5B2C661CA600DE54C5 /* Alamofire in Frameworks */,
 				CE4F9EA42C8F4C410060EA44 /* DropDown in Frameworks */,
@@ -669,6 +671,7 @@
 				B94BAEAB2C64001F00B043B7 /* Lottie */,
 				CE4F9EA32C8F4C410060EA44 /* DropDown */,
 				CE3D90412CA018080054F3E0 /* RealmSwift */,
+				CE39393B2CB3EF5200811B8B /* SDWebImage */,
 			);
 			productName = Recipe;
 			productReference = FE2636B82C5FF32E00B907CC /* Recipe.app */;
@@ -707,6 +710,7 @@
 				B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				CE91AE662C8EF84900D3FB58 /* XCRemoteSwiftPackageReference "DropDown" */,
 				CE3D90402CA018080054F3E0 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				CE1E77BD2CB3E58D0093C0C8 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = FE2636B92C5FF32E00B907CC /* Products */;
 			projectDirPath = "";
@@ -1058,6 +1062,14 @@
 				minimumVersion = 4.5.0;
 			};
 		};
+		CE1E77BD2CB3E58D0093C0C8 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		CE3D90402CA018080054F3E0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -1121,6 +1133,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B94BAEAA2C64001F00B043B7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		CE39393B2CB3EF5200811B8B /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE1E77BD2CB3E58D0093C0C8 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 		CE3D90412CA018080054F3E0 /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;

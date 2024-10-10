@@ -19,6 +19,8 @@ class CartVM {
     var onNoData: (() -> Void)?
     var recipeObjects: [RecipeObject] = []
     
+    static let shared = CartVM.init()
+    
     init() {
         self.recipeRepository = RecipeRepository(realmDataSource: RealmRecipeDataSource())
         
@@ -77,6 +79,7 @@ class CartVM {
     func loadRecipeDataFromRealm() {
         if recipeObjects.isEmpty {
             onNoData?()
+            return 
         }
         var tempDict = [String: [(Recipe, Ingredient)]]()
         doneIngredients.removeAll()
@@ -109,6 +112,23 @@ class CartVM {
         })
         recipeObjects.removeAll()
         loadRecipeDataFromRealm()
+    }
+    
+    func deleteRecipebyId(recipeId: String) {
+        if let index = recipeObjects.firstIndex(where: {$0.id == recipeId}) {
+            recipeObjects.remove(at: index)
+            recipeRepository.deleteRecipeById(byId: recipeId, complection: { [weak self] result in
+                switch result {
+                    case .success():
+                        print("DEBUG: Successfully deleted recipe with id \(recipeId) from Realm.")
+                        self?.loadRecipeDataFromRealm()
+                    case .failure(let error):
+                        print("Error: Failed to delete recipe from Realm - \(error.localizedDescription)")
+                }
+            })
+        } else {
+            print("DEBUG: Recipe with id \(recipeId) not found in recipeObjects.")
+        }
     }
     
     func addRecipeToRealm(_ recipes: [Recipe]) {
@@ -162,10 +182,16 @@ class CartVM {
     }
     
     func numberOfSections() -> Int {
+        if recipeObjects.isEmpty {
+            return 0
+        }
         return ingredientsByCategory.count + (doneIngredients.isEmpty ? 0 : 1)
     }
     
     func numberOfRows(in section: Int) -> Int {
+        if recipeObjects.isEmpty {
+            return 0
+        }
         if section < ingredientsByCategory.count {
             return ingredientsByCategory[section].1.count
         } else {

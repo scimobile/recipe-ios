@@ -11,7 +11,8 @@ class CartVC: UIViewController {
     
     // MARK: Properties
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    private lazy var vm: CartVM = CartVM.init()
+    private lazy var vm: CartVM = CartVM.shared
+    private var headerView: RecipeCardCell?
     
     // MARK: LifeCycle
     override func viewDidLoad() {
@@ -25,6 +26,7 @@ class CartVC: UIViewController {
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("RecipeDeleted"), object: nil)
     }
     
     // MARK: UI Configuration
@@ -35,12 +37,16 @@ class CartVC: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(recipeDelete), name: NSNotification.Name("RecipeDeleted"), object: nil)
+        
         vm.onIngredientsChanged = { [weak self] in
             self?.tableView.reloadData()
         }
         
         vm.onNoData = { [weak self] in
             self?.showNoDataView()
+            self?.tableView.reloadData()
+            self?.tableView.tableHeaderView = nil
         }
     }
     
@@ -61,10 +67,14 @@ class CartVC: UIViewController {
     private func registerCells() {
         let categoryTableViewCellNib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
         
-        let headerView = Bundle.main.loadNibNamed("RecipeCardCell", owner: self, options: nil)?.first as? RecipeCardCell
-        headerView?.configure(with: vm.recipeObjects, vm: self.vm)
+        headerView = Bundle.main.loadNibNamed("RecipeCardCell", owner: self, options: nil)?.first as? RecipeCardCell
+        headerView?.configure(with: vm.recipeObjects)
         tableView.tableHeaderView = headerView
         tableView.register(categoryTableViewCellNib, forCellReuseIdentifier: "CategoryTableViewCell")
+    }
+    
+    private func updateHeaderView() {
+        headerView?.configure(with: vm.recipeObjects)
     }
     
     private func setupNavigationBar() {
@@ -148,6 +158,17 @@ class CartVC: UIViewController {
     
     @objc func reloadData() {
         self.vm.loadRecipeDataFromRealm()
+    }
+    
+    @objc func recipeDelete() {
+        if vm.recipeObjects.isEmpty {
+            print("DEBUG: No more recipes, hiding table view")
+            tableView.reloadData()
+            showNoDataView()
+        } else {
+            tableView.reloadData()
+            updateHeaderView()
+        }
     }
 }
 
