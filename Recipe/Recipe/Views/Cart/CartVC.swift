@@ -24,21 +24,12 @@ class CartVC: UIViewController {
         super.viewDidLayoutSubviews()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("RecipeDeleted"), object: nil)
-    }
-    
     // MARK: UI Configuration
     private func configureUI() {
         title = "My Groceries"
         setupTableView()
         setupNavigationBar()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(recipeDelete), name: NSNotification.Name("RecipeDeleted"), object: nil)
-        
+    
         vm.onIngredientsChanged = { [weak self] in
             self?.tableView.reloadData()
         }
@@ -68,13 +59,13 @@ class CartVC: UIViewController {
         let categoryTableViewCellNib = UINib(nibName: "CategoryTableViewCell", bundle: nil)
         
         headerView = Bundle.main.loadNibNamed("RecipeCardCell", owner: self, options: nil)?.first as? RecipeCardCell
-        headerView?.configure(with: vm.recipeObjects)
+        headerView?.configure(with: vm.recipeObjects, delegate: self)
         tableView.tableHeaderView = headerView
         tableView.register(categoryTableViewCellNib, forCellReuseIdentifier: "CategoryTableViewCell")
     }
     
     private func updateHeaderView() {
-        headerView?.configure(with: vm.recipeObjects)
+        headerView?.configure(with: vm.recipeObjects, delegate: self)
     }
     
     private func setupNavigationBar() {
@@ -213,5 +204,16 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return vm.numberOfSections()
+    }
+}
+extension CartVC: RecipeCardViewCellDelegate {
+    func didUpdateIngredientQuantity(forRecipeId recipeId: String, newQuantity: String) {
+        vm.updateIngredientQuantity(recipeId: recipeId, newQuantity: newQuantity)
+        self.reloadData()
+    }
+
+    func didTapDeleteRecipe(with recipeId: String) {
+        vm.deleteRecipebyId(recipeId: recipeId)
+        self.recipeDelete()
     }
 }

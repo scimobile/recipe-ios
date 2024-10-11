@@ -10,6 +10,11 @@ import DropDown
 import RealmSwift
 import SDWebImage
 
+protocol RecipeCardViewCellDelegate: AnyObject {
+    func didTapDeleteRecipe(with recipeId: String)
+    func didUpdateIngredientQuantity(forRecipeId recipeId: String, newQuantity: String)
+}
+
 class RecipeCardViewCell: UICollectionViewCell {
     
     // MARK: Properties
@@ -27,6 +32,7 @@ class RecipeCardViewCell: UICollectionViewCell {
 
     private var vm: CartVM = CartVM.shared
     private var recipe: RecipeObject?
+    private weak var delegate: RecipeCardViewCellDelegate?
     
     // MARK: LifeCycle Methods
     override func awakeFromNib() {
@@ -42,37 +48,19 @@ class RecipeCardViewCell: UICollectionViewCell {
     private func setupUI() {
         cardImageView.layer.cornerRadius = 10
         selectDropdownMenuButton.addTarget(self, action: #selector(toggleDropdown), for: .touchUpInside)
-        
         closeButton.addTarget(self, action: #selector(deleteRecipe), for: .touchUpInside)
+        contentView.dropShadow()
     }
     
     private func setupDropdown(_ recipe: RecipeObject) {
         dropDown.dataSource = options
         dropDown.anchorView = selectDropdownMenuButton
         dropDown.width = dropDownWidth
+        dropDown.cornerRadius = 10
         dropDown.backgroundColor = UIColor.white.withAlphaComponent(0.95)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             selectPeopleLabel.text = item
-            updateIngredientQuantity(recipeId: recipe.id, newQuantity: item)
-        }
-    }
-    
-    func updateIngredientQuantity(recipeId: String, newQuantity: String) {
-        let realm = try! Realm()
-        let newQuantityNumber = Double(newQuantity) ?? 0.0
-        if let recipe = realm.object(ofType: RecipeObject.self, forPrimaryKey: recipeId) {
-            try! realm.write {
-                for ingredient in recipe.ingredients {
-                    let parts = ingredient.quantityPerServing.split(separator: " ")
-                    print("\(parts[0]) and \(parts[1]) quantityPerServing")
-                    let subString = parts.map { Double($0) ?? 0.0}
-                    print("\(subString[0] * newQuantityNumber)")
-                    let updatedQuantity = subString[0] * newQuantityNumber
-                    
-                    ingredient.quantity = "\(updatedQuantity) \(parts[1])"
-                }
-                NotificationCenter.default.post(name: NSNotification.Name("IngredientQuantityUpdated"), object: nil)
-            }
+            delegate?.didUpdateIngredientQuantity(forRecipeId: recipe.id, newQuantity: item)
         }
     }
     
@@ -84,12 +72,11 @@ class RecipeCardViewCell: UICollectionViewCell {
     @objc private func deleteRecipe() {
         guard let recipeId = recipe?.id else { return }
         print("DEBUG: Deleting recipe with id \(recipeId)")
-        vm.deleteRecipebyId(recipeId: recipeId)
-        NotificationCenter.default.post(name: NSNotification.Name("RecipeDeleted"), object: nil)
+        delegate?.didTapDeleteRecipe(with: recipeId)
     }
     
     // MARK: - Configuration
-    func config(with recipe: RecipeObject) {
+    func config(with recipe: RecipeObject, delegate: RecipeCardViewCellDelegate?) {
         titleLabel.text = recipe.name
         if let imageUrl = URL(string: recipe.imageURL) {
             cardImageView.sd_setImage(with: imageUrl)
@@ -98,5 +85,6 @@ class RecipeCardViewCell: UICollectionViewCell {
         }
         setupDropdown(recipe)
         self.recipe = recipe
+        self.delegate = delegate
     }
 }

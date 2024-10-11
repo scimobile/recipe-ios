@@ -114,6 +114,24 @@ class CartVM {
         loadRecipeDataFromRealm()
     }
     
+    func updateIngredientQuantity(recipeId: String, newQuantity: String) {
+        let realm = try! Realm()
+        let newQuantityNumber = Double(newQuantity) ?? 0.0
+        if let recipe = realm.object(ofType: RecipeObject.self, forPrimaryKey: recipeId) {
+            try! realm.write {
+                for ingredient in recipe.ingredients {
+                    let parts = ingredient.quantityPerServing.split(separator: " ")
+                    print("\(parts[0]) and \(parts[1]) quantityPerServing")
+                    let subString = parts.map { Double($0) ?? 0.0}
+                    print("\(subString[0] * newQuantityNumber)")
+                    let updatedQuantity = subString[0] * newQuantityNumber
+                    
+                    ingredient.quantity = "\(updatedQuantity) \(parts[1])"
+                }
+            }
+        }
+    }
+    
     func deleteRecipebyId(recipeId: String) {
         if let index = recipeObjects.firstIndex(where: {$0.id == recipeId}) {
             recipeObjects.remove(at: index)

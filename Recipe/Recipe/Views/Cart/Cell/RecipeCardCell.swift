@@ -15,6 +15,7 @@ class RecipeCardCell: UITableViewCell {
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var cartCollectionView: UICollectionView!
     private var vm: CartVM = CartVM.shared
+    private weak var delegate: RecipeCardViewCellDelegate?
     
     // MARK: LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -28,11 +29,17 @@ class RecipeCardCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
+        setupShadow()
+    }
+    
+    private func setupShadow() {
+        contentView.dropShadow()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         cartCollectionView.frame = CGRect(x: 0, y: 0, width: contentView.bounds.width - 10, height: 250)
+        contentView.layer.shadowPath = UIBezierPath(rect: contentView.bounds).cgPath
     }
     
     // MARK: Setup Methods
@@ -45,11 +52,12 @@ class RecipeCardCell: UITableViewCell {
     }
     
     // MARK: Configure
-    func configure(with model: [RecipeObject]) {
+    func configure(with model: [RecipeObject], delegate: RecipeCardViewCellDelegate) {
         let totalRecipes = model.count
         let totalItems = model.reduce(0) { $0 + $1.ingredients.count }
         recipeTitle.text = "\(totalRecipes) Recipes ● \(totalItems) Items"
         cartCollectionView.reloadData()
+        self.delegate = delegate
     }
 }
 
@@ -66,7 +74,7 @@ extension RecipeCardCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let recipeObj = vm.recipeObjects
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecipeCardViewCell.identifier, for: indexPath) as! RecipeCardViewCell
-        cell.config(with: recipeObj[indexPath.row])
+        cell.config(with: recipeObj[indexPath.row], delegate: self.delegate)
         return cell
     }
     
